@@ -1,0 +1,1606 @@
+{% doc %}
+  @prompt
+    Please add a new Rich Text Section with transparent text boxes that have a dropdown option to change the text to H1, H2, H3, H4, H5, H6, and paragraph, another option to change the text size, another option to change the text colour, and a rich formatting tool kit that is usually standard with rich text.  
+    
+    Please include an option to move each text box’s position up or down within the section, above or below others.
+    
+    The section should have the option to add up to 10 additional text boxes, all with the options listed above.
+    
+    The Rich Text section should mirror what is in each text box, so that spacing between paragraphs, text alignment, text size, etc. shows up on the section the same way it shows up in the text box. 
+    
+    The background should have this gradient coding:
+    > div {
+      background: linear-gradient(
+        to bottom right,
+        #bb941b 0%,
+        #e0c55a 25%,
+        #be9722 50%,
+        #c6a228 75%,
+        #ebce66 100%
+      );
+    }
+    
+    Please add an optional image placeholder that can moved up or down in the section and be used or hidden at the user’s discretion. 
+    
+    Add a button at the bottom that is fully customizable, colours of the text, size of the text, and all other normal text parameters., remove the white background in the text boxes and make them transparent, Center all the text boxes, add the option to align text left, centre or right in each text box, add the option to add an image in each text box
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-rich-text-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background: linear-gradient(
+      to bottom right,
+      #bb941b 0%,
+      #e0c55a 25%,
+      #be9722 50%,
+      #c6a228 75%,
+      #ebce66 100%
+    );
+    padding: {{ block.settings.section_padding }}px 20px;
+  }
+
+  .ai-rich-text-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.spacing_between_items }}px;
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} {
+    background-color: transparent;
+    padding: {{ block.settings.text_box_padding }}px;
+    border-radius: {{ block.settings.text_box_border_radius }}px;
+    order: var(--ai-order-{{ ai_gen_id }});
+    text-align: var(--ai-text-align-{{ ai_gen_id }});
+  }
+
+  .ai-rich-text-box-content-{{ ai_gen_id }} {
+    margin-bottom: 15px;
+  }
+
+  .ai-rich-text-box-content-{{ ai_gen_id }}:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} h1,
+  .ai-rich-text-box-{{ ai_gen_id }} h2,
+  .ai-rich-text-box-{{ ai_gen_id }} h3,
+  .ai-rich-text-box-{{ ai_gen_id }} h4,
+  .ai-rich-text-box-{{ ai_gen_id }} h5,
+  .ai-rich-text-box-{{ ai_gen_id }} h6,
+  .ai-rich-text-box-{{ ai_gen_id }} p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} h1 {
+    font-size: var(--ai-font-size-{{ ai_gen_id }});
+    color: var(--ai-text-color-{{ ai_gen_id }});
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} h2 {
+    font-size: var(--ai-font-size-{{ ai_gen_id }});
+    color: var(--ai-text-color-{{ ai_gen_id }});
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} h3 {
+    font-size: var(--ai-font-size-{{ ai_gen_id }});
+    color: var(--ai-text-color-{{ ai_gen_id }});
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} h4 {
+    font-size: var(--ai-font-size-{{ ai_gen_id }});
+    color: var(--ai-text-color-{{ ai_gen_id }});
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} h5 {
+    font-size: var(--ai-font-size-{{ ai_gen_id }});
+    color: var(--ai-text-color-{{ ai_gen_id }});
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} h6 {
+    font-size: var(--ai-font-size-{{ ai_gen_id }});
+    color: var(--ai-text-color-{{ ai_gen_id }});
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} p {
+    font-size: var(--ai-font-size-{{ ai_gen_id }});
+    color: var(--ai-text-color-{{ ai_gen_id }});
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} * {
+    color: var(--ai-text-color-{{ ai_gen_id }});
+  }
+
+  .ai-rich-text-box-image-{{ ai_gen_id }} {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .ai-rich-text-box-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.text_box_image_border_radius }}px;
+  }
+
+  .ai-rich-text-box-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: {{ block.settings.text_box_image_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-rich-text-box-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-rich-text-image-{{ ai_gen_id }} {
+    order: var(--ai-image-order-{{ ai_gen_id }});
+    width: 100%;
+  }
+
+  .ai-rich-text-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-rich-text-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-rich-text-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-rich-text-button-wrapper-{{ ai_gen_id }} {
+    order: 999;
+    display: flex;
+    justify-content: {{ block.settings.button_alignment }};
+  }
+
+  .ai-rich-text-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: {{ block.settings.button_font_weight }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .ai-rich-text-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-rich-text-section-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding | times: 0.6 }}px 15px;
+    }
+  }
+{% endstyle %}
+
+<ai-rich-text-{{ ai_gen_id }} class="ai-rich-text-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-rich-text-container-{{ ai_gen_id }}">
+    {% if block.settings.text_box_1_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-1-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_1_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_1_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_1_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_1_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_1_content != blank %}
+            {{ block.settings.text_box_1_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_1_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_1_image %}
+              <img
+                src="{{ block.settings.text_box_1_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_1_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_1_image.width }}"
+                height="{{ block.settings.text_box_1_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.text_box_2_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-2-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_2_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_2_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_2_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_2_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_2_content != blank %}
+            {{ block.settings.text_box_2_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_2_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_2_image %}
+              <img
+                src="{{ block.settings.text_box_2_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_2_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_2_image.width }}"
+                height="{{ block.settings.text_box_2_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.text_box_3_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-3-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_3_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_3_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_3_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_3_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_3_content != blank %}
+            {{ block.settings.text_box_3_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_3_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_3_image %}
+              <img
+                src="{{ block.settings.text_box_3_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_3_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_3_image.width }}"
+                height="{{ block.settings.text_box_3_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.text_box_4_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-4-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_4_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_4_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_4_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_4_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_4_content != blank %}
+            {{ block.settings.text_box_4_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_4_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_4_image %}
+              <img
+                src="{{ block.settings.text_box_4_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_4_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_4_image.width }}"
+                height="{{ block.settings.text_box_4_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.text_box_5_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-5-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_5_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_5_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_5_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_5_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_5_content != blank %}
+            {{ block.settings.text_box_5_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_5_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_5_image %}
+              <img
+                src="{{ block.settings.text_box_5_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_5_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_5_image.width }}"
+                height="{{ block.settings.text_box_5_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.text_box_6_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-6-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_6_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_6_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_6_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_6_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_6_content != blank %}
+            {{ block.settings.text_box_6_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_6_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_6_image %}
+              <img
+                src="{{ block.settings.text_box_6_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_6_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_6_image.width }}"
+                height="{{ block.settings.text_box_6_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.text_box_7_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-7-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_7_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_7_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_7_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_7_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_7_content != blank %}
+            {{ block.settings.text_box_7_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_7_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_7_image %}
+              <img
+                src="{{ block.settings.text_box_7_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_7_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_7_image.width }}"
+                height="{{ block.settings.text_box_7_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.text_box_8_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-8-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_8_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_8_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_8_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_8_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_8_content != blank %}
+            {{ block.settings.text_box_8_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_8_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_8_image %}
+              <img
+                src="{{ block.settings.text_box_8_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_8_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_8_image.width }}"
+                height="{{ block.settings.text_box_8_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.text_box_9_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-9-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_9_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_9_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_9_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_9_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_9_content != blank %}
+            {{ block.settings.text_box_9_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_9_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_9_image %}
+              <img
+                src="{{ block.settings.text_box_9_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_9_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_9_image.width }}"
+                height="{{ block.settings.text_box_9_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.text_box_10_enabled %}
+      <div 
+        class="ai-rich-text-box-{{ ai_gen_id }} ai-rich-text-box-10-{{ ai_gen_id }}"
+        style="
+          --ai-order-{{ ai_gen_id }}: {{ block.settings.text_box_10_position }};
+          --ai-font-size-{{ ai_gen_id }}: {{ block.settings.text_box_10_font_size }}px;
+          --ai-text-color-{{ ai_gen_id }}: {{ block.settings.text_box_10_color }};
+          --ai-text-align-{{ ai_gen_id }}: {{ block.settings.text_box_10_alignment }};
+        "
+      >
+        <div class="ai-rich-text-box-content-{{ ai_gen_id }}">
+          {% if block.settings.text_box_10_content != blank %}
+            {{ block.settings.text_box_10_content }}
+          {% else %}
+            <p>Add your content here</p>
+          {% endif %}
+        </div>
+        {% if block.settings.text_box_10_show_image %}
+          <div class="ai-rich-text-box-image-{{ ai_gen_id }}">
+            {% if block.settings.text_box_10_image %}
+              <img
+                src="{{ block.settings.text_box_10_image | image_url: width: 2000 }}"
+                alt="{{ block.settings.text_box_10_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.text_box_10_image.width }}"
+                height="{{ block.settings.text_box_10_image.height }}"
+              >
+            {% else %}
+              <div class="ai-rich-text-box-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_image %}
+      <div 
+        class="ai-rich-text-image-{{ ai_gen_id }}"
+        style="--ai-image-order-{{ ai_gen_id }}: {{ block.settings.image_position }};"
+      >
+        {% if block.settings.image %}
+          <img
+            src="{{ block.settings.image | image_url: width: 2000 }}"
+            alt="{{ block.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+          >
+        {% else %}
+          <div class="ai-rich-text-image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_button %}
+      <div class="ai-rich-text-button-wrapper-{{ ai_gen_id }}">
+        {% if block.settings.button_link != blank %}
+          <a href="{{ block.settings.button_link }}" class="ai-rich-text-button-{{ ai_gen_id }}">
+            {{ block.settings.button_text }}
+          </a>
+        {% else %}
+          <span class="ai-rich-text-button-{{ ai_gen_id }}">
+            {{ block.settings.button_text }}
+          </span>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</ai-rich-text-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class AiRichText{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+      }
+    }
+
+    customElements.define('ai-rich-text-{{ ai_gen_id }}', AiRichText{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Rich text gradient",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section settings"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 600,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "spacing_between_items",
+      "label": "Spacing between items",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Text box style"
+    },
+    {
+      "type": "range",
+      "id": "text_box_padding",
+      "label": "Padding",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "text_box_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "text_box_image_border_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Text box 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_1_enabled",
+      "label": "Enable text box 1",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_1_content",
+      "label": "Content",
+      "default": "<h2>Welcome to our store</h2>"
+    },
+    {
+      "type": "range",
+      "id": "text_box_1_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "text_box_1_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_1_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "text_box_1_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_1_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text box 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_2_enabled",
+      "label": "Enable text box 2",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_2_content",
+      "label": "Content",
+      "default": "<p>Discover our amazing products and services.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_box_2_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "text_box_2_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_2_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_2_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_2_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text box 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_3_enabled",
+      "label": "Enable text box 3",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_3_content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "text_box_3_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "text_box_3_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_3_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_3_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_3_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text box 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_4_enabled",
+      "label": "Enable text box 4",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_4_content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "text_box_4_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "text_box_4_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_4_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_4_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_4_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_4_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text box 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_5_enabled",
+      "label": "Enable text box 5",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_5_content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "text_box_5_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "select",
+      "id": "text_box_5_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_5_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_5_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_5_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_5_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text box 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_6_enabled",
+      "label": "Enable text box 6",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_6_content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "text_box_6_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 6
+    },
+    {
+      "type": "select",
+      "id": "text_box_6_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_6_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_6_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_6_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_6_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text box 7"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_7_enabled",
+      "label": "Enable text box 7",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_7_content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "text_box_7_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 7
+    },
+    {
+      "type": "select",
+      "id": "text_box_7_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_7_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_7_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_7_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_7_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text box 8"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_8_enabled",
+      "label": "Enable text box 8",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_8_content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "text_box_8_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "select",
+      "id": "text_box_8_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_8_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_8_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_8_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_8_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text box 9"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_9_enabled",
+      "label": "Enable text box 9",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_9_content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "text_box_9_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 9
+    },
+    {
+      "type": "select",
+      "id": "text_box_9_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_9_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_9_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_9_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_9_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text box 10"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_10_enabled",
+      "label": "Enable text box 10",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_10_content",
+      "label": "Content"
+    },
+    {
+      "type": "range",
+      "id": "text_box_10_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "select",
+      "id": "text_box_10_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "text_box_10_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_10_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_box_10_show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "text_box_10_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "label": "Show image",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_position",
+      "label": "Position",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Vertical padding",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background color",
+      "default": "#c6a228"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Hover background color",
+      "default": "#052b3e"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#c6a228"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Hover border color",
+      "default": "#052b3e"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rich text gradient"
+    }
+  ]
+}
+{% endschema %}

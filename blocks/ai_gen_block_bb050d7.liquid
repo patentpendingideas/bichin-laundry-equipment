@@ -1,0 +1,945 @@
+{% doc %}
+  @prompt
+    Please add a new Rich Text Section with a text box that has a dropdown option to change the headings, colours of the text, size of the text, and all other normal text parameters.
+    
+    The section should have the option to add additional text boxes, all with the options listed above.
+    
+    Add a button at the bottom that is fully customizable.colours of the text, size of the text, and all other normal text parameters.
+    
+    The section should have the option to add additional text boxes, all with the options listed above.
+    
+    Please include an image placeholder in the center under the first text box and make it moveable within the section.
+    
+    Add a button at the bottom that is fully customizable.
+    
+    The background should have this gradient coding:
+    > div {
+      background: linear-gradient(
+        to bottom right,
+        #bb941b 0%,
+        #e0c55a 25%,
+        #be9722 50%,
+        #c6a228 75%,
+        #ebce66 100%
+      );
+    }
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-rich-text-section-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background: linear-gradient(
+      to bottom right,
+      #bb941b 0%,
+      #e0c55a 25%,
+      #be9722 50%,
+      #c6a228 75%,
+      #ebce66 100%
+    );
+    padding: {{ block.settings.section_padding_top }}px {{ block.settings.section_padding_horizontal }}px {{ block.settings.section_padding_bottom }}px;
+  }
+
+  .ai-rich-text-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.content_spacing }}px;
+    align-items: {{ block.settings.content_alignment }};
+  }
+
+  .ai-rich-text-box-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-rich-text-heading-{{ ai_gen_id }} {
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    color: {{ block.settings.text_box_1_color }};
+    font-size: {{ block.settings.text_box_1_size }}px;
+    text-align: {{ block.settings.text_box_1_alignment }};
+    line-height: 1.2;
+  }
+
+  .ai-rich-text-heading-{{ ai_gen_id }}.h1 {
+    font-size: calc({{ block.settings.text_box_1_size }}px * 1.5);
+  }
+
+  .ai-rich-text-heading-{{ ai_gen_id }}.h2 {
+    font-size: calc({{ block.settings.text_box_1_size }}px * 1.3);
+  }
+
+  .ai-rich-text-heading-{{ ai_gen_id }}.h3 {
+    font-size: calc({{ block.settings.text_box_1_size }}px * 1.1);
+  }
+
+  .ai-rich-text-heading-{{ ai_gen_id }}.h4 {
+    font-size: {{ block.settings.text_box_1_size }}px;
+  }
+
+  .ai-rich-text-heading-{{ ai_gen_id }}.h5 {
+    font-size: calc({{ block.settings.text_box_1_size }}px * 0.9);
+  }
+
+  .ai-rich-text-heading-{{ ai_gen_id }}.h6 {
+    font-size: calc({{ block.settings.text_box_1_size }}px * 0.8);
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} {
+    color: {{ block.settings.text_box_1_color }};
+    font-size: {{ block.settings.text_box_1_size }}px;
+    text-align: {{ block.settings.text_box_1_alignment }};
+    line-height: 1.6;
+  }
+
+  .ai-rich-text-box-2-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-rich-text-heading-2-{{ ai_gen_id }} {
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    color: {{ block.settings.text_box_2_color }};
+    font-size: {{ block.settings.text_box_2_size }}px;
+    text-align: {{ block.settings.text_box_2_alignment }};
+    line-height: 1.2;
+  }
+
+  .ai-rich-text-heading-2-{{ ai_gen_id }}.h1 {
+    font-size: calc({{ block.settings.text_box_2_size }}px * 1.5);
+  }
+
+  .ai-rich-text-heading-2-{{ ai_gen_id }}.h2 {
+    font-size: calc({{ block.settings.text_box_2_size }}px * 1.3);
+  }
+
+  .ai-rich-text-heading-2-{{ ai_gen_id }}.h3 {
+    font-size: calc({{ block.settings.text_box_2_size }}px * 1.1);
+  }
+
+  .ai-rich-text-heading-2-{{ ai_gen_id }}.h4 {
+    font-size: {{ block.settings.text_box_2_size }}px;
+  }
+
+  .ai-rich-text-heading-2-{{ ai_gen_id }}.h5 {
+    font-size: calc({{ block.settings.text_box_2_size }}px * 0.9);
+  }
+
+  .ai-rich-text-heading-2-{{ ai_gen_id }}.h6 {
+    font-size: calc({{ block.settings.text_box_2_size }}px * 0.8);
+  }
+
+  .ai-rich-text-content-2-{{ ai_gen_id }} {
+    color: {{ block.settings.text_box_2_color }};
+    font-size: {{ block.settings.text_box_2_size }}px;
+    text-align: {{ block.settings.text_box_2_alignment }};
+    line-height: 1.6;
+  }
+
+  .ai-rich-text-box-3-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-rich-text-heading-3-{{ ai_gen_id }} {
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    color: {{ block.settings.text_box_3_color }};
+    font-size: {{ block.settings.text_box_3_size }}px;
+    text-align: {{ block.settings.text_box_3_alignment }};
+    line-height: 1.2;
+  }
+
+  .ai-rich-text-heading-3-{{ ai_gen_id }}.h1 {
+    font-size: calc({{ block.settings.text_box_3_size }}px * 1.5);
+  }
+
+  .ai-rich-text-heading-3-{{ ai_gen_id }}.h2 {
+    font-size: calc({{ block.settings.text_box_3_size }}px * 1.3);
+  }
+
+  .ai-rich-text-heading-3-{{ ai_gen_id }}.h3 {
+    font-size: calc({{ block.settings.text_box_3_size }}px * 1.1);
+  }
+
+  .ai-rich-text-heading-3-{{ ai_gen_id }}.h4 {
+    font-size: {{ block.settings.text_box_3_size }}px;
+  }
+
+  .ai-rich-text-heading-3-{{ ai_gen_id }}.h5 {
+    font-size: calc({{ block.settings.text_box_3_size }}px * 0.9);
+  }
+
+  .ai-rich-text-heading-3-{{ ai_gen_id }}.h6 {
+    font-size: calc({{ block.settings.text_box_3_size }}px * 0.8);
+  }
+
+  .ai-rich-text-content-3-{{ ai_gen_id }} {
+    color: {{ block.settings.text_box_3_color }};
+    font-size: {{ block.settings.text_box_3_size }}px;
+    text-align: {{ block.settings.text_box_3_alignment }};
+    line-height: 1.6;
+  }
+
+  .ai-rich-text-image-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+    max-width: {{ block.settings.image_max_width }}px;
+    margin: {{ block.settings.image_margin_top }}px auto {{ block.settings.image_margin_bottom }}px;
+    order: {{ block.settings.image_position }};
+  }
+
+  .ai-rich-text-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-rich-text-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    position: relative;
+  }
+
+  .ai-rich-text-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    opacity: 0.3;
+  }
+
+  .ai-rich-text-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-rich-text-button-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+    display: flex;
+    justify-content: {{ block.settings.button_alignment }};
+    margin-top: {{ block.settings.button_margin_top }}px;
+  }
+
+  .ai-rich-text-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: {{ block.settings.button_font_weight }};
+    text-decoration: none;
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    border-radius: {{ block.settings.button_border_radius }}px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .ai-rich-text-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-rich-text-section-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding_top | times: 0.7 }}px {{ block.settings.section_padding_horizontal | times: 0.7 }}px {{ block.settings.section_padding_bottom | times: 0.7 }}px;
+    }
+
+    .ai-rich-text-box-{{ ai_gen_id }},
+    .ai-rich-text-box-2-{{ ai_gen_id }},
+    .ai-rich-text-box-3-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-rich-text-heading-{{ ai_gen_id }},
+    .ai-rich-text-heading-2-{{ ai_gen_id }},
+    .ai-rich-text-heading-3-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.text_box_1_size }}px * 0.9);
+    }
+
+    .ai-rich-text-content-{{ ai_gen_id }},
+    .ai-rich-text-content-2-{{ ai_gen_id }},
+    .ai-rich-text-content-3-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.text_box_1_size }}px * 0.9);
+    }
+  }
+{% endstyle %}
+
+<div class="ai-rich-text-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-rich-text-container-{{ ai_gen_id }}">
+    {% if block.settings.show_text_box_1 %}
+      <div class="ai-rich-text-box-{{ ai_gen_id }}">
+        {% if block.settings.text_box_1_heading != blank %}
+          <{{ block.settings.text_box_1_heading_tag }} class="ai-rich-text-heading-{{ ai_gen_id }} {{ block.settings.text_box_1_heading_tag }}">
+            {{ block.settings.text_box_1_heading }}
+          </{{ block.settings.text_box_1_heading_tag }}>
+        {% endif %}
+        {% if block.settings.text_box_1_content != blank %}
+          <div class="ai-rich-text-content-{{ ai_gen_id }}">
+            {{ block.settings.text_box_1_content }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-rich-text-image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img
+          src="{{ block.settings.image | image_url: width: 2000 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+          class="ai-rich-text-image-{{ ai_gen_id }}"
+        >
+      {% else %}
+        <div class="ai-rich-text-image-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+          <div class="ai-rich-text-empty-state-{{ ai_gen_id }}">
+            Add an image to enhance your content
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if block.settings.show_text_box_2 %}
+      <div class="ai-rich-text-box-2-{{ ai_gen_id }}">
+        {% if block.settings.text_box_2_heading != blank %}
+          <{{ block.settings.text_box_2_heading_tag }} class="ai-rich-text-heading-2-{{ ai_gen_id }} {{ block.settings.text_box_2_heading_tag }}">
+            {{ block.settings.text_box_2_heading }}
+          </{{ block.settings.text_box_2_heading_tag }}>
+        {% endif %}
+        {% if block.settings.text_box_2_content != blank %}
+          <div class="ai-rich-text-content-2-{{ ai_gen_id }}">
+            {{ block.settings.text_box_2_content }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_text_box_3 %}
+      <div class="ai-rich-text-box-3-{{ ai_gen_id }}">
+        {% if block.settings.text_box_3_heading != blank %}
+          <{{ block.settings.text_box_3_heading_tag }} class="ai-rich-text-heading-3-{{ ai_gen_id }} {{ block.settings.text_box_3_heading_tag }}">
+            {{ block.settings.text_box_3_heading }}
+          </{{ block.settings.text_box_3_heading_tag }}>
+        {% endif %}
+        {% if block.settings.text_box_3_content != blank %}
+          <div class="ai-rich-text-content-3-{{ ai_gen_id }}">
+            {{ block.settings.text_box_3_content }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if block.settings.show_button %}
+      <div class="ai-rich-text-button-wrapper-{{ ai_gen_id }}">
+        <a
+          href="{{ block.settings.button_link }}"
+          class="ai-rich-text-button-{{ ai_gen_id }}"
+        >
+          {{ block.settings.button_text }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Rich text section",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container width",
+      "min": 600,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_spacing",
+      "label": "Content spacing",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Heading bottom spacing",
+      "min": 5,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal",
+      "label": "Padding horizontal",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Text box 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_box_1",
+      "label": "Show text box 1",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text_box_1_heading",
+      "label": "Heading",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "select",
+      "id": "text_box_1_heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_1_content",
+      "label": "Content",
+      "default": "<p>Discover our premium collection of products designed to enhance your lifestyle.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_box_1_size",
+      "label": "Text size",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_1_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "text_box_1_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_max_width",
+      "label": "Image max width",
+      "min": 200,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_position",
+      "label": "Image position",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 2,
+      "info": "0 = top, higher numbers = lower position"
+    },
+    {
+      "type": "range",
+      "id": "image_margin_top",
+      "label": "Image margin top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_margin_bottom",
+      "label": "Image margin bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Text box 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_box_2",
+      "label": "Show text box 2",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text_box_2_heading",
+      "label": "Heading",
+      "default": "Additional heading"
+    },
+    {
+      "type": "select",
+      "id": "text_box_2_heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_2_content",
+      "label": "Content",
+      "default": "<p>Add more details about your products or services here.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_box_2_size",
+      "label": "Text size",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_2_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "text_box_2_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Text box 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_box_3",
+      "label": "Show text box 3",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text_box_3_heading",
+      "label": "Heading",
+      "default": "More information"
+    },
+    {
+      "type": "select",
+      "id": "text_box_3_heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "richtext",
+      "id": "text_box_3_content",
+      "label": "Content",
+      "default": "<p>Share additional information or call-to-action text.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_box_3_size",
+      "label": "Text size",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_box_3_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "text_box_3_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_alignment",
+      "label": "Button alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "button_margin_top",
+      "label": "Button margin top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_font_weight",
+      "label": "Font weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Padding vertical",
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Padding horizontal",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background color",
+      "default": "#c6a228"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#c6a228"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Hover background color",
+      "default": "#052b3e"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Hover border color",
+      "default": "#052b3e"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rich text section"
+    }
+  ]
+}
+{% endschema %}

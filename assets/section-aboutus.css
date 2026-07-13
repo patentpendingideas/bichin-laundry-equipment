@@ -1,0 +1,164 @@
+.main-aboutus-section{
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-aboutus-section .full_width .abut-main-row{
+   margin: 0; 
+}
+.main-aboutus-section .abut-main-row {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-aboutus-section .about-first-part{
+  max-width: 56.79%;
+  width: 100%;
+  padding: 0px 15px;
+}
+.main-aboutus-section .about-second-part{
+  max-width: 43.21%;
+  width: 100%;
+  padding: 0 15px 0 65px;
+}
+.main-aboutus-section .first-part-img{
+  padding-top: 20px;
+}
+.main-aboutus-section .first-about-hover-img {
+  padding-right: 190px;
+  display: block;
+}
+.main-aboutus-section .about-rounded-img {
+  padding-left: 270px;
+  padding-top: 75px;
+}
+.main-aboutus-section svg,
+.main-aboutus-section img{
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.main-aboutus-section .about-hover-img:hover img{
+  scale: 1.1;
+}
+.main-aboutus-section .image-bottom-content,
+.main-aboutus-section .theme_buttons{
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+.main-aboutus-section .media{
+  cursor: pointer;
+  border-radius: var(--media-radius); 
+}
+.main-aboutus-section .media img{
+  transition: all .5s ease;
+}
+.main-aboutus-section .media img:hover{
+  scale: 1.1;
+}
+@media screen and (max-width: 1429px) {
+  .main-aboutus-section .image-bottom-content,
+  .main-aboutus-section .theme_buttons{
+    margin-top: 35px;
+  }
+  .main-aboutus-section .first-about-hover-img {
+    padding-right: 150px;
+  }
+  .main-aboutus-section .about-rounded-img {
+    padding-left: 230px;
+    padding-top: 45px;
+  }
+  .main-aboutus-section .about-second-part {
+    padding: 0 15px 0 35px;
+  }
+  .main-aboutus-section .first-part-img {
+    padding-top: 15px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .main-aboutus-section .image-bottom-content,
+  .main-aboutus-section .theme_buttons{
+    margin-top: 30px;
+  }
+  .main-aboutus-section .first-about-hover-img {
+    padding-right: 100px;
+  }
+  .main-aboutus-section .about-rounded-img {
+    padding-left: 175px;
+    padding-top: 25px;
+  }
+  .main-aboutus-section .about-second-part {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .main-aboutus-section .image-bottom-content,
+  .main-aboutus-section .theme_buttons{
+    margin-top: 25px;
+  }
+  .main-aboutus-section .about-first-part {
+    max-width: 55%;
+    width: 100%;
+    padding: 0 15px;
+  }
+  .main-aboutus-section .about-second-part {
+    max-width: 45%;
+    width: 100%;
+  }
+  .main-aboutus-section .first-about-hover-img {
+    padding-right: 50px;
+  }
+  .main-aboutus-section .about-rounded-img {
+    padding-left: 125px;
+    padding-top: 15px;
+  }
+  .main-aboutus-section .first-part-img {
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 767px){
+  .main-aboutus-section .image-bottom-content,
+  .main-aboutus-section .theme_buttons{
+    margin-top: 20px;
+  }
+  .main-aboutus-section .abut-main-row {
+    row-gap: 15px;
+  }
+  .main-aboutus-section .about-first-part {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  .main-aboutus-section .about-second-part {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  .main-aboutus-section .first-part-img {
+    padding-top: 5px;
+  }
+  .main-aboutus-section .about-rounded-img {
+    padding-left: 75px;
+  }
+  .main-aboutus-section .first-about-hover-img {
+    padding-right: 25px;
+  }
+}
+@media screen and (max-width: 575px){
+  .main-aboutus-section .image-bottom-content,
+  .main-aboutus-section .theme_buttons{
+    margin-top: 15px;
+  }
+  .main-aboutus-section .about-first-part {
+    max-width: 100%;
+  }
+  .main-aboutus-section .about-second-part {
+    max-width: 100%;
+  }
+  .main-aboutus-section .first-about-hover-img {
+    padding-right: 0px;
+  }
+  .main-aboutus-section .about-rounded-img {
+    padding-left: 0px;
+  }
+  .main-aboutus-section .first-part-img {
+    padding-top: 0px;
+  }
+}
