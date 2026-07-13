@@ -111,7 +111,7 @@
         "collapsible_row_V4DUcQ": {
           "type": "collapsible_row",
           "settings": {
-            "content_number": "01",
+            "content_number": "02",
             "heading": "Do you sell equipment for laundromats?",
             "row_content": "Yes. We work with laundromat owners on new laundromat projects, laundromat upgrades, retools, and equipment replacements. We can help with the planning process, equipment selection, layout support, installation coordination, and long-term support after the machines are in place."
           }
@@ -119,17 +119,17 @@
         "collapsible_row_9BxBG3": {
           "type": "collapsible_row",
           "settings": {
-            "content_number": "02",
-            "heading": "Frequently ask question",
-            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business. Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops."
+            "content_number": "03",
+            "heading": "Do you only sell to laundromats?",
+            "row_content": "No. While laundromats are a major focus, we also supply commercial laundry equipment for hospitality businesses, hotels, care homes, healthcare operations, multi-housing properties, lodges, and other organizations that need dependable, high-volume laundry equipment."
           }
         },
         "collapsible_row_4gyRrP": {
           "type": "collapsible_row",
           "settings": {
-            "content_number": "03",
-            "heading": "Do you only sell to laundromats?",
-            "row_content": "No. While laundromats are a major focus, we also supply commercial laundry equipment for hospitality businesses, hotels, care homes, healthcare operations, multi-housing properties, lodges, and other organizations that need dependable, high-volume laundry equipment."
+            "content_number": "04",
+            "heading": "Do you offer on-premise laundry equipment?",
+            "row_content": "Yes. We offer on-premise laundry machines for businesses that want to process laundry in-house. On-premise equipment can give businesses greater control over quality, turnaround time, and long-term laundry costs."
           }
         },
         "collapsible_row_aHVPBW": {
