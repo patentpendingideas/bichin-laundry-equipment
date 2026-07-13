@@ -236,12 +236,38 @@
         "margin-top-575": 0,
         "margin-bottom-575": 0
       }
+    },
+    "blocks_Fb9rtY": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5bd6822_Rb7Gxc": {
+          "type": "ai_gen_block_5bd6822",
+          "settings": {
+            "heading": "Repairs, Service, Parts & Maintenance FAQs",
+            "heading_size": 24,
+            "font_weight": "500",
+            "text_transform": "uppercase",
+            "text_alignment": "center",
+            "text_color": "#ffffff",
+            "desktop_width_percent": 100,
+            "padding_top": 40,
+            "padding_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5bd6822_Rb7Gxc"
+      ],
+      "name": "Page title",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "rich_text_HjhMXd",
     "blocks_6mWgqY",
-    "collapsible-content"
+    "collapsible-content",
+    "blocks_Fb9rtY"
   ]
 }
