@@ -31,7 +31,7 @@
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "section_width": "full__width",
-        "caption": "Add a tagline",
+        "caption": "Answers about commercial laundry equipment.",
         "heading": "Bichin Laundry Equipment FAQ",
         "text": "Have questions about commercial laundry equipment, service, laundry chemicals, or starting a laundromat? This FAQ page brings together answers to the most common questions customers ask Bichin Laundry Equipment about equipment selection, repairs, preventative maintenance, chemical programs, laundromat planning, financing, and ongoing support. Whether you run a laundromat, hotel, care facility, healthcare operation, multi-housing laundry room, or another high-volume laundry business, we are here to help you find the right solutions for your operation.",
         "button_label": "Contact Us",
@@ -72,15 +72,48 @@
         "margin-bottom-575": 0
       }
     },
+    "blocks_6mWgqY": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5bd6822_qnVfcL": {
+          "type": "ai_gen_block_5bd6822",
+          "settings": {
+            "heading": "Commercial Laundry Equipment FAQs",
+            "heading_size": 24,
+            "font_weight": "500",
+            "text_transform": "uppercase",
+            "text_alignment": "center",
+            "text_color": "#ffffff",
+            "desktop_width_percent": 100,
+            "padding_top": 20,
+            "padding_bottom": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5bd6822_qnVfcL"
+      ],
+      "name": "Page title",
+      "settings": {}
+    },
     "collapsible-content": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_Bti8im": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "01",
+            "heading": "What kind of commercial laundry equipment do you offer?",
+            "row_content": "We offer a wide range of commercial and industrial laundry equipment, including on-premise washers and dryers, coin and card-vended machines, tumble dryers, cabinet dryers, flatwork ironers, light commercial equipment, laundry carts, and other commercial laundry solutions designed for demanding business use."
+          }
+        },
         "collapsible_row_V4DUcQ": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "01",
-            "heading": "Frequently ask question",
-            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business. Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops."
+            "heading": "Do you sell equipment for laundromats?",
+            "row_content": "Yes. We work with laundromat owners on new laundromat projects, laundromat upgrades, retools, and equipment replacements. We can help with the planning process, equipment selection, layout support, installation coordination, and long-term support after the machines are in place."
           }
         },
         "collapsible_row_9BxBG3": {
@@ -101,12 +134,13 @@
         }
       },
       "block_order": [
+        "collapsible_row_Bti8im",
         "collapsible_row_V4DUcQ",
         "collapsible_row_9BxBG3",
         "collapsible_row_aHVPBW"
       ],
       "settings": {
-        "show_topimg": true,
+        "show_topimg": false,
         "open_first_collapsible_row": true,
         "full_width": false,
         "image_ratio": "adapt",
@@ -148,37 +182,12 @@
         "margin-top-575": 0,
         "margin-bottom-575": 0
       }
-    },
-    "blocks_6mWgqY": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5bd6822_qnVfcL": {
-          "type": "ai_gen_block_5bd6822",
-          "settings": {
-            "heading": "Commercial Laundry Equipment FAQs",
-            "heading_size": 24,
-            "font_weight": "500",
-            "text_transform": "uppercase",
-            "text_alignment": "center",
-            "text_color": "#ffffff",
-            "desktop_width_percent": 100,
-            "padding_top": 20,
-            "padding_bottom": 20
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5bd6822_qnVfcL"
-      ],
-      "name": "Page title",
-      "settings": {}
     }
   },
   "order": [
     "main",
     "rich_text_HjhMXd",
-    "collapsible-content",
-    "blocks_6mWgqY"
+    "blocks_6mWgqY",
+    "collapsible-content"
   ]
 }
