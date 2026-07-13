@@ -124,6 +124,14 @@
             "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business. Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops."
           }
         },
+        "collapsible_row_4gyRrP": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "03",
+            "heading": "Do you only sell to laundromats?",
+            "row_content": "No. While laundromats are a major focus, we also supply commercial laundry equipment for hospitality businesses, hotels, care homes, healthcare operations, multi-housing properties, lodges, and other organizations that need dependable, high-volume laundry equipment."
+          }
+        },
         "collapsible_row_aHVPBW": {
           "type": "collapsible_row",
           "settings": {
@@ -137,6 +145,7 @@
         "collapsible_row_Bti8im",
         "collapsible_row_V4DUcQ",
         "collapsible_row_9BxBG3",
+        "collapsible_row_4gyRrP",
         "collapsible_row_aHVPBW"
       ],
       "settings": {
