@@ -43,7 +43,7 @@
         "richtext_heading": "#333333",
         "richtext_description": "#666666",
         "button_bg": "#333333",
-        "button_text": "#FFFFFF",
+        "button_text": "#ffffff",
         "button_hr_bg": "#333333",
         "button_hr_text": "#ffffff",
         "padding-top": 120,
@@ -85,8 +85,8 @@
             "text_alignment": "center",
             "text_color": "#ffffff",
             "desktop_width_percent": 100,
-            "padding_top": 20,
-            "padding_bottom": 20
+            "padding_top": 40,
+            "padding_bottom": 40
           },
           "blocks": {}
         }
