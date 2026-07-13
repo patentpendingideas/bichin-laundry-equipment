@@ -147,6 +147,38 @@
             "heading": "Do you offer coin and card-vended laundry equipment?",
             "row_content": "Yes. We offer coin and card-vended commercial laundry machines by Dexter and Wascomat for laundromats and shared laundry rooms. These machines are a strong fit for self-serve laundry environments that need payment flexibility, durable performance, and easy day-to-day operation."
           }
+        },
+        "collapsible_row_c4azVF": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "07",
+            "heading": "Can you help me choose the right commercial laundry equipment?",
+            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business.Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops."
+          }
+        },
+        "collapsible_row_qkHTWp": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "08",
+            "heading": "Do you offer specialty commercial laundry equipment besides washers and dryers?",
+            "row_content": "Yes. In addition to washers and dryers, we also offer equipment such as flatwork ironers, cabinet dryers, light commercial products, industrial equipment, and laundry carts to support a more complete laundry setup."
+          }
+        },
+        "collapsible_row_CcCrwN": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "09",
+            "heading": "Do you offer compact commercial laundry solutions for smaller laundry rooms?",
+            "row_content": "Yes. We can help customers choose compact and space-efficient Huebsch laundry equipment for smaller commercial laundry rooms, shared laundry areas, and properties where layout efficiency matters."
+          }
+        },
+        "collapsible_row_wmHBWx": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "10",
+            "heading": "Do you offer financing for commercial laundry equipment?",
+            "row_content": "Yes. We can help customers explore third-party financing options for qualifying commercial laundry equipment projects, especially when planning a new laundromat or a major upgrade."
+          }
         }
       },
       "block_order": [
@@ -155,7 +187,11 @@
         "collapsible_row_9BxBG3",
         "collapsible_row_4gyRrP",
         "collapsible_row_aHVPBW",
-        "collapsible_row_Ubek6U"
+        "collapsible_row_Ubek6U",
+        "collapsible_row_c4azVF",
+        "collapsible_row_qkHTWp",
+        "collapsible_row_CcCrwN",
+        "collapsible_row_wmHBWx"
       ],
       "settings": {
         "show_topimg": false,
