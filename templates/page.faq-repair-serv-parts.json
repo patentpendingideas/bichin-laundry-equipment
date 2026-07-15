@@ -189,15 +189,6 @@
             "row_content": "Yes. We continue supporting customers after installation with service, parts, warranty help, maintenance support, and ongoing guidance when needed.",
             "richtext": ""
           }
-        },
-        "collapsible_row_kqhEEK": {
-          "type": "collapsible_row",
-          "settings": {
-            "content_number": "01",
-            "heading": "Frequently ask question",
-            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business.Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops.",
-            "richtext": ""
-          }
         }
       },
       "block_order": [
@@ -210,8 +201,7 @@
         "collapsible_row_YMEhyw",
         "collapsible_row_XpJdVe",
         "collapsible_row_nabQkz",
-        "collapsible_row_CB6Crq",
-        "collapsible_row_kqhEEK"
+        "collapsible_row_CB6Crq"
       ],
       "settings": {
         "show_topimg": false,
