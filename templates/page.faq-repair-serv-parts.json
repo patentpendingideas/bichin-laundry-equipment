@@ -95,8 +95,8 @@
           "name": "Row1",
           "settings": {
             "content_number": "01",
-            "heading": "Do you service the commercial laundry equipment you sell?",
-            "row_content": "Yes. We support the equipment we sell with service, parts, maintenance support, warranty-related help, and ongoing customer care."
+            "heading": "Do you offer commercial laundry chemicals?",
+            "row_content": "Yes. We offer commercial laundry detergents and cleaning supplies for BC, Yukon, and Alberta businesses that need dependable cleaning performance and support for day-to-day laundry operations"
           }
         },
         "collapsible_row_V4DUcQ": {
@@ -104,8 +104,8 @@
           "name": "Row2",
           "settings": {
             "content_number": "02",
-            "heading": "Can I book a service call with you?",
-            "row_content": "Yes. Customers can contact us to book a service call for commercial laundry equipment that needs attention, troubleshooting, or repair."
+            "heading": "What kinds of businesses can buy your laundry chemicals?",
+            "row_content": "We supply laundry chemical solutions for laundromats, hotels, care homes, hospitals, correctional facilities, lodges, commercial laundry providers, industrial laundry providers, and other businesses with ongoing laundry needs."
           }
         },
         "collapsible_row_9BxBG3": {
@@ -113,8 +113,8 @@
           "name": "Row3",
           "settings": {
             "content_number": "03",
-            "heading": "What types of machines do you service?",
-            "row_content": "We support service requests for commercial washers, dryers, ironers, and other related commercial laundry equipment depending on the machine and application."
+            "heading": "Do you only sell chemicals for large laundry operations?",
+            "row_content": "No. We work with businesses both big and small, and we can help recommend solutions based on the size and needs of the operation."
           }
         },
         "collapsible_row_4gyRrP": {
@@ -122,8 +122,8 @@
           "name": "Row4",
           "settings": {
             "content_number": "04",
-            "heading": "Do you offer commercial laundry equipment repairs?",
-            "row_content": "Yes. We provide repair support for commercial laundry equipment when machines are down, underperforming, or showing signs of wear or failure."
+            "heading": "Can you help me choose the right commercial laundry chemicals?",
+            "row_content": "Yes. We offer customized plans to help customers determine the best cleaning brands and chemical solutions for their business, laundry volume, and operating needs."
           }
         },
         "collapsible_row_aHVPBW": {
@@ -131,8 +131,8 @@
           "name": "Row5",
           "settings": {
             "content_number": "05",
-            "heading": "Do you offer preventative maintenance for laundry equipment?",
-            "row_content": "Yes. We offer preventative maintenance support to help customers reduce unexpected breakdowns, improve machine reliability, and protect their equipment investment over time."
+            "heading": "Do you offer chemical delivery?",
+            "row_content": "Yes. We offer delivery of detergents and cleaning solutions directly to your business so your operation stays stocked and organized."
           }
         },
         "collapsible_row_Ubek6U": {
@@ -140,44 +140,8 @@
           "name": "Row6",
           "settings": {
             "content_number": "06",
-            "heading": "Do you offer extended warranty options?",
-            "row_content": "Yes. We offer extended warranty support as part of our broader service model for commercial laundry equipment."
-          }
-        },
-        "collapsible_row_c4azVF": {
-          "type": "collapsible_row",
-          "name": "Row7",
-          "settings": {
-            "content_number": "07",
-            "heading": "Do you provide parts for commercial laundry equipment?",
-            "row_content": "Yes. We provide parts support for commercial laundry equipment and can help customers identify the right part for their machine when repairs or maintenance are needed."
-          }
-        },
-        "collapsible_row_qkHTWp": {
-          "type": "collapsible_row",
-          "name": "Row8",
-          "settings": {
-            "content_number": "08",
-            "heading": "What information should I send when I need a part or service?",
-            "row_content": "To help us identify the right part or service need, it is best to send the machine model number, serial number, machine type, and a description of the issue. Photos and videos can also be very helpful."
-          }
-        },
-        "collapsible_row_CcCrwN": {
-          "type": "collapsible_row",
-          "name": "Row9",
-          "settings": {
-            "content_number": "09",
-            "heading": "Do you offer service memberships or maintenance programs?",
-            "row_content": "Yes. We offer additional service support options, including a full-service membership program with labour coverage and preferred pricing on parts, chemicals, and laundry carts."
-          }
-        },
-        "collapsible_row_wmHBWx": {
-          "type": "collapsible_row",
-          "name": "Row10",
-          "settings": {
-            "content_number": "10",
-            "heading": "Do you support customers after the equipment is installed?",
-            "row_content": "Yes. We continue supporting customers after installation with service, parts, warranty help, maintenance support, and ongoing guidance when needed."
+            "heading": "Can your chemicals help support machine cleanliness too?",
+            "row_content": "Yes. Our chemical offering includes products designed not only for clean laundry, but also for supporting clean, well-functioning laundry equipment."
           }
         }
       },
@@ -187,11 +151,7 @@
         "collapsible_row_9BxBG3",
         "collapsible_row_4gyRrP",
         "collapsible_row_aHVPBW",
-        "collapsible_row_Ubek6U",
-        "collapsible_row_c4azVF",
-        "collapsible_row_qkHTWp",
-        "collapsible_row_CcCrwN",
-        "collapsible_row_wmHBWx"
+        "collapsible_row_Ubek6U"
       ],
       "settings": {
         "show_topimg": false,
