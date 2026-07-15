@@ -95,8 +95,9 @@
           "name": "Row1",
           "settings": {
             "content_number": "01",
-            "heading": "Do you offer commercial laundry chemicals?",
-            "row_content": "Yes. We offer commercial laundry detergents and cleaning supplies for BC, Yukon, and Alberta businesses that need dependable cleaning performance and support for day-to-day laundry operations"
+            "heading": "Do you service the commercial laundry equipment you sell?",
+            "row_content": "Yes. We support the equipment we sell with service, parts, maintenance support, warranty-related help, and ongoing customer care.",
+            "richtext": ""
           }
         },
         "collapsible_row_V4DUcQ": {
@@ -104,8 +105,9 @@
           "name": "Row2",
           "settings": {
             "content_number": "02",
-            "heading": "What kinds of businesses can buy your laundry chemicals?",
-            "row_content": "We supply laundry chemical solutions for laundromats, hotels, care homes, hospitals, correctional facilities, lodges, commercial laundry providers, industrial laundry providers, and other businesses with ongoing laundry needs."
+            "heading": "Can I book a service call with you?",
+            "row_content": "Yes. Customers can contact us to book a service call for commercial laundry equipment that needs attention, troubleshooting, or repair.",
+            "richtext": ""
           }
         },
         "collapsible_row_9BxBG3": {
@@ -113,8 +115,9 @@
           "name": "Row3",
           "settings": {
             "content_number": "03",
-            "heading": "Do you only sell chemicals for large laundry operations?",
-            "row_content": "No. We work with businesses both big and small, and we can help recommend solutions based on the size and needs of the operation."
+            "heading": "What types of machines do you service?",
+            "row_content": "We support service requests for commercial washers, dryers, ironers, and other related commercial laundry equipment depending on the machine and application.",
+            "richtext": ""
           }
         },
         "collapsible_row_4gyRrP": {
@@ -122,8 +125,9 @@
           "name": "Row4",
           "settings": {
             "content_number": "04",
-            "heading": "Can you help me choose the right commercial laundry chemicals?",
-            "row_content": "Yes. We offer customized plans to help customers determine the best cleaning brands and chemical solutions for their business, laundry volume, and operating needs."
+            "heading": "Do you offer commercial laundry equipment repairs?",
+            "row_content": "Yes. We provide repair support for commercial laundry equipment when machines are down, underperforming, or showing signs of wear or failure.",
+            "richtext": ""
           }
         },
         "collapsible_row_aHVPBW": {
@@ -131,8 +135,9 @@
           "name": "Row5",
           "settings": {
             "content_number": "05",
-            "heading": "Do you offer chemical delivery?",
-            "row_content": "Yes. We offer delivery of detergents and cleaning solutions directly to your business so your operation stays stocked and organized."
+            "heading": "Do you offer preventative maintenance for laundry equipment?",
+            "row_content": "Yes. We offer preventative maintenance support to help customers reduce unexpected breakdowns, improve machine reliability, and protect their equipment investment over time.",
+            "richtext": ""
           }
         },
         "collapsible_row_Ubek6U": {
@@ -140,8 +145,55 @@
           "name": "Row6",
           "settings": {
             "content_number": "06",
-            "heading": "Can your chemicals help support machine cleanliness too?",
-            "row_content": "Yes. Our chemical offering includes products designed not only for clean laundry, but also for supporting clean, well-functioning laundry equipment."
+            "heading": "Do you offer extended warranty options?",
+            "row_content": "Yes. We offer extended warranty support as part of our broader service model for commercial laundry equipment.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_YMEhyw": {
+          "type": "collapsible_row",
+          "name": "Row7",
+          "settings": {
+            "content_number": "01",
+            "heading": "Do you provide parts for commercial laundry equipment?",
+            "row_content": "Yes. We provide parts support for commercial laundry equipment and can help customers identify the right part for their machine when repairs or maintenance are needed.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_XpJdVe": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "01",
+            "heading": "Frequently ask question",
+            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business.Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_nabQkz": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "01",
+            "heading": "Frequently ask question",
+            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business.Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_CB6Crq": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "01",
+            "heading": "Frequently ask question",
+            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business.Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_kqhEEK": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "01",
+            "heading": "Frequently ask question",
+            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business.Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops.",
+            "richtext": ""
           }
         }
       },
@@ -151,7 +203,12 @@
         "collapsible_row_9BxBG3",
         "collapsible_row_4gyRrP",
         "collapsible_row_aHVPBW",
-        "collapsible_row_Ubek6U"
+        "collapsible_row_Ubek6U",
+        "collapsible_row_YMEhyw",
+        "collapsible_row_XpJdVe",
+        "collapsible_row_nabQkz",
+        "collapsible_row_CB6Crq",
+        "collapsible_row_kqhEEK"
       ],
       "settings": {
         "show_topimg": false,
