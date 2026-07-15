@@ -9,44 +9,41 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding-top": 60,
-        "padding-bottom": 60,
-        "padding-top-1429": 50,
-        "padding-bottom-1429": 50,
-        "padding-top-1199": 45,
-        "padding-bottom-1199": 45,
-        "padding-top-991": 40,
-        "padding-bottom-991": 40,
-        "padding-top-767": 35,
-        "padding-bottom-767": 35,
-        "padding-top-575": 30,
-        "padding-bottom-575": 30
-      }
-    },
-    "rich_text_HjhMXd": {
-      "type": "rich-text",
+    "image_banner_hinqg4": {
+      "type": "image-banner",
       "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "section_width": "full__width",
-        "caption": "What do you want to know?",
-        "heading": "Bichin Laundry Equipment FAQ",
-        "text": "Have questions about commercial laundry equipment, service, laundry chemicals, or starting a laundromat? This FAQ page brings together answers to the most common questions customers ask Bichin Laundry Equipment about equipment selection, repairs, preventative maintenance, chemical programs, laundromat planning, financing, and ongoing support. Whether you run a laundromat, hotel, care facility, healthcare operation, multi-housing laundry room, or another high-volume laundry business, we are here to help you find the right solutions for your operation.",
-        "button_label": "Contact Us",
-        "button_link": "shopify://pages/contact-us",
-        "desktop_content_position": "center",
-        "text_alignment": "center",
-        "section_bg": "#ffffff",
-        "richtext_subheading": "#333333",
-        "richtext_heading": "#333333",
-        "richtext_description": "#666666",
-        "button_bg": "#333333",
+        "section_width": "full_width",
+        "main_subheading": "Text about your branding",
+        "heading": "Image banner",
+        "text": "Give customers details about the banner image(s) or content on the template.",
+        "show_countdown": false,
+        "product_mont": "January",
+        "product_year": "2025",
+        "product_date": "30",
+        "day_title": "Day",
+        "hour_title": "Hour",
+        "minute_title": "Min",
+        "second_title": "Sec",
+        "button_label_1": "Button label",
+        "button_link_1": "",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "bg_color": "#ffffff",
+        "box_background_color": "#ffffff",
+        "heading_color": "#131313",
+        "subheading_color": "#131313",
+        "description_color": "#666666",
+        "button_bg": "#131313",
         "button_text": "#ffffff",
-        "button_hr_bg": "#333333",
+        "button_hr_bg": "#131313",
         "button_hr_text": "#ffffff",
+        "countdown_bg": "#ffffff",
+        "countdown_text": "#333333",
         "padding-top": 120,
         "padding-bottom": 120,
         "padding-top-1429": 70,
@@ -73,112 +70,78 @@
         "margin-bottom-575": 0
       }
     },
-    "blocks_6mWgqY": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5bd6822_qnVfcL": {
-          "type": "ai_gen_block_5bd6822",
-          "settings": {
-            "heading": "Commercial Laundry Chemicals FAQs",
-            "heading_size": 22,
-            "font_weight": "500",
-            "text_transform": "uppercase",
-            "text_alignment": "center",
-            "text_color": "#ffffff",
-            "desktop_width_percent": 100,
-            "padding_top": 40,
-            "padding_bottom": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5bd6822_qnVfcL"
-      ],
-      "name": "Page title",
-      "settings": {}
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding-top": 60,
+        "padding-bottom": 60,
+        "padding-top-1429": 50,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 45,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 40,
+        "padding-bottom-991": 40,
+        "padding-top-767": 35,
+        "padding-bottom-767": 35,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30
+      }
     },
     "collapsible-content": {
       "type": "collapsible-content",
       "blocks": {
         "collapsible_row_Bti8im": {
           "type": "collapsible_row",
+          "name": "Row1",
           "settings": {
             "content_number": "01",
-            "heading": "What kind of commercial laundry equipment do you offer?",
-            "row_content": "We offer a wide range of commercial and industrial laundry equipment, including on-premise washers and dryers, coin and card-vended machines, tumble dryers, cabinet dryers, flatwork ironers, light commercial equipment, laundry carts, and other commercial laundry solutions designed for demanding business use."
+            "heading": "Do you offer commercial laundry chemicals?",
+            "row_content": "Yes. We offer commercial laundry detergents and cleaning supplies for BC, Yukon, and Alberta businesses that need dependable cleaning performance and support for day-to-day laundry operations"
           }
         },
         "collapsible_row_V4DUcQ": {
           "type": "collapsible_row",
+          "name": "Row2",
           "settings": {
             "content_number": "02",
-            "heading": "Do you sell equipment for laundromats?",
-            "row_content": "Yes. We work with laundromat owners on new laundromat projects, laundromat upgrades, retools, and equipment replacements. We can help with the planning process, equipment selection, layout support, installation coordination, and long-term support after the machines are in place."
+            "heading": "What kinds of businesses can buy your laundry chemicals?",
+            "row_content": "We supply laundry chemical solutions for laundromats, hotels, care homes, hospitals, correctional facilities, lodges, commercial laundry providers, industrial laundry providers, and other businesses with ongoing laundry needs."
           }
         },
         "collapsible_row_9BxBG3": {
           "type": "collapsible_row",
+          "name": "Row3",
           "settings": {
             "content_number": "03",
-            "heading": "Do you only sell to laundromats?",
-            "row_content": "No. While laundromats are a major focus, we also supply commercial laundry equipment for hospitality businesses, hotels, care homes, healthcare operations, multi-housing properties, lodges, and other organizations that need dependable, high-volume laundry equipment."
+            "heading": "Do you only sell chemicals for large laundry operations?",
+            "row_content": "No. We work with businesses both big and small, and we can help recommend solutions based on the size and needs of the operation."
           }
         },
         "collapsible_row_4gyRrP": {
           "type": "collapsible_row",
+          "name": "Row4",
           "settings": {
             "content_number": "04",
-            "heading": "Do you offer on-premise laundry equipment?",
-            "row_content": "Yes. We offer on-premise laundry machines for businesses that want to process laundry in-house. On-premise equipment can give businesses greater control over quality, turnaround time, and long-term laundry costs."
+            "heading": "Can you help me choose the right commercial laundry chemicals?",
+            "row_content": "Yes. We offer customized plans to help customers determine the best cleaning brands and chemical solutions for their business, laundry volume, and operating needs."
           }
         },
         "collapsible_row_aHVPBW": {
           "type": "collapsible_row",
+          "name": "Row5",
           "settings": {
             "content_number": "05",
-            "heading": "What types of on-premise laundry machines do you carry?",
-            "row_content": "We offer on-premise hardmount washers, softmount washers, single dryers, stacked dryers, and washer-dryer stackers, along with other commercial laundry equipment options depending on the application and facility needs."
+            "heading": "Do you offer chemical delivery?",
+            "row_content": "Yes. We offer delivery of detergents and cleaning solutions directly to your business so your operation stays stocked and organized."
           }
         },
         "collapsible_row_Ubek6U": {
           "type": "collapsible_row",
+          "name": "Row6",
           "settings": {
             "content_number": "06",
-            "heading": "Do you offer coin and card-vended laundry equipment?",
-            "row_content": "Yes. We offer coin and card-vended commercial laundry machines by Dexter and Wascomat for laundromats and shared laundry rooms. These machines are a strong fit for self-serve laundry environments that need payment flexibility, durable performance, and easy day-to-day operation."
-          }
-        },
-        "collapsible_row_c4azVF": {
-          "type": "collapsible_row",
-          "settings": {
-            "content_number": "07",
-            "heading": "Can you help me choose the right commercial laundry equipment?",
-            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business.Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops."
-          }
-        },
-        "collapsible_row_qkHTWp": {
-          "type": "collapsible_row",
-          "settings": {
-            "content_number": "08",
-            "heading": "Do you offer specialty commercial laundry equipment besides washers and dryers?",
-            "row_content": "Yes. In addition to washers and dryers, we also offer equipment such as flatwork ironers, cabinet dryers, light commercial products, industrial equipment, and laundry carts to support a more complete laundry setup."
-          }
-        },
-        "collapsible_row_CcCrwN": {
-          "type": "collapsible_row",
-          "settings": {
-            "content_number": "09",
-            "heading": "Do you offer compact commercial laundry solutions for smaller laundry rooms?",
-            "row_content": "Yes. We can help customers choose compact and space-efficient Huebsch laundry equipment for smaller commercial laundry rooms, shared laundry areas, and properties where layout efficiency matters."
-          }
-        },
-        "collapsible_row_wmHBWx": {
-          "type": "collapsible_row",
-          "settings": {
-            "content_number": "10",
-            "heading": "Do you offer financing for commercial laundry equipment?",
-            "row_content": "Yes. We can help customers explore third-party financing options for qualifying commercial laundry equipment projects, especially when planning a new laundromat or a major upgrade."
+            "heading": "Can your chemicals help support machine cleanliness too?",
+            "row_content": "Yes. Our chemical offering includes products designed not only for clean laundry, but also for supporting clean, well-functioning laundry equipment."
           }
         }
       },
@@ -188,11 +151,7 @@
         "collapsible_row_9BxBG3",
         "collapsible_row_4gyRrP",
         "collapsible_row_aHVPBW",
-        "collapsible_row_Ubek6U",
-        "collapsible_row_c4azVF",
-        "collapsible_row_qkHTWp",
-        "collapsible_row_CcCrwN",
-        "collapsible_row_wmHBWx"
+        "collapsible_row_Ubek6U"
       ],
       "settings": {
         "show_topimg": false,
@@ -237,38 +196,11 @@
         "margin-top-575": 0,
         "margin-bottom-575": 0
       }
-    },
-    "blocks_Fb9rtY": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5bd6822_Rb7Gxc": {
-          "type": "ai_gen_block_5bd6822",
-          "settings": {
-            "heading": "Repairs, Service, Parts & Maintenance FAQs",
-            "heading_size": 24,
-            "font_weight": "500",
-            "text_transform": "uppercase",
-            "text_alignment": "center",
-            "text_color": "#ffffff",
-            "desktop_width_percent": 100,
-            "padding_top": 40,
-            "padding_bottom": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5bd6822_Rb7Gxc"
-      ],
-      "name": "Page title",
-      "settings": {}
     }
   },
   "order": [
+    "image_banner_hinqg4",
     "main",
-    "rich_text_HjhMXd",
-    "blocks_6mWgqY",
-    "collapsible-content",
-    "blocks_Fb9rtY"
+    "collapsible-content"
   ]
 }
