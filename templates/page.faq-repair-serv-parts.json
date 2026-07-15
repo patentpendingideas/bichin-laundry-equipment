@@ -87,58 +87,6 @@
         "padding-bottom-575": 30
       }
     },
-    "rich_text_HjhMXd": {
-      "type": "rich-text",
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "section_width": "full__width",
-        "caption": "What do you want to know?",
-        "heading": "Bichin Laundry Equipment FAQ",
-        "text": "Have questions about commercial laundry equipment, service, laundry chemicals, or starting a laundromat? This FAQ page brings together answers to the most common questions customers ask Bichin Laundry Equipment about equipment selection, repairs, preventative maintenance, chemical programs, laundromat planning, financing, and ongoing support. Whether you run a laundromat, hotel, care facility, healthcare operation, multi-housing laundry room, or another high-volume laundry business, we are here to help you find the right solutions for your operation.",
-        "button_label": "Contact Us",
-        "button_link": "shopify://pages/contact-us",
-        "desktop_content_position": "center",
-        "text_alignment": "center",
-        "section_bg": "#ffffff",
-        "richtext_subheading": "#333333",
-        "richtext_heading": "#333333",
-        "richtext_description": "#666666",
-        "button_bg": "#333333",
-        "button_text": "#ffffff",
-        "button_hr_bg": "#333333",
-        "button_hr_text": "#ffffff",
-        "padding-top": 120,
-        "padding-bottom": 120,
-        "padding-top-1429": 70,
-        "padding-bottom-1429": 70,
-        "padding-top-1199": 60,
-        "padding-bottom-1199": 60,
-        "padding-top-991": 50,
-        "padding-bottom-991": 50,
-        "padding-top-767": 40,
-        "padding-bottom-767": 40,
-        "padding-top-575": 30,
-        "padding-bottom-575": 30,
-        "margin-top": 0,
-        "margin-bottom": 0,
-        "margin-top-1429": 0,
-        "margin-bottom-1429": 0,
-        "margin-top-1199": 0,
-        "margin-bottom-1199": 0,
-        "margin-top-991": 0,
-        "margin-bottom-991": 0,
-        "margin-top-767": 0,
-        "margin-bottom-767": 0,
-        "margin-top-575": 0,
-        "margin-bottom-575": 0
-      }
-    },
-    "blocks_6mWgqY": {
-      "type": "_blocks",
-      "name": "Page title",
-      "settings": {}
-    },
     "collapsible-content": {
       "type": "collapsible-content",
       "blocks": {
@@ -162,6 +110,7 @@
         },
         "collapsible_row_9BxBG3": {
           "type": "collapsible_row",
+          "name": "Row3",
           "settings": {
             "content_number": "03",
             "heading": "What types of machines do you service?",
@@ -170,6 +119,7 @@
         },
         "collapsible_row_4gyRrP": {
           "type": "collapsible_row",
+          "name": "Row4",
           "settings": {
             "content_number": "04",
             "heading": "Do you offer commercial laundry equipment repairs?",
@@ -285,8 +235,6 @@
   "order": [
     "image_banner_hinqg4",
     "main",
-    "rich_text_HjhMXd",
-    "blocks_6mWgqY",
     "collapsible-content"
   ]
 }
