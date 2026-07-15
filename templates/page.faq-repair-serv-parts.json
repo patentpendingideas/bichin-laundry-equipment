@@ -9,6 +9,67 @@
  */
 {
   "sections": {
+    "image_banner_hinqg4": {
+      "type": "image-banner",
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "section_width": "full_width",
+        "main_subheading": "Text about your branding",
+        "heading": "Image banner",
+        "text": "Give customers details about the banner image(s) or content on the template.",
+        "show_countdown": false,
+        "product_mont": "January",
+        "product_year": "2025",
+        "product_date": "30",
+        "day_title": "Day",
+        "hour_title": "Hour",
+        "minute_title": "Min",
+        "second_title": "Sec",
+        "button_label_1": "Button label",
+        "button_link_1": "",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "bg_color": "#ffffff",
+        "box_background_color": "#ffffff",
+        "heading_color": "#131313",
+        "subheading_color": "#131313",
+        "description_color": "#666666",
+        "button_bg": "#131313",
+        "button_text": "#ffffff",
+        "button_hr_bg": "#131313",
+        "button_hr_text": "#ffffff",
+        "countdown_bg": "#ffffff",
+        "countdown_text": "#333333",
+        "padding-top": 120,
+        "padding-bottom": 120,
+        "padding-top-1429": 70,
+        "padding-bottom-1429": 70,
+        "padding-top-1199": 60,
+        "padding-bottom-1199": 60,
+        "padding-top-991": 50,
+        "padding-bottom-991": 50,
+        "padding-top-767": 40,
+        "padding-bottom-767": 40,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -217,38 +278,13 @@
         "margin-top-575": 0,
         "margin-bottom-575": 0
       }
-    },
-    "blocks_Fb9rtY": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5bd6822_Rb7Gxc": {
-          "type": "ai_gen_block_5bd6822",
-          "settings": {
-            "heading": "Repairs, Service, Parts & Maintenance FAQs",
-            "heading_size": 24,
-            "font_weight": "500",
-            "text_transform": "uppercase",
-            "text_alignment": "center",
-            "text_color": "#ffffff",
-            "desktop_width_percent": 100,
-            "padding_top": 40,
-            "padding_bottom": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5bd6822_Rb7Gxc"
-      ],
-      "name": "Page title",
-      "settings": {}
     }
   },
   "order": [
+    "image_banner_hinqg4",
     "main",
     "rich_text_HjhMXd",
     "blocks_6mWgqY",
-    "collapsible-content",
-    "blocks_Fb9rtY"
+    "collapsible-content"
   ]
 }
