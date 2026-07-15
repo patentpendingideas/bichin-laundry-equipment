@@ -75,26 +75,6 @@
     },
     "blocks_6mWgqY": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_5bd6822_qnVfcL": {
-          "type": "ai_gen_block_5bd6822",
-          "settings": {
-            "heading": "Commercial Laundry Equipment FAQs",
-            "heading_size": 22,
-            "font_weight": "500",
-            "text_transform": "uppercase",
-            "text_alignment": "center",
-            "text_color": "#ffffff",
-            "desktop_width_percent": 100,
-            "padding_top": 40,
-            "padding_bottom": 40
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_5bd6822_qnVfcL"
-      ],
       "name": "Page title",
       "settings": {}
     },
@@ -105,80 +85,90 @@
           "type": "collapsible_row",
           "settings": {
             "content_number": "01",
-            "heading": "What kind of commercial laundry equipment do you offer?",
-            "row_content": "We offer a wide range of commercial and industrial laundry equipment, including on-premise washers and dryers, coin and card-vended machines, tumble dryers, cabinet dryers, flatwork ironers, light commercial equipment, laundry carts, and other commercial laundry solutions designed for demanding business use."
+            "heading": "Can you help me start a laundromat?",
+            "row_content": "Yes. We work with both new laundromat owners and existing owners who are upgrading or renovating a store. We help guide the process from early planning through equipment selection and ongoing support.",
+            "richtext": ""
           }
         },
         "collapsible_row_V4DUcQ": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "02",
-            "heading": "Do you sell equipment for laundromats?",
-            "row_content": "Yes. We work with laundromat owners on new laundromat projects, laundromat upgrades, retools, and equipment replacements. We can help with the planning process, equipment selection, layout support, installation coordination, and long-term support after the machines are in place."
+            "heading": "What does your laundromat planning process include?",
+            "row_content": "Our laundromat planning support can include location guidance, assessing the commercial space, creating layouts, selecting the right equipment mix, helping with financing options, ordering equipment, installation coordination, and ongoing support.",
+            "richtext": ""
           }
         },
         "collapsible_row_9BxBG3": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "03",
-            "heading": "Do you only sell to laundromats?",
-            "row_content": "No. While laundromats are a major focus, we also supply commercial laundry equipment for hospitality businesses, hotels, care homes, healthcare operations, multi-housing properties, lodges, and other organizations that need dependable, high-volume laundry equipment."
+            "heading": "Do you help with laundromat layouts and floor plans?",
+            "row_content": "Yes. We help create designs and floor plans based on the available square footage of the space, machine placement, workflow, and business goals.",
+            "richtext": ""
           }
         },
         "collapsible_row_4gyRrP": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "04",
-            "heading": "Do you offer on-premise laundry equipment?",
-            "row_content": "Yes. We offer on-premise laundry machines for businesses that want to process laundry in-house. On-premise equipment can give businesses greater control over quality, turnaround time, and long-term laundry costs."
+            "heading": "Can you help me choose how many washers and dryers I need?",
+            "row_content": "Yes. We help determine the right mix, numbers, and capacities of washers, dryers, and related equipment based on your projected demand and business model.",
+            "richtext": ""
           }
         },
         "collapsible_row_aHVPBW": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "05",
-            "heading": "What types of on-premise laundry machines do you carry?",
-            "row_content": "We offer on-premise hardmount washers, softmount washers, single dryers, stacked dryers, and washer-dryer stackers, along with other commercial laundry equipment options depending on the application and facility needs."
+            "heading": "Do you work with contractors and project estimators?",
+            "row_content": "Yes. We work with contractors, architects, and project estimators to help keep projects practical, efficient, and aligned with the laundry plan.",
+            "richtext": ""
           }
         },
         "collapsible_row_Ubek6U": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "06",
-            "heading": "Do you offer coin and card-vended laundry equipment?",
-            "row_content": "Yes. We offer coin and card-vended commercial laundry machines by Dexter and Wascomat for laundromats and shared laundry rooms. These machines are a strong fit for self-serve laundry environments that need payment flexibility, durable performance, and easy day-to-day operation."
+            "heading": "Do you provide pricing or quotes during the planning stage?",
+            "row_content": "Yes. We can provide a project quote once the planning, layout, and budgeting details are clear enough to build an accurate equipment and support package.",
+            "richtext": ""
           }
         },
         "collapsible_row_c4azVF": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "07",
-            "heading": "Can you help me choose the right commercial laundry equipment?",
-            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business.Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops."
+            "heading": "Do you offer free planning and design consultations?",
+            "row_content": "Yes. We offer planning and design support to help customers move forward with a clearer laundromat concept and equipment plan.",
+            "richtext": ""
           }
         },
         "collapsible_row_qkHTWp": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "08",
-            "heading": "Do you offer specialty commercial laundry equipment besides washers and dryers?",
-            "row_content": "Yes. In addition to washers and dryers, we also offer equipment such as flatwork ironers, cabinet dryers, light commercial products, industrial equipment, and laundry carts to support a more complete laundry setup."
+            "heading": "Can you help with laundromat financing?",
+            "row_content": "Yes. We can help customers explore reputable third-party financing options and navigate the approval process where applicable.",
+            "richtext": ""
           }
         },
         "collapsible_row_CcCrwN": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "09",
-            "heading": "Do you offer compact commercial laundry solutions for smaller laundry rooms?",
-            "row_content": "Yes. We can help customers choose compact and space-efficient Huebsch laundry equipment for smaller commercial laundry rooms, shared laundry areas, and properties where layout efficiency matters."
+            "heading": "Do you only help with brand-new laundromats?",
+            "row_content": "No. We also help with laundromat retools, equipment replacements, renovations, and upgrades to existing laundry businesses.",
+            "richtext": ""
           }
         },
         "collapsible_row_wmHBWx": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "10",
-            "heading": "Do you offer financing for commercial laundry equipment?",
-            "row_content": "Yes. We can help customers explore third-party financing options for qualifying commercial laundry equipment projects, especially when planning a new laundromat or a major upgrade."
+            "heading": "Do you continue supporting customers after the laundromat opens?",
+            "row_content": "Yes. We continue supporting customers with equipment, service, parts, warranties, and ongoing guidance after the laundromat is up and running.",
+            "richtext": ""
           }
         }
       },
