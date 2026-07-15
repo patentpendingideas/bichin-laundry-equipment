@@ -11,10 +11,264 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "settings": {
+        "padding-top": 60,
+        "padding-bottom": 60,
+        "padding-top-1429": 50,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 45,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 40,
+        "padding-bottom-991": 40,
+        "padding-top-767": 35,
+        "padding-bottom-767": 35,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30
+      }
+    },
+    "rich_text_HjhMXd": {
+      "type": "rich-text",
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "full__width",
+        "caption": "What do you want to know?",
+        "heading": "Bichin Laundry Equipment FAQ",
+        "text": "Have questions about commercial laundry equipment, service, laundry chemicals, or starting a laundromat? This FAQ page brings together answers to the most common questions customers ask Bichin Laundry Equipment about equipment selection, repairs, preventative maintenance, chemical programs, laundromat planning, financing, and ongoing support. Whether you run a laundromat, hotel, care facility, healthcare operation, multi-housing laundry room, or another high-volume laundry business, we are here to help you find the right solutions for your operation.",
+        "button_label": "Contact Us",
+        "button_link": "shopify://pages/contact-us",
+        "desktop_content_position": "center",
+        "text_alignment": "center",
+        "section_bg": "#ffffff",
+        "richtext_subheading": "#333333",
+        "richtext_heading": "#333333",
+        "richtext_description": "#666666",
+        "button_bg": "#333333",
+        "button_text": "#ffffff",
+        "button_hr_bg": "#333333",
+        "button_hr_text": "#ffffff",
+        "padding-top": 120,
+        "padding-bottom": 120,
+        "padding-top-1429": 70,
+        "padding-bottom-1429": 70,
+        "padding-top-1199": 60,
+        "padding-bottom-1199": 60,
+        "padding-top-991": 50,
+        "padding-bottom-991": 50,
+        "padding-top-767": 40,
+        "padding-bottom-767": 40,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    },
+    "blocks_6mWgqY": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5bd6822_qnVfcL": {
+          "type": "ai_gen_block_5bd6822",
+          "settings": {
+            "heading": "Commercial Laundry Equipment FAQs",
+            "heading_size": 22,
+            "font_weight": "500",
+            "text_transform": "uppercase",
+            "text_alignment": "center",
+            "text_color": "#ffffff",
+            "desktop_width_percent": 100,
+            "padding_top": 40,
+            "padding_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5bd6822_qnVfcL"
+      ],
+      "name": "Page title",
+      "settings": {}
+    },
+    "collapsible-content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Bti8im": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "01",
+            "heading": "What kind of commercial laundry equipment do you offer?",
+            "row_content": "We offer a wide range of commercial and industrial laundry equipment, including on-premise washers and dryers, coin and card-vended machines, tumble dryers, cabinet dryers, flatwork ironers, light commercial equipment, laundry carts, and other commercial laundry solutions designed for demanding business use."
+          }
+        },
+        "collapsible_row_V4DUcQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "02",
+            "heading": "Do you sell equipment for laundromats?",
+            "row_content": "Yes. We work with laundromat owners on new laundromat projects, laundromat upgrades, retools, and equipment replacements. We can help with the planning process, equipment selection, layout support, installation coordination, and long-term support after the machines are in place."
+          }
+        },
+        "collapsible_row_9BxBG3": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "03",
+            "heading": "Do you only sell to laundromats?",
+            "row_content": "No. While laundromats are a major focus, we also supply commercial laundry equipment for hospitality businesses, hotels, care homes, healthcare operations, multi-housing properties, lodges, and other organizations that need dependable, high-volume laundry equipment."
+          }
+        },
+        "collapsible_row_4gyRrP": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "04",
+            "heading": "Do you offer on-premise laundry equipment?",
+            "row_content": "Yes. We offer on-premise laundry machines for businesses that want to process laundry in-house. On-premise equipment can give businesses greater control over quality, turnaround time, and long-term laundry costs."
+          }
+        },
+        "collapsible_row_aHVPBW": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "05",
+            "heading": "What types of on-premise laundry machines do you carry?",
+            "row_content": "We offer on-premise hardmount washers, softmount washers, single dryers, stacked dryers, and washer-dryer stackers, along with other commercial laundry equipment options depending on the application and facility needs."
+          }
+        },
+        "collapsible_row_Ubek6U": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "06",
+            "heading": "Do you offer coin and card-vended laundry equipment?",
+            "row_content": "Yes. We offer coin and card-vended commercial laundry machines by Dexter and Wascomat for laundromats and shared laundry rooms. These machines are a strong fit for self-serve laundry environments that need payment flexibility, durable performance, and easy day-to-day operation."
+          }
+        },
+        "collapsible_row_c4azVF": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "07",
+            "heading": "Can you help me choose the right commercial laundry equipment?",
+            "row_content": "Shopify is a complete commerce platform that lets you start, grow, and manage a business.Create and customize an online store Sell in multiple places, including web, mobile, social media, online marketplaces, brick-and-mortar locations, and pop-up shops."
+          }
+        },
+        "collapsible_row_qkHTWp": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "08",
+            "heading": "Do you offer specialty commercial laundry equipment besides washers and dryers?",
+            "row_content": "Yes. In addition to washers and dryers, we also offer equipment such as flatwork ironers, cabinet dryers, light commercial products, industrial equipment, and laundry carts to support a more complete laundry setup."
+          }
+        },
+        "collapsible_row_CcCrwN": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "09",
+            "heading": "Do you offer compact commercial laundry solutions for smaller laundry rooms?",
+            "row_content": "Yes. We can help customers choose compact and space-efficient Huebsch laundry equipment for smaller commercial laundry rooms, shared laundry areas, and properties where layout efficiency matters."
+          }
+        },
+        "collapsible_row_wmHBWx": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "10",
+            "heading": "Do you offer financing for commercial laundry equipment?",
+            "row_content": "Yes. We can help customers explore third-party financing options for qualifying commercial laundry equipment projects, especially when planning a new laundromat or a major upgrade."
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Bti8im",
+        "collapsible_row_V4DUcQ",
+        "collapsible_row_9BxBG3",
+        "collapsible_row_4gyRrP",
+        "collapsible_row_aHVPBW",
+        "collapsible_row_Ubek6U",
+        "collapsible_row_c4azVF",
+        "collapsible_row_qkHTWp",
+        "collapsible_row_CcCrwN",
+        "collapsible_row_wmHBWx"
+      ],
+      "settings": {
+        "show_topimg": false,
+        "open_first_collapsible_row": true,
+        "full_width": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "further_text": "Still have questions? contact us.",
+        "contact_btn_text": "Contact",
+        "contact_btn_link": "shopify://pages/contact-us",
+        "main_title_alignment": "center",
+        "number_bg": "#052b3e",
+        "number_color": "#ffffff",
+        "heading_color": "#ffffff",
+        "content_color": "#cccccc",
+        "bg_color": "#08364c",
+        "number_hr_bg": "#948958",
+        "number_hr_color": "#ffffff",
+        "hover_color": "#948958",
+        "padding-top": 0,
+        "padding-bottom": 60,
+        "padding-top-1429": 0,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 0,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 0,
+        "padding-bottom-991": 40,
+        "padding-top-767": 0,
+        "padding-bottom-767": 35,
+        "padding-top-575": 0,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    },
+    "blocks_Fb9rtY": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5bd6822_Rb7Gxc": {
+          "type": "ai_gen_block_5bd6822",
+          "settings": {
+            "heading": "Repairs, Service, Parts & Maintenance FAQs",
+            "heading_size": 24,
+            "font_weight": "500",
+            "text_transform": "uppercase",
+            "text_alignment": "center",
+            "text_color": "#ffffff",
+            "desktop_width_percent": 100,
+            "padding_top": 40,
+            "padding_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5bd6822_Rb7Gxc"
+      ],
+      "name": "Page title",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_HjhMXd",
+    "blocks_6mWgqY",
+    "collapsible-content",
+    "blocks_Fb9rtY"
   ]
 }
