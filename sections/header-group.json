@@ -60,7 +60,6 @@
     },
     "header": {
       "type": "header",
-      "disabled": true,
       "settings": {
         "logo_position": "middle",
         "show_container": false,
