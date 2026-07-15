@@ -128,6 +128,7 @@
         },
         "collapsible_row_aHVPBW": {
           "type": "collapsible_row",
+          "name": "Row5",
           "settings": {
             "content_number": "05",
             "heading": "Do you offer preventative maintenance for laundry equipment?",
@@ -136,6 +137,7 @@
         },
         "collapsible_row_Ubek6U": {
           "type": "collapsible_row",
+          "name": "Row6",
           "settings": {
             "content_number": "06",
             "heading": "Do you offer extended warranty options?",
@@ -144,6 +146,7 @@
         },
         "collapsible_row_c4azVF": {
           "type": "collapsible_row",
+          "name": "Row7",
           "settings": {
             "content_number": "07",
             "heading": "Do you provide parts for commercial laundry equipment?",
@@ -152,6 +155,7 @@
         },
         "collapsible_row_qkHTWp": {
           "type": "collapsible_row",
+          "name": "Row8",
           "settings": {
             "content_number": "08",
             "heading": "What information should I send when I need a part or service?",
@@ -160,6 +164,7 @@
         },
         "collapsible_row_CcCrwN": {
           "type": "collapsible_row",
+          "name": "Row9",
           "settings": {
             "content_number": "09",
             "heading": "Do you offer service memberships or maintenance programs?",
@@ -168,6 +173,7 @@
         },
         "collapsible_row_wmHBWx": {
           "type": "collapsible_row",
+          "name": "Row10",
           "settings": {
             "content_number": "10",
             "heading": "Do you support customers after the equipment is installed?",
