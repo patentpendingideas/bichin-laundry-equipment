@@ -30,7 +30,7 @@
       "type": "contact-form",
       "settings": {
         "contact_us_map_enable": true,
-        "contact_map": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13004323.590934537!2d-104.6752891796967!3d37.27418510935136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sin!4v1680755419965!5m2!1sen!2sin\" width=\"600\" height=\"564\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "contact_map": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1033.6696064655523!2d-122.6912838645237!3d49.10150973331928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485cfe067d4f343%3A0x2f2221a5046ee6be!2s19231%2054%20Ave%2C%20Surrey%2C%20BC%20V3S%208P5!5e0!3m2!1sen!2sca!4v1784144754011!5m2!1sen!2sca\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
         "information_heading": "Our information",
         "information_paragraph": "At Bichin Laundry Equipment, we specialize in commercial and industrial laundry solutions. As authorized supplier and distributor of trusted brands, we offer top-quality washers and dryers that are supported by warranties, expert service, and ongoing customer care.",
         "address_heading": "Address",
