@@ -152,6 +152,7 @@
         },
         "collapsible_row_V4DUcQ": {
           "type": "collapsible_row",
+          "name": "faq",
           "settings": {
             "content_number": "02",
             "heading": "Can I book a service call with you?",
