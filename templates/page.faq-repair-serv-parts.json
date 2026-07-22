@@ -100,7 +100,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_V4DUcQa": {
+        "collapsible_row_V4DUcQb": {
           "type": "collapsible_row",
           "name": "Row2",
           "settings": {
@@ -110,7 +110,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_9BxBG3a": {
+        "collapsible_row_9BxBG3b": {
           "type": "collapsible_row",
           "name": "Row3",
           "settings": {
@@ -120,7 +120,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_4gyRrPa": {
+        "collapsible_row_4gyRrPb": {
           "type": "collapsible_row",
           "name": "Row4",
           "settings": {
@@ -130,7 +130,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_aHVPBWa": {
+        "collapsible_row_aHVPBWb": {
           "type": "collapsible_row",
           "name": "Row5",
           "settings": {
@@ -140,7 +140,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_Ubek6Ua": {
+        "collapsible_row_Ubek6Ub": {
           "type": "collapsible_row",
           "name": "Row6",
           "settings": {
@@ -150,7 +150,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_YMEhywa": {
+        "collapsible_row_YMEhywb": {
           "type": "collapsible_row",
           "name": "Row7",
           "settings": {
@@ -160,7 +160,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_XpJdVea": {
+        "collapsible_row_XpJdVeb": {
           "type": "collapsible_row",
           "name": "Row8",
           "settings": {
@@ -170,7 +170,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_nabQkza": {
+        "collapsible_row_nabQkzb": {
           "type": "collapsible_row",
           "name": "Row9",
           "settings": {
@@ -180,7 +180,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_CB6Crqa": {
+        "collapsible_row_CB6Crqb": {
           "type": "collapsible_row",
           "name": "Row10",
           "settings": {
@@ -192,16 +192,16 @@
         }
       },
       "block_order": [
-        "collapsible_row_Bti8ima",
-        "collapsible_row_V4DUcQa",
-        "collapsible_row_9BxBG3a",
-        "collapsible_row_4gyRrPa",
-        "collapsible_row_aHVPBWa",
-        "collapsible_row_Ubek6Ua",
-        "collapsible_row_YMEhywa",
-        "collapsible_row_XpJdVea",
-        "collapsible_row_nabQkza",
-        "collapsible_row_CB6Crqa"
+        "collapsible_row_Bti8imb",
+        "collapsible_row_V4DUcQb",
+        "collapsible_row_9BxBG3b",
+        "collapsible_row_4gyRrPb",
+        "collapsible_row_aHVPBWb",
+        "collapsible_row_Ubek6Ub",
+        "collapsible_row_YMEhywb",
+        "collapsible_row_XpJdVeb",
+        "collapsible_row_nabQkzb",
+        "collapsible_row_CB6Crqb"
       ],
       "settings": {
         "show_topimg": false,
@@ -210,7 +210,7 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "further_text": "Still have questions? We are happy to help with commercial laundry equipment, parts, service, chemicals, and laundromat planning. Whether you are opening a new laundromat, upgrading your current equipment, or looking for dependable supply and service support, we can help you take the next step.",
-        "contact_btn_text": "Contact Us",
+        "contact_btn_text": "Book A Repair",
         "contact_btn_link": "shopify://pages/contact-us",
         "main_title_alignment": "center",
         "number_bg": "#052b3e",
