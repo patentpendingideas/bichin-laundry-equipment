@@ -84,6 +84,7 @@
         "slider_rztJqr": {
           "type": "Slider",
           "name": "Intro to Bichin",
+          "disabled": true,
           "settings": {
             "slider_type": "image",
             "hero_slideshow_link_video": "",
