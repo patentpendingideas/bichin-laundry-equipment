@@ -169,23 +169,6 @@
       </div>
     {% endif %}
 
-    <div class="ai-rich-text-image-wrapper-{{ ai_gen_id }}">
-      {% if block.settings.image %}
-        <img
-          src="{{ block.settings.image | image_url: width: 1200 }}"
-          alt="{{ block.settings.image.alt | escape }}"
-          loading="lazy"
-          width="{{ block.settings.image.width }}"
-          height="{{ block.settings.image.height }}"
-          class="ai-rich-text-image-{{ ai_gen_id }}"
-        >
-      {% else %}
-        <div class="ai-rich-text-image-placeholder-{{ ai_gen_id }}">
-          {{ 'image' | placeholder_svg_tag }}
-        </div>
-      {% endif %}
-    </div>
-
     {% if block.settings.show_button and block.settings.button_text != blank %}
       <div class="ai-rich-text-button-wrapper-{{ ai_gen_id }}">
         <a
