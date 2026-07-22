@@ -28,7 +28,6 @@
     },
     "rich_text_HjhMXd": {
       "type": "rich-text",
-      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "section_width": "full__width",
@@ -99,15 +98,6 @@
             "richtext": ""
           }
         },
-        "collapsible_row_9BxBG1": {
-          "type": "collapsible_row",
-          "settings": {
-            "content_number": "03",
-            "heading": "Do you only sell to laundromats?",
-            "row_content": "No. While laundromats are a major focus, we also supply commercial laundry equipment for hospitality businesses, hotels, care homes, healthcare operations, multi-housing properties, lodges, and other organizations that need dependable, high-volume laundry equipment.",
-            "richtext": ""
-          }
-        },
         "collapsible_row_4gyRrP1": {
           "type": "collapsible_row",
           "settings": {
@@ -175,7 +165,6 @@
       "block_order": [
         "collapsible_row_Bti8im1",
         "collapsible_row_V4DUcQ1",
-        "collapsible_row_9BxBG31",
         "collapsible_row_4gyRrP1",
         "collapsible_row_aHVPBW1",
         "collapsible_row_Ubek6U1",
@@ -230,6 +219,7 @@
     },
     "blocks_Fb9rtY": {
       "type": "_blocks",
+      "disabled": true,
       "name": "Page title",
       "settings": {}
     }
