@@ -40,7 +40,7 @@
             "section_padding_top": 50,
             "section_padding_bottom": 30,
             "section_padding_horizontal": 20,
-            "text_box_1_content": "<h2>State of the art commercial laundry equipment for sale</h2><h2> in BC, Alberta, and the Yukon</h2>",
+            "text_box_1_content": "<h2>State of the art equipment for sale in BC, Alberta, and the Yukon.</h2>",
             "text_box_1_alignment": "center",
             "text_box_1_color": "#c6a228",
             "text_box_1_size": 22,
@@ -147,6 +147,7 @@
         "collection_39GRA4",
         "collection_Rb97af"
       ],
+      "disabled": true,
       "name": "Category section style1",
       "settings": {
         "section_width": "full_width",
