@@ -90,47 +90,47 @@
     "collapsible-content": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_Bti8im": {
+        "collapsible_row_Bti8ima": {
           "type": "collapsible_row",
           "name": "Row1",
           "settings": {
             "content_number": "01",
-            "heading": "Do you service the commercial laundry equipment you sell?",
-            "row_content": "Yes. We support the equipment we sell with service, parts, maintenance support, warranty-related help, and ongoing customer care.",
+            "heading": "What kind of commercial laundry equipment do you offer?",
+            "row_content": "We offer a wide range of commercial and industrial laundry equipment, including on-premise washers and dryers, coin and card-vended machines, tumble dryers, cabinet dryers, flatwork ironers, light commercial equipment, laundry carts, and other commercial laundry solutions designed for demanding business use.",
             "richtext": ""
           }
         },
-        "collapsible_row_V4DUcQ": {
+        "collapsible_row_V4DUcQa": {
           "type": "collapsible_row",
           "name": "Row2",
           "settings": {
             "content_number": "02",
-            "heading": "Can I book a service call with you?",
-            "row_content": "Yes. Customers can contact us to book a service call for commercial laundry equipment that needs attention, troubleshooting, or repair.",
+            "heading": "Do you sell equipment for laundromats?",
+            "row_content": "Yes. We work with laundromat owners on new laundromat projects, laundromat upgrades, retools, and equipment replacements. We can help with the planning process, equipment selection, layout support, installation coordination, and long-term support after the machines are in place.",
             "richtext": ""
           }
         },
-        "collapsible_row_9BxBG3": {
+        "collapsible_row_9BxBG3a": {
           "type": "collapsible_row",
           "name": "Row3",
           "settings": {
             "content_number": "03",
-            "heading": "What types of machines do you service?",
-            "row_content": "We support service requests for commercial washers, dryers, ironers, and other related commercial laundry equipment depending on the machine and application.",
+            "heading": "Do you only sell to laundromats?",
+            "row_content": "No. While laundromats are a major focus, we also supply commercial laundry equipment for hospitality businesses, hotels, care homes, healthcare operations, multi-housing properties, lodges, and other organizations that need dependable, high-volume laundry equipment.",
             "richtext": ""
           }
         },
-        "collapsible_row_4gyRrP": {
+        "collapsible_row_4gyRrPa": {
           "type": "collapsible_row",
           "name": "Row4",
           "settings": {
             "content_number": "04",
-            "heading": "Do you offer commercial laundry equipment repairs?",
-            "row_content": "Yes. We provide repair support for commercial laundry equipment when machines are down, underperforming, or showing signs of wear or failure.",
+            "heading": "Do you offer on-premise laundry equipment?",
+            "row_content": "Yes. We offer on-premise laundry machines for businesses that want to process laundry in-house. On-premise equipment can give businesses greater control over quality, turnaround time, and long-term laundry costs.",
             "richtext": ""
           }
         },
-        "collapsible_row_aHVPBW": {
+        "collapsible_row_aHVPBWa": {
           "type": "collapsible_row",
           "name": "Row5",
           "settings": {
@@ -140,68 +140,68 @@
             "richtext": ""
           }
         },
-        "collapsible_row_Ubek6U": {
+        "collapsible_row_Ubek6Ua": {
           "type": "collapsible_row",
           "name": "Row6",
           "settings": {
             "content_number": "06",
-            "heading": "Do you offer extended warranty options?",
-            "row_content": "Yes. We offer extended warranty support as part of our broader service model for commercial laundry equipment.",
+            "heading": "Do you offer coin and card-vended laundry equipment?",
+            "row_content": "Yes. We offer coin and card-vended commercial laundry machines by Dexter and Wascomat for laundromats and shared laundry rooms. These machines are a strong fit for self-serve laundry environments that need payment flexibility, durable performance, and easy day-to-day operation.",
             "richtext": ""
           }
         },
-        "collapsible_row_YMEhyw": {
+        "collapsible_row_YMEhywa": {
           "type": "collapsible_row",
           "name": "Row7",
           "settings": {
             "content_number": "07",
-            "heading": "Do you provide parts for commercial laundry equipment?",
-            "row_content": "Yes. We provide parts support for commercial laundry equipment and can help customers identify the right part for their machine when repairs or maintenance are needed.",
+            "heading": "Can you help me choose the right commercial laundry equipment?",
+            "row_content": "Yes. We help customers assess available space, laundry volume, capacity needs, workflow, and business goals so they can choose the right mix of washers, dryers, stack units, and related equipment.",
             "richtext": ""
           }
         },
-        "collapsible_row_XpJdVe": {
+        "collapsible_row_XpJdVea": {
           "type": "collapsible_row",
           "name": "Row8",
           "settings": {
             "content_number": "08",
-            "heading": "What information should I send when I need a part or service?",
-            "row_content": "To help us identify the right part or service need, it is best to send the machine model number, serial number, machine type, and a description of the issue. Photos and videos can also be very helpful.",
+            "heading": "Do you offer specialty commercial laundry equipment besides washers and dryers?",
+            "row_content": "Yes. In addition to washers and dryers, we also offer equipment such as flatwork ironers, cabinet dryers, light commercial products, industrial equipment, and laundry carts to support a more complete laundry setup.",
             "richtext": ""
           }
         },
-        "collapsible_row_nabQkz": {
+        "collapsible_row_nabQkza": {
           "type": "collapsible_row",
           "name": "Row9",
           "settings": {
             "content_number": "09",
-            "heading": "Do you offer service memberships or maintenance programs?",
-            "row_content": "Yes. We offer additional service support options, including a full-service membership program with labour coverage and preferred pricing on parts, chemicals, and laundry carts.",
+            "heading": "Do you offer compact commercial laundry solutions for smaller laundry rooms?",
+            "row_content": "Yes. We can help customers choose compact and space-efficient Huebsch laundry equipment for smaller commercial laundry rooms, shared laundry areas, and properties where layout efficiency matters.",
             "richtext": ""
           }
         },
-        "collapsible_row_CB6Crq": {
+        "collapsible_row_CB6Crqa": {
           "type": "collapsible_row",
           "name": "Row10",
           "settings": {
             "content_number": "10",
-            "heading": "Do you support customers after the equipment is installed?",
-            "row_content": "Yes. We continue supporting customers after installation with service, parts, warranty help, maintenance support, and ongoing guidance when needed.",
+            "heading": "Do you offer financing for commercial laundry equipment?",
+            "row_content": "Yes. We can help customers explore third-party financing options for qualifying commercial laundry equipment projects, especially when planning a new laundromat or a major upgrade.",
             "richtext": ""
           }
         }
       },
       "block_order": [
-        "collapsible_row_Bti8im",
-        "collapsible_row_V4DUcQ",
-        "collapsible_row_9BxBG3",
-        "collapsible_row_4gyRrP",
-        "collapsible_row_aHVPBW",
-        "collapsible_row_Ubek6U",
-        "collapsible_row_YMEhyw",
-        "collapsible_row_XpJdVe",
-        "collapsible_row_nabQkz",
-        "collapsible_row_CB6Crq"
+        "collapsible_row_Bti8ima",
+        "collapsible_row_V4DUcQa",
+        "collapsible_row_9BxBG3a",
+        "collapsible_row_4gyRrPa",
+        "collapsible_row_aHVPBWa",
+        "collapsible_row_Ubek6Ua",
+        "collapsible_row_YMEhywa",
+        "collapsible_row_XpJdVea",
+        "collapsible_row_nabQkza",
+        "collapsible_row_CB6Crqa"
       ],
       "settings": {
         "show_topimg": false,
