@@ -54,6 +54,9 @@
             "text_box_3_alignment": "center",
             "text_box_3_color": "#ffffff",
             "text_box_3_size": 18,
+            "image_position": 0,
+            "image_max_width": 200,
+            "image_border_radius": 0,
             "show_button": true,
             "button_text": "Shop now",
             "button_link": "shopify://collections/on-premise-laundry-equipment",
@@ -144,7 +147,6 @@
         "collection_39GRA4",
         "collection_Rb97af"
       ],
-      "disabled": true,
       "name": "Category section style1",
       "settings": {
         "section_width": "full_width",
