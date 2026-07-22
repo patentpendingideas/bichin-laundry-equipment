@@ -37,6 +37,9 @@
   endif
 -%}
 
+{% unless product.tags contains 'hide-price' %}
+  <!-- Your original theme price code goes here -->
+
 <div
   class="
     price
@@ -48,6 +51,7 @@
     {%- if show_badges %} price--show-badge{% endif -%}
   "
 >
+
   <div class="price__container">
     {%- comment -%}
       Explanation of description list:
@@ -126,3 +130,5 @@
     </span>
   {%- endif -%}
 </div>
+
+{% endunless %}
