@@ -81,7 +81,7 @@
     "collapsible-content": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_Bti8im": {
+        "collapsible_row_Bti8im3": {
           "type": "collapsible_row",
           "name": "Row1",
           "settings": {
@@ -91,7 +91,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_V4DUcQ": {
+        "collapsible_row_V4DUcQ3": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "02",
@@ -100,7 +100,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_9BxBG3": {
+        "collapsible_row_9BxBG33": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "03",
@@ -109,7 +109,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_4gyRrP": {
+        "collapsible_row_4gyRrP3": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "04",
@@ -118,7 +118,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_aHVPBW": {
+        "collapsible_row_aHVPBW3": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "05",
@@ -129,11 +129,11 @@
         }
       },
       "block_order": [
-        "collapsible_row_Bti8im",
-        "collapsible_row_V4DUcQ",
-        "collapsible_row_9BxBG3",
-        "collapsible_row_4gyRrP",
-        "collapsible_row_aHVPBW"
+        "collapsible_row_Bti8im3",
+        "collapsible_row_V4DUcQ3",
+        "collapsible_row_9BxBG33",
+        "collapsible_row_4gyRrP3",
+        "collapsible_row_aHVPBW3"
       ],
       "settings": {
         "show_topimg": false,

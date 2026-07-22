@@ -81,7 +81,7 @@
     "collapsible-content": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_Bti8im": {
+        "collapsible_row_Bti8im4": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "01",
@@ -90,7 +90,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_V4DUcQ": {
+        "collapsible_row_V4DUcQ4": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "02",
@@ -99,7 +99,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_9BxBG3": {
+        "collapsible_row_9BxBG34": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "03",
@@ -108,7 +108,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_4gyRrP": {
+        "collapsible_row_4gyRrP4": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "04",
@@ -117,7 +117,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_aHVPBW": {
+        "collapsible_row_aHVPBW4": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "05",
@@ -126,7 +126,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_Ubek6U": {
+        "collapsible_row_Ubek6U4": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "06",
@@ -135,7 +135,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_c4azVF": {
+        "collapsible_row_c4azVF4": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "07",
@@ -144,7 +144,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_qkHTWp": {
+        "collapsible_row_qkHTWp4": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "08",
@@ -153,7 +153,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_CcCrwN": {
+        "collapsible_row_CcCrwN4": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "09",
@@ -162,7 +162,7 @@
             "richtext": ""
           }
         },
-        "collapsible_row_wmHBWx": {
+        "collapsible_row_wmHBWx4": {
           "type": "collapsible_row",
           "settings": {
             "content_number": "10",
@@ -173,16 +173,16 @@
         }
       },
       "block_order": [
-        "collapsible_row_Bti8im",
-        "collapsible_row_V4DUcQ",
-        "collapsible_row_9BxBG3",
-        "collapsible_row_4gyRrP",
-        "collapsible_row_aHVPBW",
-        "collapsible_row_Ubek6U",
-        "collapsible_row_c4azVF",
-        "collapsible_row_qkHTWp",
-        "collapsible_row_CcCrwN",
-        "collapsible_row_wmHBWx"
+        "collapsible_row_Bti8im4",
+        "collapsible_row_V4DUcQ4",
+        "collapsible_row_9BxBG34",
+        "collapsible_row_4gyRrP4",
+        "collapsible_row_aHVPBW4",
+        "collapsible_row_Ubek6U4",
+        "collapsible_row_c4azVF4",
+        "collapsible_row_qkHTWp4",
+        "collapsible_row_CcCrwN4",
+        "collapsible_row_wmHBWx4"
       ],
       "settings": {
         "show_topimg": false,

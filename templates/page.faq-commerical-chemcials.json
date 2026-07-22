@@ -90,7 +90,7 @@
     "collapsible-content": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_Bti8im": {
+        "collapsible_row_Bti8im2": {
           "type": "collapsible_row",
           "name": "Row1",
           "settings": {
@@ -99,7 +99,7 @@
             "row_content": "Yes. We offer commercial laundry detergents and cleaning supplies for BC, Yukon, and Alberta businesses that need dependable cleaning performance and support for day-to-day laundry operations"
           }
         },
-        "collapsible_row_V4DUcQ": {
+        "collapsible_row_V4DUcQ2": {
           "type": "collapsible_row",
           "name": "Row2",
           "settings": {
@@ -108,7 +108,7 @@
             "row_content": "We supply laundry chemical solutions for laundromats, hotels, care homes, hospitals, correctional facilities, lodges, commercial laundry providers, industrial laundry providers, and other businesses with ongoing laundry needs."
           }
         },
-        "collapsible_row_9BxBG3": {
+        "collapsible_row_9BxBG32": {
           "type": "collapsible_row",
           "name": "Row3",
           "settings": {
@@ -117,7 +117,7 @@
             "row_content": "No. We work with businesses both big and small, and we can help recommend solutions based on the size and needs of the operation."
           }
         },
-        "collapsible_row_4gyRrP": {
+        "collapsible_row_4gyRrP2": {
           "type": "collapsible_row",
           "name": "Row4",
           "settings": {
@@ -126,7 +126,7 @@
             "row_content": "Yes. We offer customized plans to help customers determine the best cleaning brands and chemical solutions for their business, laundry volume, and operating needs."
           }
         },
-        "collapsible_row_aHVPBW": {
+        "collapsible_row_aHVPBW2": {
           "type": "collapsible_row",
           "name": "Row5",
           "settings": {
@@ -135,7 +135,7 @@
             "row_content": "Yes. We offer delivery of detergents and cleaning solutions directly to your business so your operation stays stocked and organized."
           }
         },
-        "collapsible_row_Ubek6U": {
+        "collapsible_row_Ubek6U2": {
           "type": "collapsible_row",
           "name": "Row6",
           "settings": {
@@ -146,12 +146,12 @@
         }
       },
       "block_order": [
-        "collapsible_row_Bti8im",
-        "collapsible_row_V4DUcQ",
-        "collapsible_row_9BxBG3",
-        "collapsible_row_4gyRrP",
-        "collapsible_row_aHVPBW",
-        "collapsible_row_Ubek6U"
+        "collapsible_row_Bti8im2",
+        "collapsible_row_V4DUcQ2",
+        "collapsible_row_9BxBG32",
+        "collapsible_row_4gyRrP2",
+        "collapsible_row_aHVPBW2",
+        "collapsible_row_Ubek6U2"
       ],
       "settings": {
         "show_topimg": false,
