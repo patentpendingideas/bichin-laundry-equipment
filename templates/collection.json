@@ -38,7 +38,7 @@
         "show_topimg": false,
         "products_per_page": 16,
         "columns_desktop": 3,
-        "columns_mobile": 2,
+        "columns_mobile": 1,
         "enable_filtering": false,
         "filter_type": "vertical",
         "advertize_heading": "Advertisement",
