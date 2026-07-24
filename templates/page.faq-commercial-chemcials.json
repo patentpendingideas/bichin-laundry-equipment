@@ -72,20 +72,7 @@
     },
     "main": {
       "type": "main-page",
-      "settings": {
-        "padding-top": 60,
-        "padding-bottom": 60,
-        "padding-top-1429": 50,
-        "padding-bottom-1429": 50,
-        "padding-top-1199": 45,
-        "padding-bottom-1199": 45,
-        "padding-top-991": 40,
-        "padding-bottom-991": 40,
-        "padding-top-767": 35,
-        "padding-bottom-767": 35,
-        "padding-top-575": 30,
-        "padding-bottom-575": 30
-      }
+      "settings": {}
     },
     "collapsible-content": {
       "type": "collapsible-content",
