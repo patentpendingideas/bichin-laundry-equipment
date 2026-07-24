@@ -1,0 +1,124 @@
+.full-width-image-comparison {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.comparison-row{
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.image-comparison {
+  width: 100%;
+}
+.image-comparison-right-side-part {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.image-comparison-right-side-part-wrapper{
+  max-width: 85%;
+  width: 100%;
+  margin: 0 auto;
+}
+.image-comparison {
+  position: relative;
+  cursor: col-resize;
+}
+.compare_img>* {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.compare_img.image_comparison_overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.img_comparison_btn {
+  padding: 0;
+  width: 80px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+  border: 0;
+  z-index: 3;
+  background-color: transparent !important;
+  cursor: col-resize;
+  z-index: 2;
+}
+.img_comparison_btn h3 {
+  width: 80px;
+  height: 80px;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.img_comparison_btn:before {
+  content: "";
+  width: 3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.comparison_left_before_img,
+.comparison_right_after_img {
+  position: relative;
+}
+.comparison_right_after_text {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+}
+.image-comparison-right-text .theme_buttons {
+  margin-top: 40px;;
+}
+.image-comparison .media{
+  border-radius: var(--media-radius);
+}
+@media screen and (max-width: 1429px) {
+  .image-comparison-right-text .theme_buttons {
+    margin-top: 30px;
+  }
+  .img_comparison_btn h3 {
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+  }
+  .img_comparison_btn {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 1299px) {
+  .image-comparison-right-side-part, .image-comparison{
+    max-width: 100%;
+  }
+  .comparison-row{
+    flex-direction: column; 
+  }
+  .image-comparison-right-side-part{
+    padding: 30px 0px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .image-comparison-right-text .theme_buttons {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .image-comparison-right-side-part-wrapper{
+    max-width: 95%;
+  }
+}

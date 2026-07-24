@@ -1,0 +1,255 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_hinqg4": {
+      "type": "image-banner",
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "section_width": "full_width",
+        "main_subheading": "Text about your branding",
+        "heading": "Image banner",
+        "text": "Give customers details about the banner image(s) or content on the template.",
+        "show_countdown": false,
+        "product_mont": "January",
+        "product_year": "2025",
+        "product_date": "30",
+        "day_title": "Day",
+        "hour_title": "Hour",
+        "minute_title": "Min",
+        "second_title": "Sec",
+        "button_label_1": "Button label",
+        "button_link_1": "",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "bg_color": "#ffffff",
+        "box_background_color": "#ffffff",
+        "heading_color": "#131313",
+        "subheading_color": "#131313",
+        "description_color": "#666666",
+        "button_bg": "#131313",
+        "button_text": "#ffffff",
+        "button_hr_bg": "#131313",
+        "button_hr_text": "#ffffff",
+        "countdown_bg": "#ffffff",
+        "countdown_text": "#333333",
+        "padding-top": 120,
+        "padding-bottom": 120,
+        "padding-top-1429": 70,
+        "padding-bottom-1429": 70,
+        "padding-top-1199": 60,
+        "padding-bottom-1199": 60,
+        "padding-top-991": 50,
+        "padding-bottom-991": 50,
+        "padding-top-767": 40,
+        "padding-bottom-767": 40,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding-top": 60,
+        "padding-bottom": 60,
+        "padding-top-1429": 50,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 45,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 40,
+        "padding-bottom-991": 40,
+        "padding-top-767": 35,
+        "padding-bottom-767": 35,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30
+      }
+    },
+    "collapsible-content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Bti8imb": {
+          "type": "collapsible_row",
+          "name": "Row1",
+          "settings": {
+            "content_number": "01",
+            "heading": "Do you service the commercial laundry equipment you sell?",
+            "row_content": "Yes. We support the equipment we sell with service, parts, maintenance support, warranty-related help, and ongoing customer care.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_V4DUcQb": {
+          "type": "collapsible_row",
+          "name": "Row2",
+          "settings": {
+            "content_number": "02",
+            "heading": "Can I book a service call with you?",
+            "row_content": "Yes. Customers can contact us to book a service call for commercial laundry equipment that needs attention, troubleshooting, or repair.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_9BxBG3b": {
+          "type": "collapsible_row",
+          "name": "Row3",
+          "settings": {
+            "content_number": "03",
+            "heading": "What types of machines do you service?",
+            "row_content": "We support service requests for commercial washers, dryers, ironers, and other related commercial laundry equipment depending on the machine and application.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_4gyRrPb": {
+          "type": "collapsible_row",
+          "name": "Row4",
+          "settings": {
+            "content_number": "04",
+            "heading": "Do you offer commercial laundry equipment repairs?",
+            "row_content": "Yes. We provide repair support for commercial laundry equipment when machines are down, underperforming, or showing signs of wear or failure.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_aHVPBWb": {
+          "type": "collapsible_row",
+          "name": "Row5",
+          "settings": {
+            "content_number": "05",
+            "heading": "Do you offer preventative maintenance for laundry equipment?",
+            "row_content": "Yes. We offer preventative maintenance support to help customers reduce unexpected breakdowns, improve machine reliability, and protect their equipment investment over time.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_Ubek6Ub": {
+          "type": "collapsible_row",
+          "name": "Row6",
+          "settings": {
+            "content_number": "06",
+            "heading": "Do you offer extended warranty options?",
+            "row_content": "Yes. We offer extended warranty support as part of our broader service model for commercial laundry equipment.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_YMEhywb": {
+          "type": "collapsible_row",
+          "name": "Row7",
+          "settings": {
+            "content_number": "07",
+            "heading": "Do you provide parts for commercial laundry equipment?",
+            "row_content": "Yes. We provide parts support for commercial laundry equipment and can help customers identify the right part for their machine when repairs or maintenance are needed.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_XpJdVeb": {
+          "type": "collapsible_row",
+          "name": "Row8",
+          "settings": {
+            "content_number": "08",
+            "heading": "What information should I send when I need a part or service?",
+            "row_content": "To help us identify the right part or service need, it is best to send the machine model number, serial number, machine type, and a description of the issue. Photos and videos can also be very helpful.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_nabQkzb": {
+          "type": "collapsible_row",
+          "name": "Row9",
+          "settings": {
+            "content_number": "09",
+            "heading": "Do you offer service memberships or maintenance programs?",
+            "row_content": "Yes. We offer additional service support options, including a full-service membership program with labour coverage and preferred pricing on parts, chemicals, and laundry carts.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_CB6Crqb": {
+          "type": "collapsible_row",
+          "name": "Row10",
+          "settings": {
+            "content_number": "10",
+            "heading": "Do you support customers after the equipment is installed?",
+            "row_content": "Yes. We continue supporting customers after installation with service, parts, warranty help, maintenance support, and ongoing guidance when needed.",
+            "richtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_V4DUcQb",
+        "collapsible_row_9BxBG3b",
+        "collapsible_row_4gyRrPb",
+        "collapsible_row_aHVPBWb",
+        "collapsible_row_Ubek6Ub",
+        "collapsible_row_YMEhywb",
+        "collapsible_row_XpJdVeb",
+        "collapsible_row_nabQkzb",
+        "collapsible_row_CB6Crqb"
+      ],
+      "settings": {
+        "show_topimg": false,
+        "open_first_collapsible_row": true,
+        "full_width": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "further_text": "Still have questions? We are happy to help with commercial laundry equipment, parts, service, chemicals, and laundromat planning. Whether you are opening a new laundromat, upgrading your current equipment, or looking for dependable supply and service support, we can help you take the next step.",
+        "contact_btn_text": "Book A Repair",
+        "contact_btn_link": "shopify://pages/contact-us",
+        "main_title_alignment": "center",
+        "number_bg": "#052b3e",
+        "number_color": "#ffffff",
+        "heading_color": "#ffffff",
+        "content_color": "#cccccc",
+        "bg_color": "#08364c",
+        "number_hr_bg": "#948958",
+        "number_hr_color": "#ffffff",
+        "hover_color": "#948958",
+        "padding-top": 0,
+        "padding-bottom": 60,
+        "padding-top-1429": 0,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 0,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 0,
+        "padding-bottom-991": 40,
+        "padding-top-767": 0,
+        "padding-bottom-767": 35,
+        "padding-top-575": 0,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    }
+  },
+  "order": [
+    "image_banner_hinqg4",
+    "main",
+    "collapsible-content"
+  ]
+}

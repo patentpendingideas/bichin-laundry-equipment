@@ -1,0 +1,238 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding-top": 60,
+        "padding-bottom": 60,
+        "padding-top-1429": 50,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 45,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 40,
+        "padding-bottom-991": 40,
+        "padding-top-767": 35,
+        "padding-bottom-767": 35,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30
+      }
+    },
+    "rich_text_HjhMXd": {
+      "type": "rich-text",
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "full__width",
+        "caption": "What do you want to know?",
+        "heading": "Bichin Laundry Equipment FAQ",
+        "text": "Have questions about commercial laundry equipment, service, laundry chemicals, or starting a laundromat? This FAQ page brings together answers to the most common questions customers ask Bichin Laundry Equipment about equipment selection, repairs, preventative maintenance, chemical programs, laundromat planning, financing, and ongoing support. Whether you run a laundromat, hotel, care facility, healthcare operation, multi-housing laundry room, or another high-volume laundry business, we are here to help you find the right solutions for your operation.",
+        "button_label": "Contact Us",
+        "button_link": "shopify://pages/contact-us",
+        "desktop_content_position": "center",
+        "text_alignment": "center",
+        "section_bg": "#ffffff",
+        "richtext_subheading": "#333333",
+        "richtext_heading": "#333333",
+        "richtext_description": "#666666",
+        "button_bg": "#333333",
+        "button_text": "#ffffff",
+        "button_hr_bg": "#333333",
+        "button_hr_text": "#ffffff",
+        "padding-top": 120,
+        "padding-bottom": 120,
+        "padding-top-1429": 70,
+        "padding-bottom-1429": 70,
+        "padding-top-1199": 60,
+        "padding-bottom-1199": 60,
+        "padding-top-991": 50,
+        "padding-bottom-991": 50,
+        "padding-top-767": 40,
+        "padding-bottom-767": 40,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    },
+    "blocks_6mWgqY": {
+      "type": "_blocks",
+      "name": "Page title",
+      "settings": {}
+    },
+    "collapsible-content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Bti8im4": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "01",
+            "heading": "Can you help me start a laundromat?",
+            "row_content": "Yes. We work with both new laundromat owners and existing owners who are upgrading or renovating a store. We help guide the process from early planning through equipment selection and ongoing support.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_V4DUcQ4": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "02",
+            "heading": "What does your laundromat planning process include?",
+            "row_content": "Our laundromat planning support can include location guidance, assessing the commercial space, creating layouts, selecting the right equipment mix, helping with financing options, ordering equipment, installation coordination, and ongoing support.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_9BxBG34": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "03",
+            "heading": "Do you help with laundromat layouts and floor plans?",
+            "row_content": "Yes. We help create designs and floor plans based on the available square footage of the space, machine placement, workflow, and business goals.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_4gyRrP4": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "04",
+            "heading": "Can you help me choose how many washers and dryers I need?",
+            "row_content": "Yes. We help determine the right mix, numbers, and capacities of washers, dryers, and related equipment based on your projected demand and business model.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_aHVPBW4": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "05",
+            "heading": "Do you work with contractors and project estimators?",
+            "row_content": "Yes. We work with contractors, architects, and project estimators to help keep projects practical, efficient, and aligned with the laundry plan.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_Ubek6U4": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "06",
+            "heading": "Do you provide pricing or quotes during the planning stage?",
+            "row_content": "Yes. We can provide a project quote once the planning, layout, and budgeting details are clear enough to build an accurate equipment and support package.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_c4azVF4": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "07",
+            "heading": "Do you offer free planning and design consultations?",
+            "row_content": "Yes. We offer planning and design support to help customers move forward with a clearer laundromat concept and equipment plan.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_qkHTWp4": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "08",
+            "heading": "Can you help with laundromat financing?",
+            "row_content": "Yes. We can help customers explore reputable third-party financing options and navigate the approval process where applicable.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_CcCrwN4": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "09",
+            "heading": "Do you only help with brand-new laundromats?",
+            "row_content": "No. We also help with laundromat retools, equipment replacements, renovations, and upgrades to existing laundry businesses.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_wmHBWx4": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "10",
+            "heading": "Do you continue supporting customers after the laundromat opens?",
+            "row_content": "Yes. We continue supporting customers with equipment, service, parts, warranties, and ongoing guidance after the laundromat is up and running.",
+            "richtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Bti8im4",
+        "collapsible_row_V4DUcQ4",
+        "collapsible_row_9BxBG34",
+        "collapsible_row_4gyRrP4",
+        "collapsible_row_aHVPBW4",
+        "collapsible_row_Ubek6U4",
+        "collapsible_row_c4azVF4",
+        "collapsible_row_qkHTWp4",
+        "collapsible_row_CcCrwN4",
+        "collapsible_row_wmHBWx4"
+      ],
+      "settings": {
+        "show_topimg": false,
+        "open_first_collapsible_row": true,
+        "full_width": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "further_text": "Still have questions? We are happy to help with commercial laundromat planning. Whether you are opening a new laundromat, upgrading your current equipment, or looking for dependable supply and service support, we can help you take the next step.",
+        "contact_btn_text": "Contact Us",
+        "contact_btn_link": "shopify://pages/contact-us",
+        "main_title_alignment": "center",
+        "number_bg": "#052b3e",
+        "number_color": "#ffffff",
+        "heading_color": "#ffffff",
+        "content_color": "#cccccc",
+        "bg_color": "#08364c",
+        "number_hr_bg": "#948958",
+        "number_hr_color": "#ffffff",
+        "hover_color": "#948958",
+        "padding-top": 0,
+        "padding-bottom": 60,
+        "padding-top-1429": 0,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 0,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 0,
+        "padding-bottom-991": 40,
+        "padding-top-767": 0,
+        "padding-bottom-767": 35,
+        "padding-top-575": 0,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_HjhMXd",
+    "blocks_6mWgqY",
+    "collapsible-content"
+  ]
+}

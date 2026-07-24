@@ -1,0 +1,189 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding-top": 60,
+        "padding-bottom": 60,
+        "padding-top-1429": 50,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 45,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 40,
+        "padding-bottom-991": 40,
+        "padding-top-767": 35,
+        "padding-bottom-767": 35,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30
+      }
+    },
+    "rich_text_HjhMXd": {
+      "type": "rich-text",
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "full__width",
+        "caption": "What do you want to know?",
+        "heading": "Bichin Laundry Equipment FAQ",
+        "text": "Have questions about commercial laundry equipment, service, laundry chemicals, or starting a laundromat? This FAQ page brings together answers to the most common questions customers ask Bichin Laundry Equipment about equipment selection, repairs, preventative maintenance, chemical programs, laundromat planning, financing, and ongoing support. Whether you run a laundromat, hotel, care facility, healthcare operation, multi-housing laundry room, or another high-volume laundry business, we are here to help you find the right solutions for your operation.",
+        "button_label": "Contact Us",
+        "button_link": "shopify://pages/contact-us",
+        "desktop_content_position": "center",
+        "text_alignment": "center",
+        "section_bg": "#ffffff",
+        "richtext_subheading": "#333333",
+        "richtext_heading": "#333333",
+        "richtext_description": "#666666",
+        "button_bg": "#333333",
+        "button_text": "#ffffff",
+        "button_hr_bg": "#333333",
+        "button_hr_text": "#ffffff",
+        "padding-top": 120,
+        "padding-bottom": 120,
+        "padding-top-1429": 70,
+        "padding-bottom-1429": 70,
+        "padding-top-1199": 60,
+        "padding-bottom-1199": 60,
+        "padding-top-991": 50,
+        "padding-bottom-991": 50,
+        "padding-top-767": 40,
+        "padding-bottom-767": 40,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    },
+    "blocks_6mWgqY": {
+      "type": "_blocks",
+      "name": "Page title",
+      "settings": {}
+    },
+    "collapsible-content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Bti8im3c": {
+          "type": "collapsible_row",
+          "name": "Row1",
+          "settings": {
+            "content_number": "01",
+            "heading": "Do you only offer laundry chemicals?",
+            "row_content": "No. In addition to laundry chemicals, we also offer kitchen and dishwashing solutions, as well as housekeeping and janitorial cleaning products.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_V4DUcQ3c": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "02",
+            "heading": "Do you offer commercial kitchen cleaning chemicals?",
+            "row_content": "Yes. We provide kitchen and dishwashing solutions for commercial businesses that need dependable cleaning support in food-service and hospitality environments.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_9BxBG33c": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "03",
+            "heading": "Do you offer housekeeping and janitorial products?",
+            "row_content": "Yes. We offer housekeeping supplies and commercial and industrial-grade janitorial cleaning solutions for businesses that need to keep their facilities clean, organized, and presentable.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_4gyRrP3c": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "04",
+            "heading": "What types of businesses can use your non-laundry cleaning products?",
+            "row_content": "Our non-laundry chemical and cleaning products are a strong fit for hotels, lodges, care facilities, healthcare environments, kitchens, and other businesses that need commercial cleaning support beyond the laundry room.",
+            "richtext": ""
+          }
+        },
+        "collapsible_row_aHVPBW3c": {
+          "type": "collapsible_row",
+          "settings": {
+            "content_number": "05",
+            "heading": "Can you help create a custom chemical supply plan for my business?",
+            "row_content": "Yes. We can help create a customized plan based on your business type, cleaning needs, usage levels, and delivery preferences.",
+            "richtext": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Bti8im3c",
+        "collapsible_row_V4DUcQ3c",
+        "collapsible_row_9BxBG33c",
+        "collapsible_row_4gyRrP3c",
+        "collapsible_row_aHVPBW3c"
+      ],
+      "settings": {
+        "show_topimg": false,
+        "open_first_collapsible_row": true,
+        "full_width": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "further_text": "Still have questions? We are happy to help with kitchen and dishwashing solutions for commercial businesses. Whether you are opening a new kitchen, laundrymat or upgrading your current equipment, or looking for dependable supply and service support, we can help you take the next step.",
+        "contact_btn_text": "Request Pricing",
+        "contact_btn_link": "shopify://pages/contact-us",
+        "main_title_alignment": "center",
+        "number_bg": "#052b3e",
+        "number_color": "#ffffff",
+        "heading_color": "#ffffff",
+        "content_color": "#cccccc",
+        "bg_color": "#08364c",
+        "number_hr_bg": "#948958",
+        "number_hr_color": "#ffffff",
+        "hover_color": "#948958",
+        "padding-top": 0,
+        "padding-bottom": 60,
+        "padding-top-1429": 0,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 0,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 0,
+        "padding-bottom-991": 40,
+        "padding-top-767": 0,
+        "padding-bottom-767": 35,
+        "padding-top-575": 0,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_HjhMXd",
+    "blocks_6mWgqY",
+    "collapsible-content"
+  ]
+}

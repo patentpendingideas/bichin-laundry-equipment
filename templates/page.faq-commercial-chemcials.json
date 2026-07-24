@@ -1,0 +1,206 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_hinqg4": {
+      "type": "image-banner",
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "section_width": "full_width",
+        "main_subheading": "Text about your branding",
+        "heading": "Image banner",
+        "text": "Give customers details about the banner image(s) or content on the template.",
+        "show_countdown": false,
+        "product_mont": "January",
+        "product_year": "2025",
+        "product_date": "30",
+        "day_title": "Day",
+        "hour_title": "Hour",
+        "minute_title": "Min",
+        "second_title": "Sec",
+        "button_label_1": "Button label",
+        "button_link_1": "",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "bg_color": "#ffffff",
+        "box_background_color": "#ffffff",
+        "heading_color": "#131313",
+        "subheading_color": "#131313",
+        "description_color": "#666666",
+        "button_bg": "#131313",
+        "button_text": "#ffffff",
+        "button_hr_bg": "#131313",
+        "button_hr_text": "#ffffff",
+        "countdown_bg": "#ffffff",
+        "countdown_text": "#333333",
+        "padding-top": 120,
+        "padding-bottom": 120,
+        "padding-top-1429": 70,
+        "padding-bottom-1429": 70,
+        "padding-top-1199": 60,
+        "padding-bottom-1199": 60,
+        "padding-top-991": 50,
+        "padding-bottom-991": 50,
+        "padding-top-767": 40,
+        "padding-bottom-767": 40,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding-top": 60,
+        "padding-bottom": 60,
+        "padding-top-1429": 50,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 45,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 40,
+        "padding-bottom-991": 40,
+        "padding-top-767": 35,
+        "padding-bottom-767": 35,
+        "padding-top-575": 30,
+        "padding-bottom-575": 30
+      }
+    },
+    "collapsible-content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Bti8imd": {
+          "type": "collapsible_row",
+          "name": "Row1",
+          "settings": {
+            "content_number": "01",
+            "heading": "Do you offer commercial laundry chemicals?",
+            "row_content": "Yes. We offer commercial laundry detergents and cleaning supplies for BC, Yukon, and Alberta businesses that need dependable cleaning performance and support for day-to-day laundry operations"
+          }
+        },
+        "collapsible_row_V4DUcQd": {
+          "type": "collapsible_row",
+          "name": "Row2",
+          "settings": {
+            "content_number": "02",
+            "heading": "What kinds of businesses can buy your laundry chemicals?",
+            "row_content": "We supply laundry chemical solutions for laundromats, hotels, care homes, hospitals, correctional facilities, lodges, commercial laundry providers, industrial laundry providers, and other businesses with ongoing laundry needs."
+          }
+        },
+        "collapsible_row_9BxBG3d": {
+          "type": "collapsible_row",
+          "name": "Row3",
+          "settings": {
+            "content_number": "03",
+            "heading": "Do you only sell chemicals for large laundry operations?",
+            "row_content": "No. We work with businesses both big and small, and we can help recommend solutions based on the size and needs of the operation."
+          }
+        },
+        "collapsible_row_4gyRrPd": {
+          "type": "collapsible_row",
+          "name": "Row4",
+          "settings": {
+            "content_number": "04",
+            "heading": "Can you help me choose the right commercial laundry chemicals?",
+            "row_content": "Yes. We offer customized plans to help customers determine the best cleaning brands and chemical solutions for their business, laundry volume, and operating needs."
+          }
+        },
+        "collapsible_row_aHVPBWd": {
+          "type": "collapsible_row",
+          "name": "Row5",
+          "settings": {
+            "content_number": "05",
+            "heading": "Do you offer chemical delivery?",
+            "row_content": "Yes. We offer delivery of detergents and cleaning solutions directly to your business so your operation stays stocked and organized."
+          }
+        },
+        "collapsible_row_Ubek6Ud": {
+          "type": "collapsible_row",
+          "name": "Row6",
+          "settings": {
+            "content_number": "06",
+            "heading": "Can your chemicals help support machine cleanliness too?",
+            "row_content": "Yes. Our chemical offering includes products designed not only for clean laundry, but also for supporting clean, well-functioning laundry equipment."
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Bti8imd",
+        "collapsible_row_V4DUcQd",
+        "collapsible_row_9BxBG3d",
+        "collapsible_row_4gyRrPd",
+        "collapsible_row_aHVPBWd",
+        "collapsible_row_Ubek6Ud"
+      ],
+      "settings": {
+        "show_topimg": false,
+        "open_first_collapsible_row": true,
+        "full_width": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "further_text": "Still have questions? We are happy to help with commercial laundry chemicals. Whether you are opening a new laundromat, upgrading your current equipment, or looking for dependable supply and service support, we can help you take the next step.",
+        "contact_btn_text": "Request Pricing",
+        "contact_btn_link": "shopify://pages/contact-us",
+        "main_title_alignment": "center",
+        "number_bg": "#052b3e",
+        "number_color": "#ffffff",
+        "heading_color": "#ffffff",
+        "content_color": "#cccccc",
+        "bg_color": "#08364c",
+        "number_hr_bg": "#948958",
+        "number_hr_color": "#ffffff",
+        "hover_color": "#948958",
+        "padding-top": 0,
+        "padding-bottom": 60,
+        "padding-top-1429": 0,
+        "padding-bottom-1429": 50,
+        "padding-top-1199": 0,
+        "padding-bottom-1199": 45,
+        "padding-top-991": 0,
+        "padding-bottom-991": 40,
+        "padding-top-767": 0,
+        "padding-bottom-767": 35,
+        "padding-top-575": 0,
+        "padding-bottom-575": 30,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
+      }
+    }
+  },
+  "order": [
+    "image_banner_hinqg4",
+    "main",
+    "collapsible-content"
+  ]
+}

@@ -1,0 +1,86 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Check out our full line of Dexter Laundry Equipment!"
+          }
+        },
+        "6a4ebb5f-8058-4e13-9e67-af4ff4976629": {
+          "type": "announcement",
+          "settings": {
+            "text": "Let us help you plan your laundromat layout!"
+          }
+        },
+        "b8a9a4f8-53f1-42af-a2b5-14ca3e07938e": {
+          "type": "announcement",
+          "settings": {
+            "text": "We service laundry businesses all over BC!"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "6a4ebb5f-8058-4e13-9e67-af4ff4976629",
+        "b8a9a4f8-53f1-42af-a2b5-14ca3e07938e"
+      ],
+      "custom_css": [
+        "> div {background: linear-gradient( to bottom right, #bb941b 0%, #e0c55a 25%, #be9722 50%, #c6a228 75%, #ebce66 100% );}"
+      ],
+      "settings": {
+        "show_line_separator": false,
+        "show_container": false,
+        "show_social": false,
+        "autoplay-enable": false,
+        "arrows": false,
+        "speed": "500",
+        "loop": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "flip_vertical": "social-icons-first",
+        "section_bg": "#c6a228",
+        "text_color": "#ffffff",
+        "text_hr_color": "#052b3e",
+        "border_color": "#c6a228"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle",
+        "show_container": false,
+        "menu": "main-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "always",
+        "show_line_separator": false,
+        "header_section_bg": "#001526",
+        "header_text_color": "#ffffff",
+        "header_text_hr_color": "#c6a228",
+        "border_color": "#08364c",
+        "menu_bg": "#001526",
+        "menu_text": "#ffffff",
+        "menu_content_text": "#cccccc",
+        "menu_hr_text": "#be9722",
+        "mobile_logo_position": "center"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
