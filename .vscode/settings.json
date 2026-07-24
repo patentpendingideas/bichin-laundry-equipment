@@ -1,0 +1,37 @@
+{
+  "files.exclude": {
+    "node_modules": true,
+    "assets/theme.css": true,
+    "assets/theme.css.map": true,
+    "assets/theme.js": true,
+    "assets/theme.js.map": true,
+    "assets/prodify.js": true,
+    "assets/prodify.js.map": true,
+    ".shopify": true
+  },
+  "search.exclude": {
+    "node_modules": true,
+    "pnpm-lock.yaml": true,
+    "assets/theme.css": true,
+    "assets/theme.js": true,
+    "assets/prodify.js": true,
+    ".shopify": true
+  },
+  "files.associations": {
+    "*.liquid": "liquid"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[liquid]": {
+    "editor.defaultFormatter": "Shopify.theme-check-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "prettier.requireConfig": true,
+  "shopifyLiquid.formattingEnabled": true,
+  "shopifyLiquid.themeCheckEnabled": true
+}

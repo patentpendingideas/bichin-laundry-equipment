@@ -1,0 +1,13 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\npnpm build"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\npnpm run dev"
+    }
+  },
+  "openLogOnRun" : "start"
+}

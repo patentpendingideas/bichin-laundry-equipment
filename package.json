@@ -1,0 +1,39 @@
+{
+  "name": "shopify-tailwind-starter",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "run-p shopify:dev css:dev js:dev",
+    "build": "run-p css:build js:build",
+    "format": "pnpm prettier --write .",
+    "shopify:dev": "shopify theme dev --poll --live-reload=hot-reload --notify=/tmp/theme.update --theme-editor-sync -e development",
+    "css:dev": "tailwindcss -i src/theme.css -o assets/theme.css --watch",
+    "css:build": "tailwindcss -i src/theme.css -o assets/theme.css --minify",
+    "js:dev": "concurrently \"esbuild src/theme.js --bundle --outfile=assets/theme.js --sourcemap --watch\" \"esbuild src/prodify/index.ts --bundle --outfile=assets/prodify.js --sourcemap --watch\"",
+    "js:build": "concurrently \"esbuild src/theme.js --bundle --minify --outfile=assets/theme.js --define:process.env.NODE_ENV='\\\"production\\\"'\" \"esbuild src/prodify/index.ts --bundle --minify --outfile=assets/prodify.js --define:process.env.NODE_ENV='\\\"production\\\"'\"",
+    "zip": "zip -r theme.zip assets config layout locales sections snippets templates shopify.theme.toml -x \"*.DS_Store*\"",
+    "package": "pnpm build && pnpm zip"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "protobufjs"
+    ]
+  },
+  "devDependencies": {
+    "@alpinejs/collapse": "^3.15.3",
+    "@alpinejs/focus": "^3.15.3",
+    "@alpinejs/morph": "^3.15.3",
+    "@shopify/cli": "^3.93.2",
+    "@shopify/prettier-plugin-liquid": "^1.10.2",
+    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
+    "alpinejs": "^3.15.3",
+    "concurrently": "^9.2.0",
+    "esbuild": "^0.25.0",
+    "liquid-ajax-cart": "^2.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.8.1",
+    "tailwindcss": "^4.1.18"
+  }
+}

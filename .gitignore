@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+*.log
+
+shopify.theme.toml
+
+assets/theme.css
+assets/theme.js
+assets/theme.js.map
+assets/prodify.js
+assets/prodify.js.map
