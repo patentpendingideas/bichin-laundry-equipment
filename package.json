@@ -1,6 +1,5 @@
 {
-  "name": "shopify-tailwind-starter",
-  "license": "MIT",
+  "name": "bichin-laundry-equipment",
   "type": "module",
   "scripts": {
     "dev": "run-p shopify:dev css:dev js:dev",

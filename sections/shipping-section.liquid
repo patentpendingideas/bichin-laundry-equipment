@@ -1,0 +1,545 @@
+
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl lg:mx-0">
+        {%- if section.settings.subtitle != blank -%}
+         <h2 class="text-xl font-semibold tracking-tight text-pretty text-gold-600 text-center sm:text-xl md:text-2xl lg:text-2xl">{{ section.settings.subtitle }}</h2>
+        {% endif %}
+        {%- if section.settings.title != blank -%}
+         <h2 class="text-2xl font-semibold tracking-tight text-pretty text-gold-600 text-center sm:text-xl md:text-2xl lg:text-2xl">{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <p class="mt-6 text-lg/8 text-gray-600">{{ section.settings.description }}</p>
+        {% endif %}
+    </div>
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <div class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+      {% for block in section.blocks %}
+        <div class="flex flex-col">
+        <dt class="text-base font-semibold text-gray-900">
+          <div class="mb-6 flex items-center justify-center rounded-lg">
+            {% if block.settings.shipping_icon != blank %}
+             {{ block.settings.shipping_icon | image_url: width: 75 | image_tag : loading: 'lazy'}}
+             {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder w-75 h-0' }}
+            {% endif %}
+          </div>
+
+          {% if block.settings.shipping_heading != blank %}
+            <h3 class="text-lg text-gold-400 text-center">{{ block.settings.shipping_heading }}</h3>
+          {% endif %}
+        </dt>
+        <dd class="mt-1 flex flex-auto flex-col text-base text-gray-600 text-center">
+          {% if block.settings.shipping_paragraph != blank %}
+            <p class="flex-auto text-base">{{ block.settings.shipping_paragraph }}</p>
+          {% endif %}
+
+          {% if block.settings.shipping_button != blank %}
+            <p class="mt-6">
+              <a href="#" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-500">{{ block.settings.shipping_button }} Learn more <span aria-hidden="true">→</span></a>
+            </p>
+          {% endif %}
+        </dd>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shipping section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main title setting"
+    },
+    {
+      "type" : "image_picker",
+      "id" : "heading-img",
+      "label" : "Heading image"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "t:sections.featured-collection.settings.subheading.label",
+      "default": "Text about your branding"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "t:sections.multicolumn.settings.title.label",
+      "default": "Featured collection"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "t:sections.featured-collection.settings.description.label",
+      "default": "Pair text with an image to focus on your brand and description of your brand."
+    },
+    {
+      "type": "select",
+      "id": "main_title_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.social_media_collage.settings.left"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.social_media_collage.settings.center"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.social_media_collage.settings.right"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.social_media_collage.settings.main_title_alignment"
+    },
+    {
+      "type": "header",
+      "content": "Service slider setting"
+    },
+    {
+      "type": "checkbox",
+      "id": "border_bottom",
+      "label": "t:sections.social_media_collage.settings.enable_border",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.featured-collection.settings.columns_desktop.label"
+    },
+    {
+      "type": "range",
+      "id": "columns_large_tablet",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "Number of columns on large tablet"
+    },
+    {
+      "type": "range",
+      "id": "columns_tablet",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 2,
+      "label": "Number of columns on tablet"
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1,
+      "label": "Number of columns on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_enable",
+      "label": "Autoplay enable",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "arrows",
+      "label": "Enable navigation arrows",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "dots",
+      "label": "Enable pagination dots",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "speed",
+      "label": "Slide speed",
+      "default": "500"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Enable loop",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Service icon setting"
+    },
+    {
+      "type": "select",
+      "id": "icon_width",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "label": "Service icon width",
+      "default": "small"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.social_media_collage.settings.color_setting"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "t:sections.social_media_collage.settings.section_background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Main title color"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "t:sections.social_media_collage.settings.subheading_color",
+      "default": "#131313"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:sections.social_media_collage.settings.heading_color",
+      "default": "#131313"
+    },
+    {
+      "type": "color",
+      "id": "content_color",
+      "label": "t:sections.social_media_collage.settings.description_color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Service content color"
+    },
+    {
+      "type": "color",
+      "id": "heading_text_color",
+      "label": "t:sections.social_media_collage.settings.heading_color",
+      "default": "#131313"
+    },
+    {
+      "type": "color",
+      "id": "content_text_color",
+      "label": "t:sections.social_media_collage.settings.description_color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "t:sections.social_media_collage.settings.border_color",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "number",
+      "id": "padding-top",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 120
+    },
+    {
+      "type": "number",
+      "id": "padding-bottom",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 120
+    },
+    {
+      "type": "header",
+      "content": "Screen wise section padding"
+    },
+    {
+      "type": "header",
+      "content": "@media screen 1429"
+    },
+    {
+      "type": "number",
+      "id": "padding-top-1429",
+      "label": "Padding top",
+      "default": 70
+    },
+    {
+      "type": "number",
+      "id": "padding-bottom-1429",
+      "label": "Padding bottom",
+      "default": 70
+    },
+    {
+      "type": "header",
+      "content": "@media screen 1199"
+    },
+    {
+      "type": "number",
+      "id": "padding-top-1199",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "number",
+      "id": "padding-bottom-1199",
+      "label": "Padding bottom",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "@media screen 991"
+    },
+    {
+      "type": "number",
+      "id": "padding-top-991",
+      "label": "Padding top",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding-bottom-991",
+      "label": "Padding bottom",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "@media screen 767"
+    },
+    {
+      "type": "number",
+      "id": "padding-top-767",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "padding-bottom-767",
+      "label": "Padding bottom",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "@media screen 575"
+    },
+    {
+      "type": "number",
+      "id": "padding-top-575",
+      "label": "Padding top",
+      "default": 30
+    },
+    {
+      "type": "number",
+      "id": "padding-bottom-575",
+      "label": "Padding bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Margin settings"
+    },
+    {
+      "type": "number",
+      "id": "margin-top",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin-bottom",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Screen wise section margin"
+    },
+    {
+      "type": "header",
+      "content": "@media screen 1429"
+    },
+    {
+      "type": "number",
+      "id": "margin-top-1429",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin-bottom-1429",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "@media screen 1199"
+    },
+    {
+      "type": "number",
+      "id": "margin-top-1199",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin-bottom-1199",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "@media screen 991"
+    },
+    {
+      "type": "number",
+      "id": "margin-top-991",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin-bottom-991",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "@media screen 767"
+    },
+    {
+      "type": "number",
+      "id": "margin-top-767",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin-bottom-767",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "@media screen 575"
+    },
+    {
+      "type": "number",
+      "id": "margin-top-575",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin-bottom-575",
+      "label": "Margin bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "shipping",
+      "name": "t:sections.social_media_collage.settings.service",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "shipping_icon",
+          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "textarea",
+          "id": "shipping_heading",
+          "default": "Shipping heading",
+          "label": "t:sections.featured-collection.settings.title.label"
+        },
+        {
+          "type": "textarea",
+          "id": "shipping_paragraph",
+          "default": "Shipping content",
+          "label": "t:sections.featured-collection.settings.description.label"
+        },
+        {
+          "type": "select",
+          "id": "shipping_content_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.social_media_collage.settings.left"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.social_media_collage.settings.center"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.social_media_collage.settings.right"
+            }
+          ],
+          "default": "left",
+          "label": "t:sections.social_media_collage.settings.content_alignment"
+        },
+        {
+          "type": "select",
+          "id": "shipping_block_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.social_media_collage.settings.left"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.social_media_collage.settings.center"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.social_media_collage.settings.right"
+            }
+          ],
+          "default": "left",
+          "label": "t:sections.slideshow.blocks.slide.settings.box_align.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shipping section",
+      "blocks": [
+        {
+          "type": "shipping"
+        },
+        {
+          "type": "shipping"
+        },
+        {
+          "type": "shipping"
+        },
+        {
+          "type": "shipping"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
