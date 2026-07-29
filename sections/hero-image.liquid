@@ -1,0 +1,53 @@
+<div class="max-w-7xl mx-auto px-4 py-12" x-data="{ activeSlide: 0, slides: 3 }">
+	<div class="relative overflow-hidden rounded-2xl shadow-lg">
+		<!-- Slides Container -->
+		<div class="flex transition-transform duration-505 ease-in-out" :style="'transform: translateX(-' + (activeSlide * 100) + '%)'">
+			{%- for block in section.blocks -%}
+				<div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 items-center bg-slate-50 p-8 md:p-16">
+					<!-- Text Content -->
+					<div class="space-y-4 mb-6 md:mb-0 md:pr-8">
+						<h2 class="text-3xl font-bold tracking-tight text-slate-900">{{ block.settings.title }}</h2>
+						<p class="text-lg text-slate-600">{{ block.settings.description }}</p>
+						{%- if block.settings.button_text != blank -%}
+							<a href="{{ block.settings.button_link }}" class="inline-block bg-black text-white px-6 py-3 rounded-xl font-medium hover:bg-slate-800 transition">
+								{{ block.settings.button_text }}
+							</a>
+						{%- endif -%}
+					</div>
+					<!-- Image Content -->
+					<div>
+						{%- if block.settings.image != blank -%}
+							<img src="{{ block.settings.image | image_url: width: 2800 }}" alt="{{ block.settings.title }}" class="w-full h-auto rounded-xl object-cover shadow-md">
+						{%- else -%}
+							{{ 'lifestyle-1' | placeholder_svg_tag: 'w-full h-64 bg-slate-200 rounded-xl' }}
+						{%- endif -%}
+					</div>
+				</div>
+			{%- endfor -%}
+		</div>
+		<!-- Navigation Buttons -->
+		<button @click="activeSlide = (activeSlide === 0) ? slides - 1 : activeSlide - 1" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow transition">❮</button>
+		<button @click="activeSlide = (activeSlide === slides - 1) ? 0 : activeSlide + 1" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow transition">❯</button>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Tailwind Image Slider",
+	"settings": [],
+	"blocks": [
+		{
+			"type": "slide",
+			"name": "Slide",
+			"settings": [
+				{ "type": "image_picker", "id": "image", "label": "Image" },
+				{ "type": "text", "id": "title", "label": "Heading", "default": "Slide title" },
+				{ "type": "textarea", "id": "description", "label": "Description", "default": "Tell your brand story." },
+				{ "type": "text", "id": "button_text", "label": "Button Text" },
+				{ "type": "url", "id": "button_link", "label": "Button Link" }
+			]
+		}
+	],
+	"presets": [{ "name": "Tailwind Image Slider" }]
+}
+{% endschema %}
