@@ -1,0 +1,133 @@
+<div class="overflow-hidden bg-white py-32">
+	<div class="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+		<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:min-w-full lg:flex-none lg:gap-y-8">
+			<div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+			{% if section.settings.eyebrow != blank %}
+				<p class="mt-6 text-xl/8 text-gray-700">
+				{{ section.settings.eyebrow }}
+				</p>
+			{% endif %}
+
+			{% if section.settings.heading != blank %}
+				<h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+				{{ section.settings.heading }}
+				</h2>
+			{% endif %}
+
+
+			{% if section.settings.subheading != blank %}
+				<p class="mt-6 text-xl/8 text-gray-700">{{ section.settings.subheading }}</p>
+			{% endif %}
+
+			{% if section.settings.body_copy != blank %}
+				<p class="mt-6 text-base/7 text-gray-600">
+				{{ section.settings.body_copy }}
+				</p>
+			{% endif %}
+
+
+			{% if section.settings.button_link != blank %}
+				<div class="mt-10 flex">
+					<a href="{{ section.settings.button_link }}"class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+					{% if section.settings.button_text != blank %}
+						{{ section.settings.button_text }}
+					{% endif %}
+					<span aria-hidden="true">&rarr;</span>
+					</a>
+				</div>
+			{% endif %}
+		</div>
+			<div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
+				{% if section.settings.image_one != blank %}
+				<div class="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+					<img src="{{ section.settings.image_one | image_url: width: 1200 | image_tag: alt: section.settings.image_one.alt, loading: 'lazy' }}" class="aspect-7/5 w-148 max-w-none rounded-2xl bg-gray-50 object-cover max-sm:w-120" />
+				</div>
+				{% endif %}
+
+				<div class="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-148 lg:items-start lg:justify-end lg:gap-x-8">
+					<div class="order-first flex w-64 flex-none justify-end self-end max-sm:w-40 lg:w-auto">
+						{% if section.settings.image_two != blank %}
+							<img src="{{ section.settings.image_two | image_url: width: 1200 | image_tag: alt: section.settings.image_two.alt, loading: 'lazy' }}" class="aspect-4/3 w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover" />
+						{% endif %}
+					</div>
+					<div class="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+						{% if section.settings.image_three != blank %}
+							<img src="{{ section.settings.image_three | image_url: width: 1200 | image_tag: alt: section.settings.image_three.alt, loading: 'lazy' }}" class="aspect-7/5 w-148 max-w-none flex-none rounded-2xl bg-gray-50 object-cover max-sm:w-120" />
+						{% endif %}
+					</div>
+					<div class="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+					{% if section.settings.image_four != blank %}
+					<img src="	{{ section.settings.image_four | image_url: width: 1200 | image_tag: alt: section.settings.image_four.alt, loading: 'lazy' }}" class="aspect-4/3 w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover" />
+					{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Best Sellers",
+	"tag": "section",
+	"limit": 1,
+	"settings": [
+		{
+			"type": "text",
+			"id": "eyebrow",
+			"label": "Eyebrow",
+			"default": "Our Best Sellers!",
+			"info": "Our Best Sellers!"
+		},
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading",
+			"default": "Our Best Sellers"
+		},
+		{
+			"type": "text",
+			"id": "subheading",
+			"label": "subheading",
+			"default": "subheading goes here"
+		},
+		{
+			"type": "text",
+			"id": "body_copy",
+			"label": "Body Copy",
+			"placeholder": "Your Body Copy"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button Text",
+			"default": "Request A Quote"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "Button link"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_one",
+			"label": "Image One"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_two",
+			"label": "Image Two"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_three",
+			"label": "Image Three"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_four",
+			"label": "Image Four"
+		}
+	]
+}
+{% endschema %}
