@@ -9,6 +9,26 @@
  */
 {
   "sections": {
+    "hero_image_a4NHCF": {
+      "type": "hero-image",
+      "blocks": {
+        "slide_kTHTUC": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Laundromat_of_dexter_equipment-xl.webp",
+            "title": "Laundromat Planning. Machine Sales. Installations. Service.",
+            "description": "Your One-Stop Laundromat Planner & Supplier in BC, Alberta & The Yukon",
+            "button_text": "Learn More",
+            "button_link": "shopify://collections/commercial-laundry-accessories"
+          }
+        }
+      },
+      "block_order": [
+        "slide_kTHTUC"
+      ],
+      "name": "Tailwind Image Slider",
+      "settings": {}
+    },
     "3b6373ce-6366-4ac4-aa49-4545b22f55a0": {
       "type": "hero-slideshow",
       "blocks": {
@@ -232,26 +252,27 @@
         "margin-bottom-575": 0
       }
     },
-    "best_sellers_ne6FMR": {
+    "best_sellers_L7Ftjj": {
       "type": "best-sellers",
-      "name": "Best Sellers Section",
+      "name": "Best Sellers",
       "settings": {
-        "eyebrow": "Our Bestsellers!",
+        "eyebrow": "Our Best Sellers!",
         "heading": "Dexter Commercial Softmount Washers",
-        "subheading": "",
+        "subheading": "subheading goes here",
         "body_copy": "Dexter Commercial Soft Mount washers are an ideal solution for BC businesses with commercial laundry rooms that are looking for a high-performance, energy-efficient, and cost-effective laundry solution. Commercial Soft Mounts are designed for heavy-duty usage without the need for thick concrete floors for mounting. Dexter Softmounts are capable of handling large loads of linens, uniforms, and other textiles. They are equipped with advanced technology such as computer-controlled wash cycles, high-speed extractors, and large-capacity drums that ensure a thorough clean every time.",
         "button_text": "Request A Quote",
-        "button_link": "",
-        "image_one": "shopify://shop_images/dexter-vended-hardmount-washerT_450-Express.png",
-        "image_two": "shopify://shop_images/T-80-dryer.png",
-        "image_three": "shopify://shop_images/T-30x2-dryer.png",
-        "image_four": "shopify://shop_images/T-900-6-cycle.png"
+        "button_link": "shopify://collections/softmount-washers",
+        "image_one": "shopify://shop_images/Dexter_Softmount_Washer_Extractor.png",
+        "image_two": "shopify://shop_images/DexterVendedStackDryersX-Seriest-30.png",
+        "image_three": "shopify://shop_images/T-900-6-cycle.png",
+        "image_four": "shopify://shop_images/DexterVendedStackDryersX-Seriest-30_d231a655-ae28-49a7-b66c-6e8982afa207.png"
       }
     }
   },
   "order": [
+    "hero_image_a4NHCF",
     "3b6373ce-6366-4ac4-aa49-4545b22f55a0",
     "shipping_section_hBnfLA",
-    "best_sellers_ne6FMR"
+    "best_sellers_L7Ftjj"
   ]
 }
