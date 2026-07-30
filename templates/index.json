@@ -252,20 +252,52 @@
         "margin-bottom-575": 0
       }
     },
-    "best_sellers_L7Ftjj": {
-      "type": "best-sellers",
-      "name": "Best Sellers",
+    "aboutus_czLXxf": {
+      "type": "aboutus",
+      "name": "Intro to Commercial Laundry Equipment",
       "settings": {
-        "eyebrow": "Our Best Sellers!",
-        "heading": "Dexter Commercial Softmount Washers",
-        "subheading": "subheading goes here",
-        "body_copy": "Dexter Commercial Soft Mount washers are an ideal solution for BC businesses with commercial laundry rooms that are looking for a high-performance, energy-efficient, and cost-effective laundry solution. Commercial Soft Mounts are designed for heavy-duty usage without the need for thick concrete floors for mounting. Dexter Softmounts are capable of handling large loads of linens, uniforms, and other textiles. They are equipped with advanced technology such as computer-controlled wash cycles, high-speed extractors, and large-capacity drums that ensure a thorough clean every time.",
-        "button_text": "Request A Quote",
-        "button_link": "shopify://collections/softmount-washers",
-        "image_one": "shopify://shop_images/Dexter_Softmount_Washer_Extractor.png",
-        "image_two": "shopify://shop_images/DexterVendedStackDryersX-Seriest-30.png",
-        "image_three": "shopify://shop_images/T-900-6-cycle.png",
-        "image_four": "shopify://shop_images/DexterVendedStackDryersX-Seriest-30_d231a655-ae28-49a7-b66c-6e8982afa207.png"
+        "section_width": "page-width",
+        "section_subtitle": "Looking for Commercial Laundry Equipment?",
+        "main_heading": "Commercial Washers, Tumble Dryers, and Flatwork Ironers for Sale",
+        "section_description": "Bichin Laundry Equipment specializes in providing commercial washers, tumble dryers, and flatwork ironers for laundromats and other large commercial laundry facilities that need commercial laundry equipment throughout British Columbia, Alberta and the Yukon.",
+        "main_title_alignment": "left",
+        "banner_type": "image",
+        "local_url": "",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "about_us_img": "shopify://shop_images/dexter_washing_machine_door.jpg",
+        "rotating_img": "shopify://shop_images/dexter-vented-products.jpg",
+        "about_us_img2": "shopify://shop_images/dexter_on_premise_hardmount_washer_o_series.png",
+        "content": "We also focus on laundromat-based coin and card-vended laundry solutions, pitching card-vending as a modern upgrade that adds payment flexibility, usage tracking, and convenience (including app-based features). We are committed to high-efficiency models with large-capacity drums and added security measures–all aspects of commercial laundry machines that laundromats, apartments, dorms, and similar properties can benefit from with improved resident experiences, operational efficiency, and reduced hassle for everyone.",
+        "about-btn-text": "EXPLORE EQUIPMENT",
+        "about-btn-url": "shopify://collections/hardmount-washers",
+        "section_bg": "#ffffff",
+        "theme_subheading_color": "#c6a228",
+        "theme_heading_color": "#000000",
+        "content_color": "#000000",
+        "padding-top": 50,
+        "padding-bottom": 50,
+        "padding-top-1429": 40,
+        "padding-bottom-1429": 40,
+        "padding-top-1199": 30,
+        "padding-bottom-1199": 30,
+        "padding-top-991": 30,
+        "padding-bottom-991": 30,
+        "padding-top-767": 20,
+        "padding-bottom-767": 20,
+        "padding-top-575": 20,
+        "padding-bottom-575": 20,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "margin-top-1429": 0,
+        "margin-bottom-1429": 0,
+        "margin-top-1199": 0,
+        "margin-bottom-1199": 0,
+        "margin-top-991": 0,
+        "margin-bottom-991": 0,
+        "margin-top-767": 0,
+        "margin-bottom-767": 0,
+        "margin-top-575": 0,
+        "margin-bottom-575": 0
       }
     }
   },
@@ -273,6 +305,6 @@
     "hero_image_a4NHCF",
     "3b6373ce-6366-4ac4-aa49-4545b22f55a0",
     "shipping_section_hBnfLA",
-    "best_sellers_L7Ftjj"
+    "aboutus_czLXxf"
   ]
 }

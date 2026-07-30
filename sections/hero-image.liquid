@@ -1,26 +1,33 @@
-<div class="max-w-7xl mx-auto px-4 py-12" x-data="{ activeSlide: 0, slides: 3 }">
-	<div class="relative overflow-hidden rounded-2xl shadow-lg">
-		<!-- Slides Container -->
+<div class="max-w-full mx-auto" x-data="{ activeSlide: 0, slides: 3 }">
+	<!-- Slides Container -->
+	<div class="relative isolate overflow-hidden shadow-lg h-5/8">
 		<div class="flex transition-transform duration-505 ease-in-out" :style="'transform: translateX(-' + (activeSlide * 100) + '%)'">
 			{%- for block in section.blocks -%}
-				<div class="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 items-center bg-slate-50 p-8 md:p-16">
-					<!-- Text Content -->
-					<div class="space-y-4 mb-6 md:mb-0 md:pr-8">
-						<h2 class="text-3xl font-bold tracking-tight text-slate-900">{{ block.settings.title }}</h2>
-						<p class="text-lg text-slate-600">{{ block.settings.description }}</p>
-						{%- if block.settings.button_text != blank -%}
-							<a href="{{ block.settings.button_link }}" class="inline-block bg-black text-white px-6 py-3 rounded-xl font-medium hover:bg-slate-800 transition">
-								{{ block.settings.button_text }}
-							</a>
+
+				{%- if block.settings.image != blank -%}
+					<img src="{{ block.settings.image | image_url: width: 2800 }}" alt="{{ block.settings.title }}" class="absolute inset-0 -z-10 size-full object-cover">
+				{%- else -%}
+					{{ 'lifestyle-1' | placeholder_svg_tag: 'w-full h-64 bg-slate-200 rounded-xl' }}
+				{%- endif -%}
+
+				<div class="mx-25 max-w-7xl px-6 lg:px-8">
+					<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+						{% comment %} <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+						{%- if block.settings.eyebrow != blank -%}
+							<p class="text-lg text-slate-600">{{ block.settings.eyebrow }}</p>
 						{%- endif -%}
-					</div>
-					<!-- Image Content -->
-					<div>
-						{%- if block.settings.image != blank -%}
-							<img src="{{ block.settings.image | image_url: width: 2800 }}" alt="{{ block.settings.title }}" class="w-full h-auto rounded-xl object-cover shadow-md">
-						{%- else -%}
-							{{ 'lifestyle-1' | placeholder_svg_tag: 'w-full h-64 bg-slate-200 rounded-xl' }}
-						{%- endif -%}
+						</div> {% endcomment %}
+						<div class="text-left bg-slateblue p-7 rounded-xl">
+							{%- if block.settings.eyebrow != blank -%}
+								<p class="text-lg text-white">{{ block.settings.eyebrow }}</p>
+							{%- endif -%}
+							<h1 class="text-3xl font-bold tracking-tight text-balance text-white sm:text-3xl md:text-5xl ">{{ block.settings.title }}</h1>
+							<p class="mt-8 text-lg font-medium text-pretty text-white sm:text-xl/8">{{ block.settings.description }}</p>
+
+							{%- if block.settings.button_text != blank -%}
+								<button type="button" href="{{ block.settings.button_link }}" class="rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ block.settings.button_text }}&nbsp;<span aria-hidden="true">→</span></button>
+							{%- endif -%}
+						</div>
 					</div>
 				</div>
 			{%- endfor -%}
@@ -33,7 +40,7 @@
 
 {% schema %}
 {
-	"name": "Tailwind Image Slider",
+	"name": "Bichin Hero Image Slider",
 	"settings": [],
 	"blocks": [
 		{
@@ -41,13 +48,14 @@
 			"name": "Slide",
 			"settings": [
 				{ "type": "image_picker", "id": "image", "label": "Image" },
-				{ "type": "text", "id": "title", "label": "Heading", "default": "Slide title" },
-				{ "type": "textarea", "id": "description", "label": "Description", "default": "Tell your brand story." },
+				{ "type": "text", "id": "eyebrow", "label": "eybrow", "default": "Commercial Laundry Equipment" },
+				{ "type": "text", "id": "title", "label": "Heading", "default": "Your Title" },
+				{ "type": "textarea", "id": "description", "label": "Description", "default": "Description for Slide" },
 				{ "type": "text", "id": "button_text", "label": "Button Text" },
 				{ "type": "url", "id": "button_link", "label": "Button Link" }
 			]
 		}
 	],
-	"presets": [{ "name": "Tailwind Image Slider" }]
+	"presets": [{ "name": "Bichin Hero Image Slider" }]
 }
 {% endschema %}

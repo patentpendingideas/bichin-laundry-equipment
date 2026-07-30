@@ -10,12 +10,9 @@
 {
   "current": {
     "show_promo_bar": true,
-    "promo_bar_content": "<p>🔥 Dexter Distributer for BC!</p>",
+    "promo_bar_content": "<p>Promo Content</p>",
     "enable_predictive_search": true,
     "enable_modal": true,
-    "promo_bar_content2": "🔥 Get in touch today!",
-    "logo": "shopify://shop_images/BLE_Text_bback.png",
-    "favicon": "shopify://shop_images/BLE_Icon_f6013399-a53b-40f7-9ddf-2c198ae8411f.png",
     "checkout_logo_image": "shopify://shop_images/62c73f0abd956f48cca683d9_4bNa5cCDFPP7_16T0grGJvHZXl_OBBUqXqUTpHmG5yqB9liv19wLCP1imCk2xUGdCdVI85078T_ZJ85NzRmH2SMUyuv05LLPXr3IQcmYtT9GHXACz5bKLH7EALVbzBQ2VniAMTpDo9BvZHmY5w.png",
     "checkout_logo_position": "center",
     "checkout_logo_size": "medium",
