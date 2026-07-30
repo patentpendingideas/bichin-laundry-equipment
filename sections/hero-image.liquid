@@ -1,22 +1,17 @@
-<div class="max-w-full mx-auto" x-data="{ activeSlide: 0, slides: 3 }">
+<div class="max-w-full mx-auto" x-data="{ activeSlide: 0, slides: {{ section.blocks.size }} }">
 	<!-- Slides Container -->
 	<div class="relative isolate overflow-hidden shadow-lg h-5/8">
 		<div class="flex transition-transform duration-505 ease-in-out" :style="'transform: translateX(-' + (activeSlide * 100) + '%)'">
 			{%- for block in section.blocks -%}
-
+			<div id="{{ forloop.index0 }}">
 				{%- if block.settings.image != blank -%}
 					<img src="{{ block.settings.image | image_url: width: 2800 }}" alt="{{ block.settings.title }}" class="absolute inset-0 -z-10 size-full object-cover">
 				{%- else -%}
 					{{ 'lifestyle-1' | placeholder_svg_tag: 'w-full h-64 bg-slate-200 rounded-xl' }}
 				{%- endif -%}
-
+				<!-- Text -->
 				<div class="mx-25 max-w-7xl px-6 lg:px-8">
 					<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-						{% comment %} <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-						{%- if block.settings.eyebrow != blank -%}
-							<p class="text-lg text-slate-600">{{ block.settings.eyebrow }}</p>
-						{%- endif -%}
-						</div> {% endcomment %}
 						<div class="text-left bg-slateblue p-7 rounded-xl">
 							{%- if block.settings.eyebrow != blank -%}
 								<p class="text-lg text-white">{{ block.settings.eyebrow }}</p>
@@ -30,6 +25,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 			{%- endfor -%}
 		</div>
 		<!-- Navigation Buttons -->
@@ -46,6 +42,7 @@
 		{
 			"type": "slide",
 			"name": "Slide",
+			"limit": 4,
 			"settings": [
 				{ "type": "image_picker", "id": "image", "label": "Image" },
 				{ "type": "text", "id": "eyebrow", "label": "eybrow", "default": "Commercial Laundry Equipment" },
