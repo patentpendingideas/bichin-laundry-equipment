@@ -12,6 +12,15 @@
     "hero_image_a4NHCF": {
       "type": "hero-image",
       "blocks": {
+        "slide_Py9Xch": {
+          "type": "slide",
+          "settings": {
+            "title": "Commercial Laundry Equipment Brands: Dexter & Podab",
+            "description": "We are the Distributor for Dexter Laundry Equipment in BC",
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/dexter-laundry-equipment-parts"
+          }
+        },
         "slide_kTHTUC": {
           "type": "slide",
           "settings": {
@@ -24,6 +33,7 @@
         }
       },
       "block_order": [
+        "slide_Py9Xch",
         "slide_kTHTUC"
       ],
       "name": "Tailwind Image Slider",
