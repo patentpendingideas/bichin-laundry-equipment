@@ -9,12 +9,46 @@
  */
 {
   "sections": {
+    "hero_image_8xPcb3": {
+      "type": "hero-image",
+      "blocks": {
+        "slide_NXzzJL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/dexter_laundry_equipment_bichin.jpg",
+            "eyebrow": "Commercial Laundry Equipment",
+            "title": "Commercial Laundry Equipment Brands: Dexter & Podab",
+            "description": "We are the Distributor for Dexter Laundry Equipment in BC",
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/dexter-laundry-equipment-parts"
+          }
+        },
+        "slide_QaFMMj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Laundromat_of_dexter_equipment-xl.webp",
+            "eyebrow": "Commercial Laundry Equipment",
+            "title": "Laundromat Planning. Machine Sales. Installations. Service.",
+            "description": "Your One-Stop Laundromat Planner & Supplier in BC, Alberta & The Yukon",
+            "button_text": "Learn More",
+            "button_link": "shopify://pages/laundromat-planning-development"
+          }
+        }
+      },
+      "block_order": [
+        "slide_NXzzJL",
+        "slide_QaFMMj"
+      ],
+      "name": "Bichin Hero Image Slider",
+      "settings": {}
+    },
     "hero_image_a4NHCF": {
       "type": "hero-image",
       "blocks": {
         "slide_Py9Xch": {
           "type": "slide",
           "settings": {
+            "eyebrow": "Commercial Laundry Equipment",
             "title": "Commercial Laundry Equipment Brands: Dexter & Podab",
             "description": "We are the Distributor for Dexter Laundry Equipment in BC",
             "button_text": "Shop Now",
@@ -25,6 +59,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Laundromat_of_dexter_equipment-xl.webp",
+            "eyebrow": "Commercial Laundry Equipment",
             "title": "Laundromat Planning. Machine Sales. Installations. Service.",
             "description": "Your One-Stop Laundromat Planner & Supplier in BC, Alberta & The Yukon",
             "button_text": "Learn More",
@@ -75,6 +110,38 @@
             "slide_btn_text": "#ffffff",
             "slide_btn_hr_bg": "#001526",
             "slide_btn_hr_text": "#ffffff"
+          }
+        },
+        "slider_wNDbHc": {
+          "type": "Slider",
+          "settings": {
+            "slider_type": "image",
+            "hero_slideshow_link_video": "",
+            "thumb_alignment": "right",
+            "slideshow_img_width": "39.145",
+            "right_img": false,
+            "show_content": true,
+            "text_alignment": "text-start",
+            "content_position": "middle-left",
+            "title_2": "Image sub Heading",
+            "title": "Image heading",
+            "heading_size": 50,
+            "desc": "Share information about your brand with your customers.",
+            "button": "Shop now",
+            "link": "",
+            "button_2": "Shop now",
+            "link_2": "",
+            "banner_link": "",
+            "slider_main_bg_color": "#ac1a2c",
+            "slide_content_bg": "#ffffff",
+            "overlay": 100,
+            "subheading_color": "#333333",
+            "heading_color": "#333333",
+            "content_color": "#666666",
+            "slide_btn_bg": "#333333",
+            "slide_btn_text": "#ffffff",
+            "slide_btn_hr_bg": "#ffffff",
+            "slide_btn_hr_text": "#333333"
           }
         },
         "template--15502601126003__3b6373ce-6366-4ac4-aa49-4545b22f55a0-Slider-2": {
@@ -148,6 +215,7 @@
       },
       "block_order": [
         "template--15502601126003__3b6373ce-6366-4ac4-aa49-4545b22f55a0-Slider-1",
+        "slider_wNDbHc",
         "template--15502601126003__3b6373ce-6366-4ac4-aa49-4545b22f55a0-Slider-2",
         "slider_rztJqr"
       ],
@@ -312,6 +380,7 @@
     }
   },
   "order": [
+    "hero_image_8xPcb3",
     "hero_image_a4NHCF",
     "3b6373ce-6366-4ac4-aa49-4545b22f55a0",
     "shipping_section_hBnfLA",
