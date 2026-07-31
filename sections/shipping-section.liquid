@@ -19,19 +19,18 @@
         <dt class="text-base font-semibold text-gray-900">
           <div class="mb-6 flex items-center justify-center rounded-lg">
             {% if block.settings.shipping_icon != blank %}
-             {{ block.settings.shipping_icon | image_url: width: 75 | image_tag : loading: 'lazy'}}
+             {{ block.settings.shipping_icon | image_url: width: 75 | image_tag : loading: 'lazy', class: 'mix-blend-multiply' }}
              {% else %}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder w-75 h-0' }}
             {% endif %}
           </div>
-
           {% if block.settings.shipping_heading != blank %}
-            <h3 class="text-lg text-gold-400 text-center">{{ block.settings.shipping_heading }}</h3>
+            <h3 class="text-lg text-gold-400 font-bold text-center">{{ block.settings.shipping_heading }}</h3>
           {% endif %}
         </dt>
         <dd class="mt-1 flex flex-auto flex-col text-base text-gray-600 text-center">
           {% if block.settings.shipping_paragraph != blank %}
-            <p class="flex-auto text-base">{{ block.settings.shipping_paragraph }}</p>
+            <p class="flex-auto text-bold text-base">{{ block.settings.shipping_paragraph }}</p>
           {% endif %}
 
           {% if block.settings.shipping_button != blank %}
