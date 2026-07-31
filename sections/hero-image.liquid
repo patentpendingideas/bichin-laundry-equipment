@@ -36,7 +36,6 @@
 				<div class="w-full flex-shrink-0" {{ block.shopify_attributes }}>
 					<div class="relative aspect-[16/9] md:aspect-[21/9]">
 						{% if block.settings.image %}
-
 							<img src="{{ block.settings.image | image_url: width: 2800 }}" alt="{{ block.settings.image.alt | escape }}" class="absolute inset-0 h-full w-full object-cover">						loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
 						{% else %}
 							<div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
