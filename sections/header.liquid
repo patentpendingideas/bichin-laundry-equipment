@@ -15,19 +15,10 @@
       x-cloak
       x-data
     >
-      <button
-        id='mobile-nav-trigger'
-        type='button'
-        class='block border-0 bg-transparent text-white appearance-none [&>span>svg]:h-auto [&>span>svg]:w-6.5 [&>span>svg]:fill-white'
-        @click='$store.global.toggleMobileMenu()'
-        :aria-expanded='$store.global.isMobileMenuVisible'
-        aria-label='Mobile Navigation Button'
-        aria-controls='mobile-menu-list'
-        x-data
-      >
+
         <span class='sr-only'>Menu</span>
         <span aria-hidden='true' x-show='!$store.global.isMobileMenuVisible' class='text-white'>
-          {% render 'icon', icon: 'menu' %}
+
         </span>
         <span aria-hidden='true' x-show='$store.global.isMobileMenuVisible' class='text-white'>
           {% render 'icon', icon: 'close' %}
@@ -40,7 +31,7 @@
       href='{{ routes.root_url }}'
       class='header-logo ml-4 text-2xl uppercase text-white no-underline md:ml-0 md:text-[32px]'
     >
-      <img src="https://bichin-laundry-equipment.myshopify.com/cdn/shop/files/BLE_Text_bback.png" alt="Company name" class="h-12" />
+      <img src="https://bichin-laundry-equipment.myshopify.com/cdn/shop/files/BLE_Text_bback.png" alt="Bichin Laundry Equipment" class="h-9" />
     </a>
 
     <div class='hidden md:block ml-25'>

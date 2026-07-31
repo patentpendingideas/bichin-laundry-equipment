@@ -1,19 +1,142 @@
-<ul
-  id='mobile-menu-list'
-  class='mobile-menu-list z-20 p-7.5 bg-indigo-900 w-screen -left-6 absolute top-full'
-  x-show='$store.global.isMobileMenuVisible'
-  role='menu'
->
-  {% for link in linklists['main-menu'].links %}
-    <li class='mobile-menu-item' role='presentation'>
-      <a
-        href='{{ link.url }}'
-        role='menuitem'
-        class='mb-2.5 block text-[26px] font-bold tracking-[1.2px] text-white no-underline'
+<div x-data="{ mobileMenuOpen: false }" class="relative bg-transparent ">
+  <div class="max-w-7xl mx-auto pr-1 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-12">
+      <!-- Hamburger Button (Visible Only on Mobile) -->
+      <div class="md:hidden">
+        <button
+          type="button"
+          @click="mobileMenuOpen = true"
+          class="bg-transparent p-1 rounded-md text-red hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
+          aria-label="Open menu"
+        >
+         {% render 'icon', icon: 'menu' %}
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu Component -->
+  <!-- x-cloak prevents screen flash on slow connections -->
+  <div
+    x-show="mobileMenuOpen"
+    x-cloak
+    class="relative z-50 md:hidden"
+    role="dialog"
+    aria-modal="true"
+  >
+    <!-- Background backdrop tint with Alpine transitions -->
+    <div
+      x-show="mobileMenuOpen"
+      x-transition:enter="transition-opacity ease-linear duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition-opacity ease-linear duration-300"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="fixed inset-0 bg-black/25 backdrop-blur-xs"
+      @click="mobileMenuOpen = false"
+    ></div>
+
+    <!-- Drawer Panel Wrapper -->
+    <div class="fixed inset-0 flex z-40">
+      <div
+        x-show="mobileMenuOpen"
+        x-transition:enter="transition ease-in-out duration-300 transform"
+        x-transition:enter-start="-translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in-out duration-300 transform"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="-translate-x-full"
+        class="relative max-w-xs w-full bg-white shadow-xl flex flex-col pb-12 overflow-y-auto"
       >
-        {{- link.title -}}
-      </a>
-    </li>
-  {% endfor %}
-  <li></li>
-</ul>
+        <!-- Top Drawer Header with Close Button -->
+        <div class="px-4 pt-5 pb-2 flex justify-between items-center">
+          <span class="text-lg font-semibold text-gray-900">Menu</span>
+          <button
+            type="button"
+            @click="mobileMenuOpen = false"
+            class="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400"
+          >
+            <span class="sr-only">Close menu</span>
+            <!-- X Close Icon (Heroicons) -->
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dynamic Shopify Navigation Menu with Collapsible Accordions -->
+        <div class="mt-4 px-4 space-y-6">
+          <nav class="space-y-4">
+            {% for link in linklists.main-menu.links %}
+              {% if link.links != blank %}
+                <!-- Parent Link Dropdown Container -->
+                <div x-data="{ dropdownOpen: false }" class="border-b border-gray-100 pb-2">
+                  <button
+                    @click="dropdownOpen = !dropdownOpen"
+                    class="w-full flex justify-between items-center text-left font-medium text-gray-900 py-2"
+                  >
+                    <span>{{ link.title }}</span>
+                    <!-- Chevron Rotating Icon -->
+                    <svg
+                      class="h-5 w-5 text-gray-400 transform transition-transform duration-200"
+                      :class="{ 'rotate-180': dropdownOpen }"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  <!-- Nested Sub-links Menu -->
+                  <div
+                    x-show="dropdownOpen"
+                    x-collapse
+                    class="mt-2 pl-4 space-y-2 bg-gray-50 p-2 rounded-md"
+                  >
+                    {% for childlink in link.links %}
+                      <a href="{{ childlink.url }}" class="block text-sm font-medium text-gray-600 hover:text-gray-900 py-1">
+                        {{ childlink.title }}
+                      </a>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% else %}
+                <!-- Normal Single Link -->
+                <a href="{{ link.url }}" class="block font-medium text-gray-900 py-2 border-b border-gray-100{% if link.active %} text-blue-600{% endif %}">
+                  {{ link.title }}
+                </a>
+              {% endif %}
+            {% endfor %}
+          </nav>
+        </div>
+
+        <!-- Secondary Bottom Utilities (Account/Search) -->
+        <div class="border-t border-gray-200 py-6 px-4 space-y-6 mt-auto">
+          {% if shop.customer_accounts_enabled %}
+            <div class="flow-root">
+              {% if customer %}
+                <a href="{{ routes.account_url }}" class="-m-2 p-2 block font-medium text-gray-900">Your Account</a>
+              {% else %}
+                <a href="{{ routes.account_login_url }}" class="-m-2 p-2 block font-medium text-gray-900">Sign in</a>
+              {% endif %}
+            </div>
+          {% endif %}
+          <div class="flow-root">
+            <form action="{{ routes.search_url }}" method="get" role="search" class="relative">
+              <input
+                type="text"
+                name="q"
+                placeholder="Search our store..."
+                class="w-full bg-gray-100 rounded-lg pl-4 pr-10 py-2 text-sm border-0 focus:ring-2 focus:ring-blue-500"
+              />
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
