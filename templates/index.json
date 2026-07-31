@@ -12,6 +12,17 @@
     "hero_image_8xPcb3": {
       "type": "hero-image",
       "blocks": {
+        "slide_y3GgEP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Laundromat_of_dexter_equipment-xl.webp",
+            "eyebrow": "Commercial Laundry Equipment",
+            "title": "Laundromat Planning. Machine Sales. Installations. Service.",
+            "description": "Your One-Stop Laundromat Planner & Supplier in BC, Alberta & The Yukon",
+            "button_text": "Learn More",
+            "button_link": "shopify://pages/laundromat-planning-development"
+          }
+        },
         "slide_NXzzJL": {
           "type": "slide",
           "settings": {
@@ -36,6 +47,7 @@
         }
       },
       "block_order": [
+        "slide_y3GgEP",
         "slide_NXzzJL",
         "slide_QaFMMj"
       ],
