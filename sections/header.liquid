@@ -1,8 +1,9 @@
+
 {% if settings.show_promo_bar %}
-  {% render 'ticker' %}
+  {% render 'promo-bar' %}
 {% endif %}
 
-<div class='px-6 md:px-8 h-24 align-middle bg-black'>
+<div class='px-6 md:px-8 h-24 align-middle bg-black pt-4'>
   <div class='container flex items-center text-white relative mx-auto'>
     <nav
       :class="$store.global.isMobileMenuVisible ? 'open' : 'closed'"
@@ -42,7 +43,7 @@
       <img src="https://bichin-laundry-equipment.myshopify.com/cdn/shop/files/BLE_Text_bback.png" alt="Company name" class="h-12" />
     </a>
 
-    <div class='hidden md:block'>
+    <div class='hidden md:block ml-25'>
       {% render 'header-menu' %}
     </div>
 
