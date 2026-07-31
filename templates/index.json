@@ -12,6 +12,17 @@
     "hero_image_8xPcb3": {
       "type": "hero-image",
       "blocks": {
+        "slide_NXzzJL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/dexter_laundry_equipment_bichin.jpg",
+            "eyebrow": "Vended and on Premises machines",
+            "title": "Commercial Laundry Equipment Brands: Dexter & Podab",
+            "description": "We are the Distributor for Dexter Laundry Equipment in BC",
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/dexter-laundry-equipment-parts"
+          }
+        },
         "slide_y3GgEP": {
           "type": "slide",
           "settings": {
@@ -22,34 +33,11 @@
             "button_text": "Learn More",
             "button_link": "shopify://pages/laundromat-planning-development"
           }
-        },
-        "slide_NXzzJL": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/dexter_laundry_equipment_bichin.jpg",
-            "eyebrow": "Commercial Laundry Equipment",
-            "title": "Commercial Laundry Equipment Brands: Dexter & Podab",
-            "description": "We are the Distributor for Dexter Laundry Equipment in BC",
-            "button_text": "Shop Now",
-            "button_link": "shopify://collections/dexter-laundry-equipment-parts"
-          }
-        },
-        "slide_QaFMMj": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/dexter_laundry_equipment_bichin.jpg",
-            "eyebrow": "Commercial Laundry Equipment",
-            "title": "Laundromat Planning. Machine Sales. Installations. Service.",
-            "description": "Your One-Stop Laundromat Planner & Supplier in BC, Alberta & The Yukon",
-            "button_text": "Learn More",
-            "button_link": "shopify://pages/laundromat-planning-development"
-          }
         }
       },
       "block_order": [
-        "slide_y3GgEP",
         "slide_NXzzJL",
-        "slide_QaFMMj"
+        "slide_y3GgEP"
       ],
       "name": "Bichin Hero Image Slider",
       "settings": {}
