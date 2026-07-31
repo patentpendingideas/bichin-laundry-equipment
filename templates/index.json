@@ -12,6 +12,16 @@
     "hero_image_8xPcb3": {
       "type": "hero-image",
       "blocks": {
+        "slide_y3GgEP": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "Commercial Laundry Equipment",
+            "title": "Your Title",
+            "description": "Description for Slide",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
         "slide_NXzzJL": {
           "type": "slide",
           "settings": {
@@ -36,6 +46,7 @@
         }
       },
       "block_order": [
+        "slide_y3GgEP",
         "slide_NXzzJL",
         "slide_QaFMMj"
       ],
