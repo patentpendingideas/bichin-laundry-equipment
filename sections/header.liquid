@@ -16,7 +16,7 @@
       x-data
     >
     <span class='sr-only'>Menu</span>
-    <span aria-hidden='true' x-show='!$store.global.isMobileMenuVisible' class='text-white'>Menu</span>
+    <span aria-hidden='true' x-show='!$store.global.isMobileMenuVisible' class='text-white hidden'>Menu</span>
       <span aria-hidden='true' x-show='$store.global.isMobileMenuVisible' class='text-white'>
         {% render 'icon', icon: 'close' %}
       </span>
