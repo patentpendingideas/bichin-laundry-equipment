@@ -37,7 +37,7 @@
       <div class="sm:px-6 lg:px-0">
         <div class="relative isolate overflow-hidden bg-white sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:shadow-md lg:shadow-xl/30 lg:mx-0 lg:max-w-none -right-24">
           {% if section.settings.about_us_img != blank %}
-              <img src="{{ section.settings.about_us_img | img_url: 'master' }}" alt="about-image" class="magniflier w-800 right-96" loading="lazy">
+              <img src="{{ section.settings.about_us_img | img_url: 'master' }}" alt="about-image" class="magniflier w-800 right-96" width="800" loading="lazy">
               {% else %}
               <div class="overflow-hidden" style="--ratio-percent: 78.576%">
                 {{ 'collection-6' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
