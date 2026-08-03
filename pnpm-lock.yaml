@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@alpinejs/intersect':
+        specifier: ^3.15.12
+        version: 3.15.12
     devDependencies:
       '@alpinejs/collapse':
         specifier: ^3.15.3
@@ -58,6 +62,9 @@ packages:
 
   '@alpinejs/focus@3.15.8':
     resolution: {integrity: sha512-YPF7jtaMFqrWI7xLjathWe/Hi/dXLReGoeZZxJZCW6pgmbFaVKqUFhl3DA+kUPSYsEhh9xk2wr9yoTZ2aB8xew==}
+
+  '@alpinejs/intersect@3.15.12':
+    resolution: {integrity: sha512-B2AlMDgx4xlRQjpDHO9SZrYur5cZkPZK0K6uY4Se+MmdePhIQ8m36gHGe0UKIYkFQkBGhVhPICGVoMYpSSYMWg==}
 
   '@alpinejs/morph@3.15.8':
     resolution: {integrity: sha512-6m1UD0IwYQj5BVFCeUGy5G1eYW9H/YcVWDskX4VaJc6HTIT+eKbDge4BjcD291WENbbjdFSf6isbcZYAOm6Orw==}
@@ -1500,6 +1507,8 @@ snapshots:
     dependencies:
       focus-trap: 6.9.4
       tabbable: 5.3.3
+
+  '@alpinejs/intersect@3.15.12': {}
 
   '@alpinejs/morph@3.15.8': {}
 

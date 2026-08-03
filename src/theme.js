@@ -1,6 +1,7 @@
 import 'liquid-ajax-cart'
 
 import Alpine from 'alpinejs'
+import AlpineIntersect from '@alpinejs/intersect'
 import AlpineCollapse from '@alpinejs/collapse'
 import AlpineFocus from '@alpinejs/focus'
 import AlpineMorph from '@alpinejs/morph'
@@ -23,7 +24,7 @@ for (const [key, value] of Object.entries(helpers)) {
 // Register and initialize AlpineJS
 window.Alpine = Alpine
 
-Alpine.plugin([AlpineCollapse, AlpineFocus, AlpineMorph])
+Alpine.plugin([AlpineCollapse, AlpineFocus, AlpineMorph, AlpineIntersect])
 AlpineGlobals.register(Alpine)
 Alpine.start()
 

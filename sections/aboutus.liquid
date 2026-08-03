@@ -1,17 +1,10 @@
-<div x-data="{ shown: false }" x-intersect="shown = true">
-  <div
-    x-show="shown"
-    x-transition:enter="transition ease-out duration-1000"
-    x-transition:enter-start="opacity-0"
-    x-transition:enter-end="opacity-100"
-  >
-    {% comment %} <p>This content fades in cleanly using Alpine's transition logic.</p> {% endcomment %}
-  </div>
-</div>
-
-
 <!-- section 1 -->
-<div class="relative isolate overflow-hidden bg-white py-24 sm:py-32">
+<div
+ x-data="{ isVisible: false }"
+ x-intersect.once="isVisible = true"
+ class="relative isolate overflow-hidden bg-white py-24 sm:py-32 transform transition-all duration-1500 ease-in-out"
+ :class="isVisible ? 'opacity-100' : 'opacity-0'"
+ >
   <div class="mx-auto max-w-full md:px-6 lg:pl-8 lg:pr-0">
     <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 items-center">
       <div class="px-6 md:px-0 lg:pt-4 lg:px-20">
@@ -35,9 +28,9 @@
         </div>
       </div>
       <div class="sm:px-6 lg:px-0">
-        <div class="relative isolate overflow-hidden bg-white sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:shadow-md lg:shadow-xl/30 lg:mx-0 lg:max-w-none -right-24">
+        <div class="relative isolate overflow-hidden bg-white sm:mx-auto sm:max-w-2xl rounded-3xl sm:shadow-md lg:shadow-xl/30 lg:mx-0 lg:max-w-none -right-24">
           {% if section.settings.about_us_img != blank %}
-              <img src="{{ section.settings.about_us_img | image_url: 'master' }}" alt="about-image" class="magniflier w-800 right-96" width="800" height="auto" loading="lazy">
+              <img src="{{ section.settings.about_us_img | image_url: width: 800 }}" alt="about-image" class="magniflier w-800 right-96" loading="lazy">
               {% else %}
               <div class="overflow-hidden" style="--ratio-percent: 78.576%">
                 {{ 'collection-6' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
@@ -50,10 +43,15 @@
 </div>
 
 <!-- section 2 -->
-<div class="grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 items-center bg-gray-100">
+<div
+  x-data="{ isVisible: false }"
+  x-intersect.threshold.50="isVisible = true"
+  class="grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 h-175 items-center bg-gray-100 transform transition-all duration-1500 delay-500 ease-in-out"
+  :class="isVisible ? 'opacity-100 scale-100' : 'opacity-10 scale-93'"
+  >
     <div >
       {% if section.settings.about_us_img2 != blank %}
-        <img src="{{ section.settings.about_us_img2 | image_url: 'master' }}" alt="about-image" class="magniflier w-800 right-96" width="800" height="auto" loading="lazy">
+        <img src="{{ section.settings.about_us_img2 | image_url: width: 800 }}" alt="about-image" class="magniflier w-800 right-96" loading="lazy">
       {% else %}
          <div class="overflow-hidden" style="--ratio-percent: 78.576%">
             {{ 'collection-6' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
@@ -62,19 +60,18 @@
     </div>
     <div >
       {% if section.settings.content != blank %}
-        <p class="my-6 px-8 lg:px-16 text-base text-gray-700 text-center">
+        <p class="my-4 px-8 lg:px-16 text-base text-gray-700 text-center">
           {{ section.settings.content }}
         </p>
       {% endif %}
 
       {% if section.settings.about-btn-text != blank %}
       <p class="text-center">
-        <a href="{{ section.settings.about-btn-url }}" class="mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-center text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">
+        <a href="{{ section.settings.about-btn-url }}" class="mt-5 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-center text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">
           {{ section.settings.about-btn-text }}&nbsp;<span aria-hidden="true">→</span>
         </a>
         </p>
       {% endif %}
-
     </div>
 </div>
 

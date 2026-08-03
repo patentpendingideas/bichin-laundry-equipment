@@ -5,7 +5,7 @@
   %}
 {% endcomment %}
 
-<div class='product-grid-item relative group'>
+<div class='group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white'>
   <div class='block image-wrapper relative pt-[140%]'>
     <img
       width='{{ prod.featured_image.width }}'
@@ -19,11 +19,11 @@
   </div>
   <div class='content'>
     <a href='{{ prod.url }}' class="after:content-[''] after:inset-0 after:absolute">
-      <div class='h3 dark mt-2 text-sm text-cloud-burst-500 group-hover:underline hover:text-cloud-burst-300'>
+      <div class='text-sm font-medium text-gray-900 mt-2 group-hover:underline hover:text-cloud-burst-300'>
         {{ prod.title }}
       </div>
     </a>
-    <p class='flex flex-wrap items-center space-x-1 *:whitespace-nowrap'>
+    {% comment %} <p class='flex flex-wrap items-center space-x-1 *:whitespace-nowrap'>
       {% if prod.price_varies %}
         <span class='text-sm'> From </span>
       {% endif %}
@@ -33,7 +33,7 @@
       {% if prod.compare_at_price_max != blank and prod.compare_at_price_max > prod.price %}
         <s class='text-sm'>{{ prod.compare_at_price_max | money_with_currency }}</s>
       {% endif %}
-    </p>
+    </p> {% endcomment %}
   </div>
   <ajax-cart-product-form>
     {% form 'product', prod %}
