@@ -12,17 +12,6 @@
     "hero_image_8xPcb3": {
       "type": "hero-image",
       "blocks": {
-        "slide_NXzzJL": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/dexter_laundry_equipment_bichin.jpg",
-            "eyebrow": "Vended and on Premises machines",
-            "title": "Commercial Laundry Equipment Brands: Dexter & Podab",
-            "description": "We are the Distributor for Dexter Laundry Equipment in BC",
-            "button_text": "Shop Now",
-            "button_link": "shopify://collections/dexter-laundry-equipment-parts"
-          }
-        },
         "slide_y3GgEP": {
           "type": "slide",
           "settings": {
@@ -33,11 +22,22 @@
             "button_text": "Learn More",
             "button_link": "shopify://pages/laundromat-planning-development"
           }
+        },
+        "slide_NXzzJL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/dexter_laundry_equipment_bichin.jpg",
+            "eyebrow": "Vended and on Premises machines",
+            "title": "Commercial Laundry Equipment Brands: Dexter & Podab",
+            "description": "We are the Distributor for Dexter Laundry Equipment in BC",
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/dexter-laundry-equipment-parts"
+          }
         }
       },
       "block_order": [
-        "slide_NXzzJL",
-        "slide_y3GgEP"
+        "slide_y3GgEP",
+        "slide_NXzzJL"
       ],
       "name": "Bichin Hero Image Slider",
       "settings": {}
