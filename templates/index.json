@@ -12,17 +12,6 @@
     "hero_image_8xPcb3": {
       "type": "hero-image",
       "blocks": {
-        "slide_NXzzJL": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/dexter_laundry_equipment_bichin.jpg",
-            "eyebrow": "Vended and on Premises machines",
-            "title": "Commercial Laundry Equipment Brands: Dexter & Podab",
-            "description": "We are the Distributor for Dexter Laundry Equipment in BC",
-            "button_text": "Shop Now",
-            "button_link": "shopify://collections/dexter-laundry-equipment-parts"
-          }
-        },
         "slide_y3GgEP": {
           "type": "slide",
           "settings": {
@@ -33,11 +22,22 @@
             "button_text": "Learn More",
             "button_link": "shopify://pages/laundromat-planning-development"
           }
+        },
+        "slide_NXzzJL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/dexter_laundry_equipment_bichin.jpg",
+            "eyebrow": "Vended and on Premises machines",
+            "title": "Commercial Laundry Equipment Brands: Dexter & Podab",
+            "description": "We are the Distributor for Dexter Laundry Equipment in BC",
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/dexter-laundry-equipment-parts"
+          }
         }
       },
       "block_order": [
-        "slide_NXzzJL",
-        "slide_y3GgEP"
+        "slide_y3GgEP",
+        "slide_NXzzJL"
       ],
       "name": "Bichin Hero Image Slider",
       "settings": {}
@@ -136,48 +136,14 @@
       "type": "aboutus",
       "name": "Intro to Commercial Laundry Equipment",
       "settings": {
-        "section_width": "page-width",
         "section_subtitle": "Looking for Commercial Laundry Equipment?",
         "main_heading": "Commercial Washers, Tumble Dryers, and Flatwork Ironers for Sale",
         "section_description": "Bichin Laundry Equipment specializes in providing commercial washers, tumble dryers, and flatwork ironers for laundromats and other large commercial laundry facilities that need commercial laundry equipment throughout British Columbia, Alberta and the Yukon.",
-        "main_title_alignment": "left",
-        "banner_type": "image",
-        "local_url": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "about_us_img": "shopify://shop_images/dexter_washing_machine_door.jpg",
-        "rotating_img": "shopify://shop_images/dexter-vented-products.jpg",
-        "about_us_img2": "shopify://shop_images/dexter_on_premise_hardmount_washer_o_series.png",
+        "about_us_img2": "shopify://shop_images/dexter-vented-products.jpg",
         "content": "We also focus on laundromat-based coin and card-vended laundry solutions, pitching card-vending as a modern upgrade that adds payment flexibility, usage tracking, and convenience (including app-based features). We are committed to high-efficiency models with large-capacity drums and added security measures–all aspects of commercial laundry machines that laundromats, apartments, dorms, and similar properties can benefit from with improved resident experiences, operational efficiency, and reduced hassle for everyone.",
         "about-btn-text": "EXPLORE EQUIPMENT",
-        "about-btn-url": "shopify://collections/hardmount-washers",
-        "section_bg": "#ffffff",
-        "theme_subheading_color": "#c6a228",
-        "theme_heading_color": "#000000",
-        "content_color": "#000000",
-        "padding-top": 50,
-        "padding-bottom": 50,
-        "padding-top-1429": 40,
-        "padding-bottom-1429": 40,
-        "padding-top-1199": 30,
-        "padding-bottom-1199": 30,
-        "padding-top-991": 30,
-        "padding-bottom-991": 30,
-        "padding-top-767": 20,
-        "padding-bottom-767": 20,
-        "padding-top-575": 20,
-        "padding-bottom-575": 20,
-        "margin-top": 0,
-        "margin-bottom": 0,
-        "margin-top-1429": 0,
-        "margin-bottom-1429": 0,
-        "margin-top-1199": 0,
-        "margin-bottom-1199": 0,
-        "margin-top-991": 0,
-        "margin-bottom-991": 0,
-        "margin-top-767": 0,
-        "margin-bottom-767": 0,
-        "margin-top-575": 0,
-        "margin-bottom-575": 0
+        "about-btn-url": "shopify://collections/hardmount-washers"
       }
     }
   },
