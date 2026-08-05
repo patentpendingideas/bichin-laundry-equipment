@@ -1,59 +1,24 @@
 {% schema %}
 {
-  "name": "Product Section",
-  "class": "section-main-product",
+  "name": "Model Document Files",
   "tag": "section",
-  "settings": [
-    {
-      "type": "radio",
-      "id": "picker_type",
-      "label": "Variant Picker Type",
-      "options": [
-        {
-          "value": "radio",
-          "label": "Radio Buttons"
-        },
-        {
-          "value": "select",
-          "label": "Select Dropdowns"
-        }
-      ],
-      "default": "radio"
-    }
-  ],
   "blocks": [
     {
-      "type": "collapsable_row",
-      "name": "Collapsable Row",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading"
-        },
-        {
-          "type": "richtext",
-          "id": "content",
-          "label": "Content"
-        }
-      ]
-    },
-    {
+      "type": "spec_sheets",
       "name": "Model Document Files",
-      "tag": "section",
       "settings": [
         {
           "type": "richtext",
-          "id": "paragraph",
-          "label": "Paragraph",
-          "default": "PDF"
-        }
-      ],
-      "presets": [
-        {
-          "name": "Custom Section"
+          "id": "pdf_link",
+          "label": "PDF Link",
+          "default": "<p>PDF</p>"
         }
       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Section"
     }
   ]
 }
@@ -148,9 +113,20 @@
         {% endif %}
       {%- endfor -%}
 
-      {% if section.settings.paragraph != blank %}
-        {{ section.settings.paragraph }}
-      {% endif %}
+     {% if section.settings.paragraph != blank %}
+       {{ section.settings.paragraph }}
+     {% endif %}
+
+     {% for block in section.blocks %}
+       {%- case block.type -%}
+         {%- when 'spec_sheets' -%}
+           <div {{ block.shopify_attributes }}>
+             {% if block.settings.pdf_link != blank %}
+             {{ block.settings.pdf_link }}
+             {% endif %}
+           </div>
+       {%- endcase -%}
+     {% endfor %}
 
         {% comment %} <div class='quantity-row'>
           <label for='quantity-control-input'>Quantity</label>
