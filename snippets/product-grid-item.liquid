@@ -5,7 +5,7 @@
   %}
 {% endcomment %}
 
-<div class='group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white'>
+<div class='group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-5 hover:shadow-lg transition-all ease-in-out duration-500'>
   <div class='block image-wrapper relative pt-[140%]'>
     <img
       width='{{ prod.featured_image.width }}'
@@ -17,12 +17,16 @@
       loading='lazy'
     >
   </div>
-  <div class='content'>
-    <a href='{{ prod.url }}' class="after:content-[''] after:inset-0 after:absolute">
-      <div class='text-sm font-medium text-gray-900 mt-2 group-hover:underline hover:text-cloud-burst-300'>
+     <a href='{{ prod.url }}'>
+      <div class='text-sm font-medium text-center text-gray-900 mt-2 group-hover:underline hover:text-cloud-burst-300'>
         {{ prod.title }}
       </div>
     </a>
+   <a href='{{ prod.url }}'
+   class="mt-5 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm text-center font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150"
+   >
+     Learn More&nbsp;<span aria-hidden="true">→</span>
+   </a>
     {% comment %} <p class='flex flex-wrap items-center space-x-1 *:whitespace-nowrap'>
       {% if prod.price_varies %}
         <span class='text-sm'> From </span>
@@ -34,8 +38,8 @@
         <s class='text-sm'>{{ prod.compare_at_price_max | money_with_currency }}</s>
       {% endif %}
     </p> {% endcomment %}
-  </div>
-  <ajax-cart-product-form>
+
+  {% comment %} <ajax-cart-product-form>
     {% form 'product', prod %}
       <input type='hidden' name='id' value='{{ prod.selected_or_first_available_variant.id }}'>
       <input type='hidden' name='quantity' value='1'>
@@ -44,5 +48,5 @@
         <!-- Error messages appear here -->
       </div>
     {% endform %}
-  </ajax-cart-product-form>
+  </ajax-cart-product-form> {% endcomment %}
 </div>

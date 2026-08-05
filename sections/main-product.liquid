@@ -37,6 +37,23 @@
           "label": "Content"
         }
       ]
+    },
+    {
+      "name": "Model Document Files",
+      "tag": "section",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "PDF"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Custom Section"
+        }
+      ]
     }
   ]
 }
@@ -79,9 +96,9 @@
             class='absolute h-full w-full object-cover inset-0'
             loading='eager'
           >
-          <h1 class='text-4xl z-50 relative'>
+          <h3 class='text-md z-50 relative text-center'>
             {{ product.selected_or_first_available_variant.options }}
-          </h1>
+          </h3>
         </div>
         <span class='absolute top-0 left-0 z-100 text-[10px]'>
           {{ product.selected_or_first_available_variant.id }}
@@ -92,7 +109,7 @@
           {{ product.type | upcase }}
         </p>
         <h1 class='text-4xl leading-normal font-medium'>{{ product.title }}</h1>
-        <div class='flex items-center py-2' data-prodify-price-container>
+        {% comment %} <div class='flex items-center py-2' data-prodify-price-container>
           <span class='sr-only'>Regular Price</span>
           {% if product.selected_or_first_available_variant.compare_at_price %}
             <span class='line-through'>
@@ -102,13 +119,40 @@
           <span>
             {{ product.selected_or_first_available_variant.price | money }}
           </span>
-        </div>
+        </div> {% endcomment %}
+
         {% render 'product-variant-picker',
           product: product,
           product_form_id: 'product-form-id',
           picker_type: section.settings.picker_type
         %}
-        <div class='quantity-row'>
+
+        <div class='description prose'>
+         <p class="text-lg text-black"> {{ product.description }}</p>
+        </div>
+
+      {% comment %}
+        If there is a specSheet MetaField, show it here
+      {% endcomment %}
+
+      {%- for variant in product.variants -%}
+      {% if product.selected_or_first_available_variant.id == variant.id %}
+        <div class="variant-file-element" data-variant-id="{{ variant.id }}" style="display: {% if variant.id == product.selected_or_first_available_variant.id %}block{% else %}none{% endif %};">
+          {%- if variant.metafields.global.specSheet.value != blank -%}
+            {%- assign attached_file = variant.metafields.global.specSheet.value -%}
+            <a href="{{ attached_file.url }}" target="_blank" class="button">
+              Download Product Spec Sheet
+            </a>
+          {%- endif -%}
+        </div>
+        {% endif %}
+      {%- endfor -%}
+
+      {% if section.settings.paragraph != blank %}
+        {{ section.settings.paragraph }}
+      {% endif %}
+
+        {% comment %} <div class='quantity-row'>
           <label for='quantity-control-input'>Quantity</label>
           <div class='quantity-control-container'>
             <button type='button' data-prodify-quantity-decrement>
@@ -126,7 +170,7 @@
               {% render 'icon', icon: 'plus' %}
             </button>
           </div>
-        </div>
+        </div> {% endcomment %}
 
         <ajax-cart-product-form>
           <form
@@ -148,7 +192,13 @@
               data-prodify-quantity-hidden-input
             >
             <div class='mb-2.5'>
-              <button
+              <a
+                href="/pages/contact-us/"
+                class="mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150"
+              >
+              Contact for pricing&nbsp;<span aria-hidden="true">→</span>
+              </a>
+              {% comment %} <button
                 type='submit'
                 name='add'
                 class='px-6 hover:bg-cloud-burst-400 bg-indigo-900 text-white w-full h-12 cursor-pointer disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-black'
@@ -166,13 +216,13 @@
                 <span class='hidden in-[[processing]]:block in-[[processing]]:cursor-not-allowed'>
                   Adding to cart...
                 </span>
-              </button>
+              </button> {% endcomment %}
             </div>
             <div data-ajax-cart-errors='form' class='text-red-500'>
               <!-- Error messages appear here -->
             </div>
 
-            {%- if product.selected_or_first_available_variant.available -%}
+            {% comment %} {%- if product.selected_or_first_available_variant.available -%}
               <button
                 type='button'
                 class='w-full h-12 px-6 text-white bg-indigo-900 flex items-center justify-center hover:after:border-offset-1'
@@ -185,25 +235,23 @@
                   window.location.href = `/cart/${window?.prodify?.currentVariant?.id}:1`
                 }
               </script>
-            {%- endif -%}
+            {%- endif -%} {% endcomment %}
 
             {{ form | payment_button }}
           </form>
         </ajax-cart-product-form>
 
-        <div class='description prose'>
-          {{ product.description }}
-        </div>
-        {% for block in section.blocks %}
+        {% comment %} {% for block in section.blocks %}
           <div class='collapsable-row border border-gray-500 my-4 p-4'>
             <h2>{{ block.settings.heading }}</h2>
             <div>{{ block.settings.content }}</div>
           </div>
-        {% endfor %}
+        {% endfor %} {% endcomment %}
       </div>
     </div>
   </div>
 </div>
+
 
 <style>
   .section-main-product .shopify-section-main-product-inner .info fieldset label {
