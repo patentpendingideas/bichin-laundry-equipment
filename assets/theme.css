@@ -280,8 +280,20 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-1\/2 {
     top: calc(1 / 2 * 100%);
+  }
+  .top-2 {
+    top: calc(var(--spacing) * 2);
+  }
+  .top-5 {
+    top: calc(var(--spacing) * 5);
+  }
+  .top-8 {
+    top: calc(var(--spacing) * 8);
   }
   .top-12\.5 {
     top: calc(var(--spacing) * 12.5);
@@ -929,6 +941,9 @@
   .inline-block {
     display: inline-block;
   }
+  .inline-flex {
+    display: inline-flex;
+  }
   .table {
     display: table;
   }
@@ -1555,6 +1570,9 @@
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -1879,10 +1897,6 @@
   .shadow-xs {
     --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .outline-1 {
     outline-style: var(--tw-outline-style);
@@ -2234,6 +2248,21 @@
   .in-\[\[processing\]\]\:cursor-not-allowed {
     :where(*:is([processing])) & {
       cursor: not-allowed;
+    }
+  }
+  .has-\[\:checked\]\:border-black {
+    &:has(*:is(:checked)) {
+      border-color: var(--color-black);
+    }
+  }
+  .has-\[\:checked\]\:bg-black {
+    &:has(*:is(:checked)) {
+      background-color: var(--color-black);
+    }
+  }
+  .has-\[\:checked\]\:text-white {
+    &:has(*:is(:checked)) {
+      color: var(--color-white);
     }
   }
   .data-\[unavailable\=true\]\:bg-slate-100 {

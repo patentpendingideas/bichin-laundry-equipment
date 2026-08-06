@@ -83,9 +83,9 @@
             {{ product.selected_or_first_available_variant.options }}
           </h3>
         </div>
-        <span class='absolute top-0 left-0 z-100 text-[10px]'>
+        {% comment %} <span class='absolute top-0 left-0 z-100 text-[10px]'>
           {{ product.selected_or_first_available_variant.id }}
-        </span>
+        </span> {% endcomment %}
       </div>
       <div class='info flex-1' id='product-info-{{ section.id }}'>
         <p class='caption tracking-wide text-[10px] leading-3 text-gray-500'>
@@ -114,27 +114,64 @@
          <p class="text-lg text-black"> {{ product.description }}</p>
         </div>
 
-      {% comment %}
-        If there is a specSheet MetaField, show it here
-      {% endcomment %}
+        <!-- add in product specific Spec Sheet -->
 
+        {% comment %} {{ product.selected_or_first_available_variant.metafields.custom.specsheets | escape }} {% endcomment %}
 
+        {%- unless product.has_only_default_variant -%}
+          {%- for variant in product.variants -%}
+            {%- if variant.metafields.custom.specsheets != blank -%}
+              <div class="variant-files" data-variant-id="{{ variant.id }}">
+                <strong>{{ variant.title }} Files:</strong>
+                <ul>
+                  {%- for file in variant.metafields.custom.file_list.value -%}
+                    <li>
+                      <a href="{{ file.url }}" target="_blank">{{ file.original_filename | default: 'Download File' }}</a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endunless -%}
 
-      {%- for variant in product.variants -%}
-      {% if product.selected_or_first_available_variant.id == variant.id %}
-        <div class="variant-file-element" data-variant-id="{{ variant.id }}" style="display: {% if variant.id == product.selected_or_first_available_variant.id %}block{% else %}none{% endif %};">
-          {%- if variant.metafields.global.specSheet.value != blank -%}
-            {%- assign attached_file = variant.metafields.global.specSheet.value -%}
-            <a href="{{ attached_file.url }}" target="_blank" class="button">
-              Download Product Spec Sheet
-            </a>
+        {%- for variant in product.variants -%}
+          {%- assign custom_field = variant.metafields.custom.specsheets -%}
+          {%- if custom_field != blank -%}
+            <div class="variant-metafield-item">
+            <ul>
+             <li> <span>{{ variant.title }}: {{ custom_field.value }}</span></li>
+            </ul>
+            </div>
           {%- endif -%}
-        </div>
-        {% endif %}
-      {%- endfor -%}s' %}
-            </button>
-            <input
-              tabindex='-1'
+        {%- endfor -%}
+
+
+          {%- for variant in product.variants -%}
+            {%- assign custom_field = variant.metafields.custom.specsheets -%}
+            {%- if custom_field != blank -%}
+              <div class="variant-metafield-item">
+                <a href="{{ initial_variant.metafields.custom.variant_file.value.url }}" target="_blank" id="variant-file-link" class="">
+                   Spec Sheet for {{ variant.title }} {{ initial_variant.metafields.custom.variant_file.value.url }}
+                 </a>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+          </p>
+
+
+
+
+
+
+      {% comment %} <div class='quantity-row'>
+      <label for='quantity-control-input'>Quantity</label>
+      <div class='quantity-control-container'>
+        <button type='button' data-prodify-quantity-decrement>
+          {% render 'icon', icon: 'minus' %}
+        </button>
+        <input
+          tabindex='-1'
               type='number'
               id='quantity-control-input'
               value='1'
@@ -239,8 +276,7 @@
   }
 
   body:not(.using-mouse)
-    .sect
-.section-main-product .shopify-section-main-product-inner .info fieldset input[disabled] + label {
+    .sec.section-main-product .shopify-section-main-product-inner .info fieldset input[disabled] + label {
     background-color: rgb(241 245 249);
     color: lightgray;
   }
