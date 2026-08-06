@@ -12,23 +12,27 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "collapsable_row_7EjzKy": {
-          "type": "collapsable_row",
+        "spec_sheets_YgRVHM": {
+          "type": "spec_sheets",
           "settings": {
-            "heading": "Some Heading",
-            "content": "<p>Model info unavailable</p>"
+            "pdf_link": "<p>PDF</p>"
           }
         }
       },
-      "block_order": ["collapsable_row_7EjzKy"],
-      "settings": {
-        "picker_type": "radio"
-      }
+      "block_order": [
+        "spec_sheets_YgRVHM"
+      ],
+      "settings": {}
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "settings": {}
+      "settings": {
+        "heading": ""
+      }
     }
   },
-  "order": ["main", "product-recommendations"]
+  "order": [
+    "main",
+    "product-recommendations"
+  ]
 }
