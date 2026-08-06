@@ -101,27 +101,56 @@
       {% endcomment %}
 
       #1
-      <script>
-        window.productVariantMetafields = [
-          {% for variant in product.variants %}
-            {
-              "variantId": {{ variant.id | json }},
-              "metafieldValue": {{ variant.metafields.custom.specsheets.value | json }}
-            }{% unless forloop.last %},{% endunless %}
-          {% endfor %}
-        ];
-      </script>
+      <div 
+        class="max-w-xl mx-auto p-6 font-sans"
+        x-data="productVariants({
+          currentVariantId: {{ product.selected_or_first_available_variant.id | json }},
+          variants: [
+            {%- for variant in product.variants -%}
+              {
+                id: {{ variant.id | json }},
+                title: {{ variant.title | json }},
+                metafield: {{ variant.metafields.custom.specsheets.value | json }}
+              }{% unless forloop.last %},{% endunless %}
+            {%- endfor -%}
+          ]
+        })"
+      >
+        <!-- Variant Selection List -->
+        <fieldset class="mb-6">
+          <legend class="text-sm font-semibold text-gray-700 mb-2">Select Variant:</legend>
+          <div class="flex flex-wrap gap-2">
+            <template x-for="variant in variants" :key="variant.id">
+              <button 
+                @click="currentVariantId = variant.id"
+                :class="currentVariantId === variant.id ? 'bg-indigo-600 text-white ring-2 ring-indigo-600' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'"
+                class="px-4 py-2 text-sm font-medium border rounded-md transition-all shadow-sm"
+                x-text="variant.title"
+              ></button>
+            </template>
+          </div>
+        </fieldset>
 
-      #2
+        <!-- Dynamic Metafield Display -->
+        <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <h3 class="text-xs font-bold tracking-wider text-gray-500 uppercase mb-1">Active Metafield Value:</h3>
+          <p class="text-lg font-medium text-gray-900" x-text="activeMetafield || 'No metafield data for this variant'"></p>
+        </div>
+      </div>
+
       <script>
-        window.productVariantLists = [
-          {% for variant in product.variants %}
-            {
-              "id": {{ variant.id }},
-              "items": {{ variant.metafields.custom.specsheets.value | json }}
-            }{% unless forloop.last %},{% endunless %}
-          {% endfor %}
-        ];
+        document.addEventListener('alpine:init', () => {
+          Alpine.data('productVariants', (config) => ({
+            currentVariantId: config.currentVariantId,
+            variants: config.variants,
+            get activeVariant() {
+              return this.variants.find(v => v.id === this.currentVariantId) || null;
+            },
+            get activeMetafield() {
+              return this.activeVariant ? this.activeVariant.metafield : null;
+            }
+          }));
+        });
       </script>
 
 
