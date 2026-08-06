@@ -100,6 +100,7 @@
         If there is a specSheet MetaField, show it here
       {% endcomment %}
 
+      #1
       <script>
         window.productVariantMetafields = [
           {% for variant in product.variants %}
@@ -110,6 +111,19 @@
           {% endfor %}
         ];
       </script>
+
+      #2
+      <script>
+        window.productVariantLists = [
+          {% for variant in product.variants %}
+            {
+              "id": {{ variant.id }},
+              "items": {{ variant.metafields.custom.specsheets.value | json }}
+            }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ];
+      </script>
+
 
       {%- for variant in product.variants -%}
       {% if product.selected_or_first_available_variant.id == variant.id %}
