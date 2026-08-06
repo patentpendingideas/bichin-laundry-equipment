@@ -83,15 +83,15 @@
             {{ product.selected_or_first_available_variant.options }}
           </h3>
         </div>
-        <span class='absolute top-0 left-0 z-100 text-[10px]'>
+        {% comment %} <span class='absolute top-0 left-0 z-100 text-[10px]'>
           {{ product.selected_or_first_available_variant.id }}
-        </span>
+        </span> {% endcomment %}
       </div>
-      <div class='info flex-1' id='product-info-{{ section.id }}'>
+      <div class='info flex-1 mt-40' id='product-info-{{ section.id }}'>
         <p class='caption tracking-wide text-[10px] leading-3 text-gray-500'>
           {{ product.type | upcase }}
         </p>
-        <h1 class='text-4xl leading-normal font-medium'>{{ product.title }}</h1>
+        <h1 class='text-3xl leading-normal font-medium'>{{ product.title }}</h1>
         {% comment %} <div class='flex items-center py-2' data-prodify-price-container>
           <span class='sr-only'>Regular Price</span>
           {% if product.selected_or_first_available_variant.compare_at_price %}
@@ -118,22 +118,67 @@
         If there is a specSheet MetaField, show it here
       {% endcomment %}
 
-      {%- for variant in product.variants -%}
-      {% if product.selected_or_first_available_variant.id == variant.id %}
-        <div class="variant-file-element" data-variant-id="{{ variant.id }}" style="display: {% if variant.id == product.selected_or_first_available_variant.id %}block{% else %}none{% endif %};">
-          {%- if variant.metafields.global.specSheet.value != blank -%}
-            {%- assign attached_file = variant.metafields.global.specSheet.value -%}
-            <a href="{{ attached_file.url }}" target="_blank" class="button">
-              Download Product Spec Sheet
-            </a>
-          {%- endif -%}
-        </div>
-        {% endif %}
-      {%- endfor -%}
+<!-- chris August 6th -->
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign current_file_url = current_variant.metafields.global.specSheet.value.url -%}
 
-      {% if section.settings.paragraph != blank %}
-        {{ section.settings.paragraph }}
-      {% endif %}
+<div class="variant-file-container">
+  <a id="variant-file-link"
+     href="{{ current_file_url | default: '#' }}"
+     target="_blank"
+     class="text-black uppercase hover:text-gold-400 transition ease-in-out duration-500"
+     style="display: {% if current_file_url %}inline-flex{% else %}none{% endif %};">
+     <strong>Model Spec Sheet:</strong> <!--<span>📄</span>--> &nbsp;&nbsp;Download Link
+  </a>
+</div>
+
+{% comment %} JSON map of variant IDs to spec sheet URLs {% endcomment %}
+<script id="variant-file-map" type="application/json">
+  {
+    {%- for variant in product.variants -%}
+      "{{ variant.id }}": "{{ variant.metafields.global.specSheet.value.url | default: '' }}"
+      {%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const fileLink = document.getElementById('variant-file-link');
+      const fileMapEl = document.getElementById('variant-file-map');
+
+      if (!fileLink || !fileMapEl) return;
+
+      const variantFileMap = JSON.parse(fileMapEl.textContent);
+
+      function checkUrlForVariant() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const variantId = urlParams.get('variant');
+
+        if (variantId && variantFileMap[variantId]) {
+          fileLink.href = variantFileMap[variantId];
+          fileLink.style.display = 'inline-flex';
+        } else {
+          fileLink.href = '#';
+          fileLink.style.display = 'none';
+        }
+      }
+
+      // 1. Check immediately on page load
+      checkUrlForVariant();
+
+      // 2. Listen for URL changes if your theme uses pushState/replaceState
+      let lastUrl = location.href;
+      new MutationObserver(() => {
+        if (location.href !== lastUrl) {
+          lastUrl = location.href;
+          // Small timeout ensures the theme's history states are finalized
+          setTimeout(checkUrlForVariant, 50);
+        }
+      }).observe(document, { subtree: true, childList: true });
+    });
+</script>
+
 
         {% comment %} <div class='quantity-row'>
           <label for='quantity-control-input'>Quantity</label>
@@ -155,11 +200,12 @@
           </div>
         </div> {% endcomment %}
 
+
         <ajax-cart-product-form>
           <form
             action='{{ routes.cart_add_url }}'
             id='product_form_id'
-            class='product-form'
+            class='product-form mt-15'
             novalidate='novalidate'
             data-prodify-product-form
           >
@@ -234,135 +280,3 @@
     </div>
   </div>
 </div>
-
-
-<style>
-  .section-main-product .shopify-section-main-product-inner .info fieldset label {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 40px;
-    letter-spacing: 1px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-
-  body:not(.using-mouse)
-    .section-main-product
-    .shopify-section-main-product-inner
-    .info
-    fieldset
-    input:focus
-    + label {
-    outline: #08f auto 2px;
-  }
-
-  .section-main-product
-    .shopify-section-main-product-inner
-    .info
-    fieldset
-    label[data-unavailable='true'],
-  .section-main-product .shopify-section-main-product-inner .info fieldset input[disabled] + label {
-    background-color: rgb(241 245 249);
-    color: lightgray;
-  }
-
-  .section-main-product .shopify-section-main-product-inner .info .quantity-row label {
-    display: block;
-    font-size: 13px;
-    letter-spacing: 0.4px;
-    line-height: 19.5px;
-    color: rgba(26, 27, 24, 0.75);
-    margin-bottom: 4px;
-  }
-
-  .section-main-product
-    .shopify-section-main-product-inner
-    .info
-    .quantity-row
-    .quantity-control-container {
-    display: flex;
-    align-items: center;
-    border: 1px solid rgba(26, 27, 24, 0.55);
-    max-width: max-content;
-    color: rgba(26, 27, 24, 0.75);
-    font-family: Arial;
-    font-size: 14px;
-  }
-
-  .section-main-product
-    .shopify-section-main-product-inner
-    .info
-    .quantity-row
-    .quantity-control-container
-    button {
-    width: 45px;
-    height: 45px;
-    appearance: none;
-    -webkit-appearance: none;
-    background: transparent;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .section-main-product
-    .shopify-section-main-product-inner
-    .info
-    .quantity-row
-    .quantity-control-container
-    button
-    svg {
-    width: 10px;
-  }
-
-  .section-main-product
-    .shopify-section-main-product-inner
-    .info
-    .quantity-row
-    .quantity-control-container
-    input {
-    appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    pointer-events: none;
-    width: 48px;
-    text-align: center;
-    padding: 0;
-  }
-
-  .section-main-product
-    .shopify-section-main-product-inner
-    .info
-    .quantity-row
-    .quantity-control-container
-    input[type='number']::-webkit-inner-spin-button,
-  .section-main-product
-    .shopify-section-main-product-inner
-    .info
-    .quantity-row
-    .quantity-control-container
-    input[type='number']::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  .section-main-product .shopify-section-main-product-inner .info form {
-    margin: 25px auto;
-  }
-
-  .section-main-product .shopify-section-main-product-inner .info .description {
-    font-size: 16px;
-    line-height: 28.8px;
-  }
-
-  .section-main-product .shopify-section-main-product-inner .info .description em {
-    font-style: italic;
-  }
-
-  .section-main-product .shopify-section-main-product-inner .info .description a {
-    color: rgba(68, 89, 88, 0.85);
-  }
-</style>
