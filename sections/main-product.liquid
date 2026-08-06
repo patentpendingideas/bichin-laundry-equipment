@@ -110,7 +110,7 @@
               {
                 id: {{ variant.id | json }},
                 title: {{ variant.title | json }},
-                metafield: {{ variant.metafields.custom.specsheets.value | json }}
+                metafield: {{ variant.metafields.custom.specSheet.value | json }}
               }{% unless forloop.last %},{% endunless %}
             {%- endfor -%}
           ]
