@@ -58,7 +58,7 @@
       "type": "text",
       "id": "subtitle",
       "label": "Title",
-      "default": "Text about your offerings"
+      "default": "Text about your branding"
     },
     {
       "type": "textarea",
@@ -70,12 +70,31 @@
   "blocks": [
     {
       "type": "shipping",
-      "name": "t:sections.social_media_collage.settings.service"
+      "name": "t:sections.social_media_collage.settings.service",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "shipping_icon",
+          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "textarea",
+          "id": "shipping_heading",
+          "default": "Shipping heading",
+          "label": "t:sections.featured-collection.settings.title.label"
+        },
+        {
+          "type": "textarea",
+          "id": "shipping_paragraph",
+          "default": "Shipping content",
+          "label": "t:sections.featured-collection.settings.description.label"
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "What We Offer Section",
+      "name": "Shipping section",
       "blocks": [
         {
           "type": "shipping"
