@@ -66,6 +66,7 @@
         "shipping_j4dayJ": {
           "type": "shipping",
           "settings": {
+            "shipping_icon": "shopify://shop_images/telephone-icon.png",
             "shipping_heading": "Technical Support",
             "shipping_paragraph": "Need help with your facility?  we have technicians and chemical support staff available to help out."
           }
