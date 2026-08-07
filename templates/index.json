@@ -42,8 +42,8 @@
       "name": "Bichin Hero Image Slider",
       "settings": {}
     },
-    "shipping_section_hBnfLA": {
-      "type": "shipping-section",
+    "whatweoffer_section_hBnfLA": {
+      "type": "what-we-offer",
       "blocks": {
         "shipping_Wq7TqE": {
           "type": "shipping",
@@ -89,47 +89,13 @@
         "description": "",
         "main_title_alignment": "center",
         "border_bottom": false,
-        "columns_desktop": 4,
-        "columns_large_tablet": 3,
-        "columns_tablet": 2,
-        "columns_mobile": 1,
-        "autoplay_enable": true,
-        "arrows": false,
-        "dots": false,
-        "speed": "500",
-        "loop": false,
         "icon_width": "medium",
         "section_bg": "#fcfcfc",
         "subheading_color": "#bb941b",
         "heading_color": "#000000",
         "content_color": "#052b3e",
         "heading_text_color": "#c6a228",
-        "content_text_color": "#000000",
-        "border_color": "rgba(0,0,0,0)",
-        "padding-top": 40,
-        "padding-bottom": 40,
-        "padding-top-1429": 80,
-        "padding-bottom-1429": 40,
-        "padding-top-1199": 60,
-        "padding-bottom-1199": 30,
-        "padding-top-991": 60,
-        "padding-bottom-991": 30,
-        "padding-top-767": 40,
-        "padding-bottom-767": 20,
-        "padding-top-575": 40,
-        "padding-bottom-575": 20,
-        "margin-top": 0,
-        "margin-bottom": 0,
-        "margin-top-1429": 0,
-        "margin-bottom-1429": 0,
-        "margin-top-1199": 0,
-        "margin-bottom-1199": 0,
-        "margin-top-991": 0,
-        "margin-bottom-991": 0,
-        "margin-top-767": 0,
-        "margin-bottom-767": 0,
-        "margin-top-575": 0,
-        "margin-bottom-575": 0
+        "content_text_color": "#000000"
       }
     },
     "aboutus_czLXxf": {
@@ -149,7 +115,7 @@
   },
   "order": [
     "hero_image_8xPcb3",
-    "shipping_section_hBnfLA",
+    "whatweoffer_section_hBnfLA",
     "aboutus_czLXxf"
   ]
 }
