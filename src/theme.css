@@ -43,8 +43,8 @@
 @utility prose {
   max-width: none;
   :where(:not(.not-prose, .not-prose *)) {
-    --tw-prose-body: var(--color-cloud-burst-400);
-    --tw-prose-headings: var(--color-cloud-burst-50);
+    --tw-prose-body: var(--color-black);
+    --tw-prose-headings: var(--color-black);
     --tw-prose-links: var(--color-woodland-500);
 
     &:where(a:hover) {

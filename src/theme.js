@@ -41,4 +41,3 @@ if (process.env.NODE_ENV === 'development') {
     styleEl.appendChild(document.createTextNode(css))
   })
 }
-
