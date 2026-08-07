@@ -51,9 +51,7 @@
           "settings": {
             "shipping_icon": "shopify://shop_images/an-icon-for-architect.png",
             "shipping_heading": "Architects",
-            "shipping_paragraph": "Looking for help planning a laundromat? We work with architects to help you plan your layout to fit machines perfectly!",
-            "shipping_content_alignment": "center",
-            "shipping_block_alignment": "left"
+            "shipping_paragraph": "Looking for help planning a laundromat? We work with architects to help you plan your layout to fit machines perfectly!"
           }
         },
         "shipping_NQxpKY": {
@@ -62,18 +60,15 @@
           "settings": {
             "shipping_icon": "shopify://shop_images/white-icon-of-a-calculator.png",
             "shipping_heading": "Project Estimators",
-            "shipping_paragraph": "We work with project & modular estimators for budgeting & layout.",
-            "shipping_content_alignment": "center",
-            "shipping_block_alignment": "center"
+            "shipping_paragraph": "We work with project & modular estimators for budgeting & layout."
           }
         },
         "shipping_j4dayJ": {
           "type": "shipping",
           "settings": {
-            "shipping_heading": "Online support 24/7",
-            "shipping_paragraph": "Need help with your electronics? Get in touch with us anytime, anywhere, and let's get your tech sorted.",
-            "shipping_content_alignment": "center",
-            "shipping_block_alignment": "center"
+            "shipping_icon": "shopify://shop_images/telephone-icon.png",
+            "shipping_heading": "Technical Support",
+            "shipping_paragraph": "Need help with your facility?  we have technicians and chemical support staff available to help out."
           }
         }
       },
@@ -85,17 +80,7 @@
       "name": "What we offer",
       "settings": {
         "subtitle": "Bichin Laundry Equipment has A LOT to offer your BC Laundry Business",
-        "title": "",
-        "description": "",
-        "main_title_alignment": "center",
-        "border_bottom": false,
-        "icon_width": "medium",
-        "section_bg": "#fcfcfc",
-        "subheading_color": "#bb941b",
-        "heading_color": "#000000",
-        "content_color": "#052b3e",
-        "heading_text_color": "#c6a228",
-        "content_text_color": "#000000"
+        "description": ""
       }
     },
     "aboutus_czLXxf": {
