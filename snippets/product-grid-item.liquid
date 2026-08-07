@@ -7,15 +7,17 @@
 
 <div class='group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-5 hover:shadow-lg transition-all ease-in-out duration-500'>
   <div class='block image-wrapper relative pt-[140%]'>
+  <a href='{{ prod.url }}'>
     <img
       width='{{ prod.featured_image.width }}'
       height='{{ prod.featured_image.height }}'
       src='{{ prod.featured_image | image_url: width: 410 }}'
       srcset='{{ prod.featured_image | image_url: width: 205 }} 1x, {{ prod.featured_image | image_url: width: 410 }} 2x'
       alt='{{ prod.featured_image.alt }}'
-      class='absolute inset-0 object-cover h-full'
+      class='absolute inset-0 object-cover h-full hover:opacity-50 transiton ease-in-out duration-500'
       loading='lazy'
     >
+  </a>
   </div>
      <a href='{{ prod.url }}'>
       <div class='text-sm font-medium text-center text-gray-900 mt-2 group-hover:underline hover:text-cloud-burst-300'>
