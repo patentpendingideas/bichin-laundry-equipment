@@ -1,79 +1,4 @@
-{{ 'rich-text.css' | asset_url | stylesheet_tag }}
-
-{%- style -%}
-  .richtext_backset{
-    background-color: {{section.settings.section_bg}};
-  }
-  .rich-text__caption{
-    color: {{section.settings.richtext_heading}};
-  }
-  .rich-text__heading{
-    color: {{section.settings.richtext_subheading}};
-  }
-  .rich-text__text{
-    color: {{ section.settings.richtext_description }};
-  }
-  .rich-text__buttons a{
-    background-color: {{ section.settings.button_bg }};
-    color: {{ section.settings.button_text }};
-  }
-  .rich-text__blocks {
-   text-align: {{ section.settings.text_alignment }};
-  }
-  .rich-text__buttons a:hover{
-    background-color: {{ section.settings.button_hr_bg}};
-    color: {{ section.settings.button_hr_text}};
-  }
-   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding-top }}px;
-    padding-bottom: {{ section.settings.padding-bottom }}px;
-    margin-top: {{ section.settings.margin-top }}px;
-    margin-bottom: {{ section.settings.margin-bottom }}px;
-  }
-  @media screen and (max-width: 1429px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding-top-1429 }}px;
-      padding-bottom: {{ section.settings.padding-bottom-1429 }}px;
-      margin-top: {{ section.settings.margin-top-1429 }}px;
-      margin-bottom: {{ section.settings.margin-bottom-1429 }}px;
-    }
-  }
-  @media screen and (max-width: 1199px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding-top-1199 }}px;
-      padding-bottom: {{ section.settings.padding-bottom-1199 }}px;
-      margin-top: {{ section.settings.margin-top-1199 }}px;
-      margin-bottom: {{ section.settings.margin-bottom-1199 }}px;
-    }
-  }
-  @media screen and (max-width: 991px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding-top-991 }}px;
-      padding-bottom: {{ section.settings.padding-bottom-991 }}px;
-      margin-top: {{ section.settings.margin-top-991 }}px;
-      margin-bottom: {{ section.settings.margin-bottom-991 }}px;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding-top-767 }}px;
-      padding-bottom: {{ section.settings.padding-bottom-767 }}px;
-      margin-top: {{ section.settings.margin-top-767 }}px;
-      margin-bottom: {{ section.settings.margin-bottom-767 }}px;
-    }
-  }
-  @media screen and (max-width: 575px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding-top-575 }}px;
-      padding-bottom: {{ section.settings.padding-bottom-575 }}px;
-      margin-top: {{ section.settings.margin-top-575 }}px;
-      margin-bottom: {{ section.settings.margin-bottom-575 }}px;
-    }
-  }
-{%- endstyle -%}
-
-<div class="isolate richtext_backset d-inline-block section-{{ section.id }}-padding">
-  <div class="rich-text content-container {{ section.settings.section_width }}">
+  <div class="px-6 md:px-8 py-12 {{ section.settings.section_width }}">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}">
       <div class="rich-text__blocks">
           {% if section.settings.caption != blank %}
@@ -101,7 +26,6 @@
       </div>
     </div>
   </div>
-</div>
 
 {% schema %}
 {
@@ -117,22 +41,22 @@
         "id": "section_width",
         "options": [
           {
-            "value": "full__width",
+            "value": "max-w-full",
             "label": "Full width"
           },
           {
-            "value": "page-width",
+            "value": "max-w-4xl",
             "label": "Page width"
           }
         ],
         "label": "Section width",
-        "default": "full__width"
+        "default": "max-w-4xl"
      },
     {
       "type": "text",
       "id": "caption",
       "default": "Add a tagline",
-      "label": "t:sections.featured-collection.settings.subheading.label"
+      "label": "caption"
     },
     {
       "type": "textarea",
