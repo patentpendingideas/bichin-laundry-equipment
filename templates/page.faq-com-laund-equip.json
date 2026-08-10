@@ -133,19 +133,12 @@
         "contact_btn_text": "Request a Quote",
         "contact_btn_link": "shopify://pages/contact-us"
       }
-    },
-    "blocks_Fb9rtY": {
-      "type": "_blocks",
-      "disabled": true,
-      "name": "Page title",
-      "settings": {}
     }
   },
   "order": [
     "main",
     "rich_text_HjhMXd",
     "blocks_6mWgqY",
-    "collapsible-content",
-    "blocks_Fb9rtY"
+    "collapsible-content"
   ]
 }
