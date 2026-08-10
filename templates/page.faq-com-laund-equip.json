@@ -17,7 +17,7 @@
       "type": "rich-text",
       "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "section_width": "full__width",
+        "section_width": "page-width",
         "caption": "What do you want to know?",
         "heading": "Bichin Laundry Equipment FAQ",
         "text": "Have questions about commercial laundry equipment, service, laundry chemicals, or starting a laundromat? This FAQ page brings together answers to the most common questions customers ask Bichin Laundry Equipment about equipment selection, repairs, preventative maintenance, chemical programs, laundromat planning, financing, and ongoing support. Whether you run a laundromat, hotel, care facility, healthcare operation, multi-housing laundry room, or another high-volume laundry business, we are here to help you find the right solutions for your operation.",
@@ -162,8 +162,6 @@
       ],
       "settings": {
         "show_topimg": false,
-        "open_first_collapsible_row": true,
-        "full_width": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "further_text": "Still have questions? We are happy to help with commercial laundry equipment, parts, service, chemicals, and laundromat planning. Whether you are opening a new laundromat, upgrading your current equipment, or looking for dependable supply and service support, we can help you take the next step.",
