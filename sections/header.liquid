@@ -65,6 +65,11 @@
           :aria-expanded="$store.global.isPredictiveSearchVisible ? 'true' : 'false'"
           aria-label='Search'
           aria-controls='predictive-search'
+          @scroll.window="isSticky = (window.pageYOffset > 50)"
+          :class="isSticky ? 'top-0' : 'bg-black relative py-1 transition-all duration-1000 ease-in-out'"
+          class="fixed w-full z-50 align-middle bg-black"
+
+
         >
           {% render 'icon', icon: 'search' %}
         </button>
@@ -75,10 +80,21 @@
       {% endif %}
 
       {% if shop.customer_accounts_enabled %}
-        <a href='{{ routes.account_url }}' class='fill-white p-2 text-white [&>svg]:h-7'>
+
+      {% if customer %}
+        <a href='{{ routes.account_urll }}' class='fill-white p-2 text-white [&>svg]:h-7'>
+            {% render 'icon', icon: 'user' %}
+          </a>
+      {% else %}
+        <a href='{{ routes.account_login_url }}' class='fill-white p-2 text-white [&>svg]:h-7'>
+            {% render 'icon', icon: 'user' %}
+          </a>
+      {% endif %}
+
+        <!-- <a href='{{ routes.account_url }}' class='fill-white p-2 text-white [&>svg]:h-7'>
           {% render 'icon', icon: 'user' %}
         </a>
-      {% endif %}
+      {% endif %} -->
 
       <a
         href='{{ routes.cart_url }}'

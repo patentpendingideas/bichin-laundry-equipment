@@ -9,7 +9,7 @@
   <div class='login-n-reset-container' x-data='{ showPasswordReset: false }'>
     <div class='account-login' x-show='!showPasswordReset'>
       <div class='account-login-inner shell'>
-        <h1>Sign In</h1>
+        <h1 class="text-3xl text-center my-10 text-gray-500">Sign In</h1>
         {% form 'customer_login', return_to: routes.account_url %}
           {{ form_errors | default_errors }}
 

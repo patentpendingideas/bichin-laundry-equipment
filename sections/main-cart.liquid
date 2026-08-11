@@ -1,21 +1,5 @@
-{% schema %}
-{
-  "name": "Cart Section",
-  "class": "section-main-collection",
-  "tag": "section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "summary-message",
-      "label": "Cart Summary Message",
-      "default": "Taxes and shipping calculated at checkout"
-    }
-  ]
-}
-{% endschema %}
-
 <div
-  class='cart px-6 py-12 md:px-8 [&_.error-notif]:block [&_.error-notif]:text-xs [&_.error-notif]:text-red-500 [&_a]:no-underline'
+  class='cart px-6 py-12 md:px-8 max-h-3/4 [&_.error-notif]:block [&_.error-notif]:text-xs [&_.error-notif]:text-red-500 [&_a]:no-underline'
   data-ajax-cart-section
 >
   <form
@@ -23,7 +7,7 @@
     method='post'
     id='cart'
   >
-    <div class='cart-inner container'>
+    <div class='cart-inner container mx-auto max-h-3/4'>
       {% if cart.item_count > 0 %}
         <table class='w-full [&_tr>td]:pb-4 [&_tr>th]:pb-4'>
           <tr class='text-left'>
@@ -127,7 +111,8 @@
           </button>
         </div>
       {% else %}
-        <h2>You have no items in your cart.</h2>
+        <h2 class="text-3xl text-center my-10 text-gray-500">You have no items in your cart.</h2>
+        <p class="text-lg text-center my-10 text-gray-500">Let's go shopping, <a href="collections/dexter-laundry-equipment-parts" class="underline underline-offset-4 decoration-gray-500 hover:text-gray-200 transition ease-in-out duration-500">equipment</a> or <a href="/collections/dexter-laundry-equipment-parts" class="underline underline-offset-4 decoration-gray-500 hover:text-gray-200 transition ease-in-out duration-500">parts</a>?</p>
       {% endif %}
     </div>
   </form>
@@ -146,3 +131,20 @@
     });
   </script>
 {% endcomment %}
+
+
+{% schema %}
+{
+  "name": "Cart Section",
+  "class": "section-main-collection",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "summary-message",
+      "label": "Cart Summary Message",
+      "default": "Taxes and shipping calculated at checkout"
+    }
+  ]
+}
+{% endschema %}
