@@ -79,9 +79,28 @@
             class='absolute h-full w-full object-cover inset-0'
             loading='eager'
           >
-          <h3 class='text-md z-50 relative text-center'>
+          <!-- <h3 class='text-md z-50 relative text-center'>
             {{ product.selected_or_first_available_variant.options }}
-          </h3>
+          </h3> -->
+
+          <p class="text-md z-50 relative text-center">
+            {% if collection.handle == 'laundry-carts' %}
+              {{ product.selected_or_first_available_variant.options }}
+
+            {% elsif collection.handle == 'on-premise-laundry-equipment' %}
+              {{ product.selected_or_first_available_variant.options }}
+
+            {% elsif collection.handle == 'vended-laundry-equipment' %}
+              {{ product.selected_or_first_available_variant.options }}
+            {% endif %}
+          </p>
+          {% assign in_collection = false %}
+
+
+
+
+
+
         </div>
         {% comment %} <span class='absolute top-0 left-0 z-100 text-[10px]'>
           {{ product.selected_or_first_available_variant.id }}
@@ -118,7 +137,6 @@
         If there is a specSheet MetaField, show it here
       {% endcomment %}
 
-    <!-- chris August 6th -->
     {%- assign current_variant = product.selected_or_first_available_variant -%}
       {%- assign current_file_url = current_variant.metafields.global.specSheet.value.url -%}
 
@@ -141,7 +159,6 @@
         {%- endfor -%}
       }
     </script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
           const fileLink = document.getElementById('variant-file-link');
@@ -200,7 +217,6 @@
           </div>
         </div> {% endcomment %}
 
-
         <ajax-cart-product-form>
           <form
             action='{{ routes.cart_add_url }}'
@@ -221,12 +237,31 @@
               data-prodify-quantity-hidden-input
             >
             <div class='mb-2.5'>
-              <a
+
+              <!-- links for specific contact pages depending on category -->
+              {% assign in_collection = false %}
+
+              {% for collection in product.collections %}
+                {% if collection.handle == 'laundry-carts' %}
+                  {% assign in_collection = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+
+              {% if in_collection %}
+                <!-- Your custom code or snippet goes here -->
+
+                <a href="/pages/carts-contact-page?product={{ product.title | url_encode }}" class="mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">Contact for pricing&nbsp;<span aria-hidden="true">→</span></a>
+
+              {% endif %}
+
+
+              <!-- <a
                 href="/pages/contact-us/"
                 class="mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150"
               >
               Contact for pricing&nbsp;<span aria-hidden="true">→</span>
-              </a>
+              </a> -->
               {% comment %} <button
                 type='submit'
                 name='add'
