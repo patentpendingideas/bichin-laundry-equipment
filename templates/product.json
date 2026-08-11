@@ -11,28 +11,46 @@
   "sections": {
     "main": {
       "type": "main-product",
-      "blocks": {
-        "spec_sheets_YgRVHM": {
-          "type": "spec_sheets",
-          "settings": {
-            "pdf_link": "<p>PDF</p>"
-          }
-        }
-      },
-      "block_order": [
-        "spec_sheets_YgRVHM"
-      ],
-      "settings": {}
+      "settings": {
+        "picker_type": "radio"
+      }
     },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
         "heading": ""
       }
+    },
+    "17864846761003abee": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_MWBfCD": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1108607",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_MWBfCD"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "17864846761003abee"
   ]
 }

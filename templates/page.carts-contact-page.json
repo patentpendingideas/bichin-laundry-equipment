@@ -8,13 +8,15 @@
  * ------------------------------------------------------------
  */
 {
-	"sections": {
-		"main": {
-			"type": "main-account",
-			"settings": {}
-		}
-	},
-	"order": [
-		"main"
-	]
+  "sections": {
+    "main": {
+      "type": "main-page-contact",
+      "settings": {
+        "heading": "Contact Us"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
