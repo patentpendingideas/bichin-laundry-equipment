@@ -201,7 +201,7 @@
           <form
             action='{{ routes.cart_add_url }}'
             id='product_form_id'
-            class='product-form mt-15'
+            class='product-form mt-2'
             novalidate='novalidate'
             data-prodify-product-form
           >
@@ -231,7 +231,7 @@
               <button
                 type='submit'
                 name='add'
-                class='mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150'
+                class='mt-1 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150'
                 {% if product.selected_or_first_available_variant.available == false %}
                   disabled
                 {% endif %}
@@ -248,56 +248,37 @@
                 </span>
               </button>
 
-              {% else %}
-                <a href="/pages/contact-us?product={{ product.title | url_encode }}" class="mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">Contact for pricing&nbsp;<span aria-hidden="true">→</span></a>
+              {% comment %}
+              {%- if product.selected_or_first_available_variant.available -%}
+                <button
+                  type='button'
+                  class='w-full h-12 px-6 text-white bg-indigo-900 flex items-center justify-center hover:after:border-offset-1'
+                  onclick='onBuyNowClicked()'
+                >
+                  Buy it now
+                </button>
+                <script>
+                  const onBuyNowClicked = () => {
+                    window.location.href = `/cart/${window?.prodify?.currentVariant?.id}:1`
+                  }
+                </script>
+              {%- endif -%}
 
+              {{ form | payment_button }}
+              {% endcomment %}
+
+
+              {% else %}
+              <!-- all others, get a quote on price -->
+                <a href="/pages/contact-us?product={{ product.title | url_encode }}" class="mt-1 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">Contact for pricing&nbsp;<span aria-hidden="true">→</span></a>
               {% endif %}
 
-
-
-              <!-- all others, get a quote on price -->
-
-
-              {% comment %} <button
-                type='submit'
-                name='add'
-                class='px-6 hover:bg-cloud-burst-400 bg-indigo-900 text-white w-full h-12 cursor-pointer disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-black'
-                {% if product.selected_or_first_available_variant.available == false %}
-                  disabled
-                {% endif %}
-              >
-                <span class='in-[[processing]]:hidden'>
-                  {%- if product.selected_or_first_available_variant.available -%}
-                    Add to cart
-                  {%- else -%}
-                    Sold out
-                  {%- endif -%}
-                </span>
-                <span class='hidden in-[[processing]]:block in-[[processing]]:cursor-not-allowed'>
-                  Adding to cart...
-                </span>
-              </button> {% endcomment %}
             </div>
             <div data-ajax-cart-errors='form' class='text-red-500'>
               <!-- Error messages appear here -->
             </div>
 
-            {% comment %} {%- if product.selected_or_first_available_variant.available -%}
-              <button
-                type='button'
-                class='w-full h-12 px-6 text-white bg-indigo-900 flex items-center justify-center hover:after:border-offset-1'
-                onclick='onBuyNowClicked()'
-              >
-                Buy it now
-              </button>
-              <script>
-                const onBuyNowClicked = () => {
-                  window.location.href = `/cart/${window?.prodify?.currentVariant?.id}:1`
-                }
-              </script>
-            {%- endif -%} {% endcomment %}
 
-            {{ form | payment_button }}
           </form>
         </ajax-cart-product-form>
 
