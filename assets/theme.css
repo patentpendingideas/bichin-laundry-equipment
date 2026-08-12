@@ -1118,11 +1118,17 @@
   .w-full {
     width: 100%;
   }
+  .max-w-1\/2 {
+    max-width: calc(1 / 2 * 100%);
+  }
   .max-w-2xl {
     max-width: var(--container-2xl);
   }
   .max-w-4xl {
     max-width: var(--container-4xl);
+  }
+  .max-w-5\/8 {
+    max-width: calc(5 / 8 * 100%);
   }
   .max-w-5xl {
     max-width: var(--container-5xl);

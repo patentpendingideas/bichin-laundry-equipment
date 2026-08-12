@@ -217,33 +217,47 @@
               data-prodify-quantity-hidden-input
             >
             <div class='mb-2.5'>
-
               <!-- links for specific contact pages depending on category -->
               {% assign in_collection = false %}
 
               {% for collection in product.collections %}
-                {% if collection.handle == 'laundry-carts' %}
+                {% if collection.handle == 'dexter-laundry-equipment-parts' %}
                   {% assign in_collection = true %}
                   {% break %}
                 {% endif %}
               {% endfor %}
 
               {% if in_collection %}
-                <!-- Your custom code or snippet goes here -->
+              <button
+                type='submit'
+                name='add'
+                class='mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150'
+                {% if product.selected_or_first_available_variant.available == false %}
+                  disabled
+                {% endif %}
+              >
+                <span class='in-[[processing]]:hidden'>
+                  {%- if product.selected_or_first_available_variant.available -%}
+                    Add to cart
+                  {%- else -%}
+                    Sold out
+                  {%- endif -%}
+                </span>
+                <span class='hidden in-[[processing]]:block in-[[processing]]:cursor-not-allowed'>
+                  Adding to cart...
+                </span>
+              </button>
 
-                <a href="/pages/carts-contact-page?product={{ product.title | url_encode }}" class="mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">Contact for pricing&nbsp;<span aria-hidden="true">→</span></a>
-
-
+              {% else %}
+                <a href="/pages/contact-us?product={{ product.title | url_encode }}" class="mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">Contact for pricing&nbsp;<span aria-hidden="true">→</span></a>
 
               {% endif %}
 
 
-              <!-- <a
-                href="/pages/contact-us/"
-                class="mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150"
-              >
-              Contact for pricing&nbsp;<span aria-hidden="true">→</span>
-              </a> -->
+
+              <!-- all others, get a quote on price -->
+
+
               {% comment %} <button
                 type='submit'
                 name='add'
