@@ -35,7 +35,9 @@
     </header>
     <div class='sm:flex'>
       <div class='flex-1 sm:ml-12'>
-        {%- form 'contact-carts', id: 'contact-form', class: 'space-y-4' -%}
+        {%- form 'contact', id: 'contact-form', class: 'space-y-4' -%}
+
+
 
           {%- if form.posted_successfully? -%}
             <div
@@ -70,6 +72,7 @@
           {%- endif -%}
 
           <div>
+
             <label for='ContactForm-name' class='block mb-2 text-sm font-medium text-gray-900'>
               {{ 'templates.contact.form.name' | t }}
             </label>
@@ -122,10 +125,12 @@
             {%- endif -%}
           </div>
           <div>
+            <label for='product-input' class='block mb-2 text-sm font-medium text-gray-900'>
+              Laundry Carts
+            </label>
+            <input type="text" id="product-input" name="contact[product]" value="">
             <label for='contact-form-subject' class='block mb-2 text-sm font-medium text-gray-900'
-              >
-              <input type="text" id="product-input" name="contact[product]" value="">
-
+              >Subject
             </label>
             <input
               autocomplete='subject'
