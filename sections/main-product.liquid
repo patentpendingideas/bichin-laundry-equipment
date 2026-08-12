@@ -62,8 +62,8 @@
       Skip to product info
     </a>
     <div class='md:flex md:gap-12 pdp-main relative'>
-      <div class='media flex-1 mb-8 md:mb-0' data-prodify-media-container>
-        <div class='image-wrapper relative overflow-hidden pt-[137%]'>
+      <div class='media flex-1 mb-0' data-prodify-media-container>
+        <div class='image-wrapper relative overflow-hidden pt-[100%] md:pt-[137%]'>
           {% if product.selected_variant and product.selected_variant.image %}
             {% assign media = product.selected_variant.image %}
           {% else %}
@@ -86,7 +86,7 @@
         </span> {% endcomment %}
 
       </div>
-      <div class='info flex-1 mt-40' id='product-info-{{ section.id }}'>
+      <div class='info flex-1 mt-1 md:mt-40' id='product-info-{{ section.id }}'>
         <p class='caption tracking-wide text-[10px] leading-3 text-gray-500'>
           {{ product.type | upcase }}
         </p>
@@ -113,68 +113,18 @@
          <p class="text-lg text-black"> {{ product.description }}</p>
         </div>
 
-      {% comment %}
-        If there is a specSheet MetaField, show it here
-      {% endcomment %}
-
-    {%- assign current_variant = product.selected_or_first_available_variant -%}
+      <!-- If there is a specSheet MetaField, show it here -->
+      {%- assign current_variant = product.selected_or_first_available_variant -%}
       {%- assign current_file_url = current_variant.metafields.global.specSheet.value.url -%}
-
-    <div class="variant-file-container">
-      <a id="variant-file-link"
-        href="{{ current_file_url | default: '#' }}"
-        target="_blank"
-        class="rounded-md bg-white px-2.5 py-1 text-sm font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50 hover:text-gold-400 transition ease-in-out duration-500"
-        style="display: {% if current_file_url %}inline-flex{% else %}none{% endif %};">
-        <strong>Download Model Spec Sheet</strong>
-      </a>
-    </div>
-
-    {% comment %} JSON map of variant IDs to spec sheet URLs {% endcomment %}
-    <script id="variant-file-map" type="application/json">
-      {
-        {%- for variant in product.variants -%}
-          "{{ variant.id }}": "{{ variant.metafields.global.specSheet.value.url | default: '' }}"
-          {%- unless forloop.last -%},{%- endunless -%}
-        {%- endfor -%}
-      }
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const fileLink = document.getElementById('variant-file-link');
-          const fileMapEl = document.getElementById('variant-file-map');
-
-          if (!fileLink || !fileMapEl) return;
-
-          const variantFileMap = JSON.parse(fileMapEl.textContent);
-
-          function checkUrlForVariant() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const variantId = urlParams.get('variant');
-
-            if (variantId && variantFileMap[variantId]) {
-              fileLink.href = variantFileMap[variantId];
-              fileLink.style.display = 'inline-flex';
-            } else {
-              fileLink.href = '#';
-              fileLink.style.display = 'none';
-            }
-          }
-
-          // 1. Check immediately on page load
-          checkUrlForVariant();
-
-          // 2. Listen for URL changes if your theme uses pushState/replaceState
-          let lastUrl = location.href;
-          new MutationObserver(() => {
-            if (location.href !== lastUrl) {
-              lastUrl = location.href;
-              // Small timeout ensures the theme's history states are finalized
-              setTimeout(checkUrlForVariant, 50);
-            }
-          }).observe(document, { subtree: true, childList: true });
-        });
-    </script>
+        <div class="variant-file-container">
+          <a id="variant-file-link"
+            href="{{ current_file_url | default: '#' }}"
+            target="_blank"
+            class="rounded-md bg-white px-2.5 py-1 mb-5 text-sm font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50 hover:text-gold-400 transition ease-in-out duration-500"
+          >
+            <strong>Download Model Spec Sheet</strong>
+          </a>
+        </div>
 
 
         {% comment %} <div class='quantity-row'>
@@ -216,6 +166,7 @@
               value='1'
               data-prodify-quantity-hidden-input
             >
+
             <div class='mb-2.5'>
               <!-- links for specific contact pages depending on category -->
               {% assign in_collection = false %}
@@ -292,3 +243,50 @@
     </div>
   </div>
 </div>
+
+
+{% comment %} JSON map of variant IDs to spec sheet URLs {% endcomment %}
+<script id="variant-file-map" type="application/json">
+  {
+    {%- for variant in product.variants -%}
+      "{{ variant.id }}": "{{ variant.metafields.global.specSheet.value.url | default: '' }}"
+      {%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  }
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const fileLink = document.getElementById('variant-file-link');
+      const fileMapEl = document.getElementById('variant-file-map');
+
+      if (!fileLink || !fileMapEl) return;
+
+      const variantFileMap = JSON.parse(fileMapEl.textContent);
+
+      function checkUrlForVariant() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const variantId = urlParams.get('variant');
+
+        if (variantId && variantFileMap[variantId]) {
+          fileLink.href = variantFileMap[variantId];
+          fileLink.style.display = 'inline-flex';
+        } else {
+          fileLink.href = '#';
+          fileLink.style.display = 'none';
+        }
+      }
+
+      // 1. Check immediately on page load
+      checkUrlForVariant();
+
+      // 2. Listen for URL changes if your theme uses pushState/replaceState
+      let lastUrl = location.href;
+      new MutationObserver(() => {
+        if (location.href !== lastUrl) {
+          lastUrl = location.href;
+          // Small timeout ensures the theme's history states are finalized
+          setTimeout(checkUrlForVariant, 50);
+        }
+      }).observe(document, { subtree: true, childList: true });
+    });
+</script>
