@@ -76,35 +76,15 @@
             sizes='(min-width: 768px) 55vw, 100vw'
             height='{{ media.height }}'
             width='{{ media.width }}'
-            class='absolute h-full w-full object-cover inset-0'
+            class='absolute h-full w-full object-contain inset-0'
             loading='eager'
           >
-          <!-- <h3 class='text-md z-50 relative text-center'>
-            {{ product.selected_or_first_available_variant.options }}
-          </h3> -->
-
-          <p class="text-md z-50 relative text-center">
-            {% if collection.handle == 'laundry-carts' %}
-              {{ product.selected_or_first_available_variant.options }}
-
-            {% elsif collection.handle == 'on-premise-laundry-equipment' %}
-              {{ product.selected_or_first_available_variant.options }}
-
-            {% elsif collection.handle == 'vended-laundry-equipment' %}
-              {{ product.selected_or_first_available_variant.options }}
-            {% endif %}
-          </p>
-          {% assign in_collection = false %}
-
-
-
-
-
-
         </div>
+
         {% comment %} <span class='absolute top-0 left-0 z-100 text-[10px]'>
           {{ product.selected_or_first_available_variant.id }}
         </span> {% endcomment %}
+
       </div>
       <div class='info flex-1 mt-40' id='product-info-{{ section.id }}'>
         <p class='caption tracking-wide text-[10px] leading-3 text-gray-500'>
@@ -252,6 +232,8 @@
                 <!-- Your custom code or snippet goes here -->
 
                 <a href="/pages/carts-contact-page?product={{ product.title | url_encode }}" class="mt-15 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">Contact for pricing&nbsp;<span aria-hidden="true">→</span></a>
+
+
 
               {% endif %}
 
