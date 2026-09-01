@@ -37,11 +37,12 @@
         "slide_tqYRdn": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Sustainability-Image-Banner.webp",
             "eyebrow": "Commercial Laundry Equipment",
             "title": "Your Title",
             "description": "Description for Slide",
             "button_text": "Learn More",
-            "button_link": ""
+            "button_link": "shopify://pages/sustainabilitiy"
           }
         }
       },
