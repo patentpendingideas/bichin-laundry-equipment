@@ -33,11 +33,22 @@
             "button_text": "Shop Now",
             "button_link": "shopify://collections/dexter-laundry-equipment-parts"
           }
+        },
+        "slide_tqYRdn": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "Commercial Laundry Equipment",
+            "title": "Your Title",
+            "description": "Description for Slide",
+            "button_text": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
         "slide_y3GgEP",
-        "slide_NXzzJL"
+        "slide_NXzzJL",
+        "slide_tqYRdn"
       ],
       "name": "Bichin Hero Image Slider",
       "settings": {}
