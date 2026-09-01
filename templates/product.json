@@ -12,7 +12,7 @@
     "main": {
       "type": "main-product",
       "settings": {
-        "picker_type": "radio"
+        "picker_type": "select"
       }
     },
     "product-recommendations": {
