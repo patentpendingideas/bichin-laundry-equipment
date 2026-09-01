@@ -17,10 +17,20 @@
           "settings": {
             "image": "shopify://shop_images/Laundromat_of_dexter_equipment-xl.webp",
             "eyebrow": "Commercial Laundry Equipment",
-            "title": "Laundromat Planning. Machine Sales. Installations. Service.",
+            "title": "INDUSTRY - LEADING BRAND.  LOLocal Expertise",
             "description": "Your One-Stop Laundromat Planner & Supplier in BC, Alberta & The Yukon",
             "button_text": "Shop Now",
             "button_link": "shopify://pages/laundromat-planning-development"
+          }
+        },
+        "slide_AEzKqh": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "Commercial Laundry Equipment",
+            "title": "Your Title",
+            "description": "Description for Slide",
+            "button_text": "",
+            "button_link": ""
           }
         },
         "slide_NXzzJL": {
@@ -37,6 +47,7 @@
       },
       "block_order": [
         "slide_y3GgEP",
+        "slide_AEzKqh",
         "slide_NXzzJL"
       ],
       "name": "Bichin Hero Image Slider",
