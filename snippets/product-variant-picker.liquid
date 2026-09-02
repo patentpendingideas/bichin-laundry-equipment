@@ -30,15 +30,15 @@
   {% else %}
     <div class='variant-selects'>
       {% for option in product.options_with_values %}
-        <div data-prodify-option-container>
-          <label for='Option-{{ section.id }}-{{ forloop.index0 }}'>
-            {{ option.name }}
+        <div data-prodify-option-container class="flex">
+          <label for='Option-{{ section.id }}-{{ forloop.index0 }}' class="w-14 flex-none">
+            <h3 class='text-xl leading-normal font-bold'>{{ option.name }}:</h3>
           </label>
-          <div class='select-wrapper relative flex items-center justify-end'>
+          <div class='w-64 flex-auto'>
             <span class='select-arrow mr-6'></span>
             <select
               id='Option-{{ section.id }}-{{ forloop.index0 }}'
-              class='input-select'
+              class='input-select mt-1 border border-gray-300 rounded px-3 py-1 bg-white text-gray-700 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500'
               name='options[{{ option.name | escape }}]'
               form='{{ product_form_id }}'
               data-option-position='{{ forloop.index }}'

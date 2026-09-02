@@ -114,11 +114,11 @@
 
       {%- assign current_variant = product.selected_or_first_available_variant -%}
       {%- assign current_file_url = current_variant.metafields.global.specSheet.value.url -%}
-        <div class="variant-file-container">
+        <div class="variant-file-container mb-5 mt-5">
           <a id="variant-file-link"
             href="{{ current_file_url | default: '#' }}"
             target="_blank"
-            class="rounded-md bg-white px-2.5 py-1 mb-5 text-sm font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50 hover:text-gold-400 transition ease-in-out duration-500"
+            class="rounded-md bg-white px-2.5 py-1 text-sm font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50 hover:text-gold-400 transition ease-in-out duration-500"
           >
             <strong>Download Spec Sheet</strong>
           </a>
@@ -218,7 +218,7 @@
 
               {% else %}
               <!-- all others, get a quote on price -->
-                <a href="/pages/contact-us?product={{ product.title | url_encode }}" class="mt-1 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">Contact for pricing&nbsp;<span aria-hidden="true">→</span></a>
+                <a href="/pages/contact-us?product={{ product.title | url_encode }}" class="mt-1 rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-bold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">Contact for pricing</a>
               {% endif %}
 
             </div>
@@ -286,4 +286,22 @@
         }
       }).observe(document, { subtree: true, childList: true });
     });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const skuElement = document.getElementById('product-sku');
+
+    document.querySelector('form[action^="/cart/add"]')?.addEventListener('change', function (event) {
+      const selectedVariantId = document.querySelector('[name="id"]')?.value;
+
+      if (!selectedVariantId || !window.meta || !meta.product) return;
+
+      const selectedVariant = meta.product.variants.find(v => v.id == selectedVariantId);
+
+      if (selectedVariant && skuElement) {
+        skuElement.textContent = selectedVariant.sku || '';
+      }
+    });
+  });
 </script>
