@@ -119,12 +119,40 @@
         "contact_btn_text": "Learn More",
         "contact_btn_link": "shopify://pages/sustainabilitiy"
       }
+    },
+    "memberships_Nb7VLn": {
+      "type": "memberships",
+      "blocks": {
+        "associations_panGDq": {
+          "type": "associations",
+          "settings": {
+            "logo": "shopify://shop_images/memberships-logo_BCNPHA.png",
+            "logo_link": "https://bcnpha.ca/"
+          }
+        },
+        "associations_XpX7ak": {
+          "type": "associations",
+          "settings": {
+            "logo": "shopify://shop_images/memberships-logo_BCHA.png",
+            "logo_link": "https://bcha.com/"
+          }
+        }
+      },
+      "block_order": [
+        "associations_panGDq",
+        "associations_XpX7ak"
+      ],
+      "name": "Bichin Memberships",
+      "settings": {
+        "heading": "WE ARE PROUD MEMBERS OF:"
+      }
     }
   },
   "order": [
     "hero_image_8xPcb3",
     "whatweoffer_section_hBnfLA",
     "aboutus_czLXxf",
-    "main_page_sustainability_Jmz9QU"
+    "main_page_sustainability_Jmz9QU",
+    "memberships_Nb7VLn"
   ]
 }
