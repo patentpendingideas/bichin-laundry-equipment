@@ -40,19 +40,16 @@
 {%- endschema -%}
 
 
-  <div class="max-w-7xl mx-auto mt-25 mb-25 bg-grey-400">
-    <div class="mx-auto max-w-lg">
+  <div class="max-w-7xl mx-auto mt-25 mb-25">
+    <p class='mt-6 mb-5 text-md md:text-lg lg:text-xl font-bold uppercase text-center text-gold-400'>{{ section.settings.heading | remove: '<p>' | remove: '</p>' }}</p>
+      <h1 class="mb-12 max-w-max mx-auto color-black text-center text-xl md:text-2xl lg:text-3xl uppercase font-bold">{{ section.settings.body }}</h1>
       {% if section.settings.image != blank %}
-        {{ section.settings.image | image_url: width: 1200 | image_tag: alt: section.settings.image.alt, loading: 'lazy' | class: 'absolute inset-0 h-full w-full object-cover'}}
-      {% endif %}
-    </div>
-
-
-
-    <h1 class="mb-12 max-w-max mx-auto color-black text-center text-lg md:text-xl lg:text-2xl uppercase">{{ page.title }}</h1>
-    <p class='mt-6 mb-10 text-base text-gray-700 text-justify'>{{ page.content | remove: '<p>' | remove: '</p>' }}</p>
-
-      {% if section.settings.body != blank or section.settings.contact_btn_text != blank %}
-        <a {% if section.settings.contact_btn_link %} href="{{ section.settings.contact_btn_link }}" {% else %} role="link" aria-disabled="true" {% endif %} class="mt-25 text-center rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">{{ section.settings.contact_btn_text }}</a>
+        {{ section.settings.image | image_url: width: 1300 | image_tag: alt: section.settings.image.alt, loading: 'lazy' | class: 'absolute inset-0 h-full w-full object-cover'}}
       {% endif %}
   </div>
+
+  <div class="mx-auto mt-15 mb-15 max-w-md text-center">
+      {% if section.settings.body != blank or section.settings.contact_btn_text != blank %}
+        <a {% if section.settings.contact_btn_link %} href="{{ section.settings.contact_btn_link }}" {% else %} role="link" aria-disabled="true" {% endif %} class="mt-25 max-w-max mx-auto rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">{{ section.settings.contact_btn_text }}</a>
+      {% endif %}
+    </div>
