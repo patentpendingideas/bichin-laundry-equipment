@@ -5,6 +5,11 @@
   "tag": "section",
   "settings": [
       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
         "type": "text",
         "id": "heading",
         "label": "Heading"
@@ -24,7 +29,7 @@
         "type": "url",
         "id": "contact_btn_link",
         "label": "Button link"
-      },
+      }
     ],
     "presets": [
       {
@@ -33,6 +38,12 @@
     ]
   }
 {%- endschema -%}
+
+{% if section.settings.image != blank %}
+    <img src="{{ section.settings.image | image_url: width: 2800 }}" alt="{{ block.settings.image.alt | escape }}" class="absolute inset-0 h-full w-full object-cover" width="2800" height="1575"	loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+
+  {{ section.settings.image | image_url: width: 2800 | image_tag: alt: section.settings.image.alt, loading: 'lazy' | class: 'absolute inset-0 h-full w-full object-cover'}}
+{% endif %}
 
   <div class="max-w-7xl mx-auto mt-25 mb-25 bg-grey-400">
     <h1 class="mb-12 max-w-max mx-auto color-black text-center text-lg md:text-xl lg:text-2xl uppercase">{{ page.title }}</h1>
