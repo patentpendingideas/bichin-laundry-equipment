@@ -1,0 +1,74 @@
+<div class="max-w-7xl mx-auto mt-25 mb-25">
+		{% if section.settings.heading != blank %}
+			<h3 class="mb-12 max-w-max mx-auto color-black text-center text-xl md:text-2xl lg:text-3xl uppercase font-bold">
+				{{ section.settings.heading }}
+			</h3>
+		{% endif %}
+
+
+		{% if section.blocks.size > 0 %}
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+				<p>This section has {{ section.blocks.size }} blocks.</p>
+
+				{% for block in section.blocks %}
+					{%- case block.type -%}
+						{%- when 'block_1' -%}
+							<div {{ block.shopify_attributes }}>
+								{% if block.settings.logo != blank %}
+								{{ block.settings.logo | image_url: width: 1200 | image_tag: alt: block.settings.logo.alt, loading: 'lazy' }}
+								{% endif %}
+								{% if block.settings.logo_link != blank %}
+								<a href="{{ block.settings.logo_link }}">Link</a>
+								{% endif %}
+							</div>
+					{%- endcase -%}
+				{% endfor %}
+
+		</div>
+		{% endif %}
+
+</div>
+
+
+
+
+
+
+
+{%- schema -%}
+		{
+			"name": "memberships",
+			"tag": "section",
+			"class": "custom-section",
+			"settings": [
+				{
+					"type": "text",
+					"id": "heading",
+					"label": "Heading"
+				}
+			],
+			"blocks": [
+				{
+					"type": "block_1",
+					"name": "Membership",
+					"settings": [
+						{
+							"type": "image_picker",
+							"id": "logo",
+							"label": "Image"
+						},
+						{
+							"type": "url",
+							"id": "logo_link",
+							"label": "Logo link"
+						}
+					]
+				}
+			],
+			"presets": [
+				{
+					"name": "Custom Section"
+				}
+			]
+		}
+{%- endschema -%}
