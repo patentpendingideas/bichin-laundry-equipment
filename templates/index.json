@@ -123,11 +123,35 @@
     "memberships_Nb7VLn": {
       "type": "memberships",
       "blocks": {
-        "associations_panGDq": {
+        "associations_CQWeex": {
           "type": "associations",
           "settings": {
-            "logo": "shopify://shop_images/memberships-logo_BCNPHA.png",
-            "logo_link": "https://bcnpha.ca/"
+            "logo": "shopify://shop_images/memberships-logo_BCCPA.png",
+            "logo_link": "https://bccare.ca/"
+          }
+        },
+        "associations_c6KrzX": {
+          "type": "associations",
+          "settings": {
+            "logo_link": ""
+          }
+        },
+        "associations_aUJWne": {
+          "type": "associations",
+          "settings": {
+            "logo_link": ""
+          }
+        },
+        "associations_4LEYaw": {
+          "type": "associations",
+          "settings": {
+            "logo_link": ""
+          }
+        },
+        "associations_QtGNHk": {
+          "type": "associations",
+          "settings": {
+            "logo_link": ""
           }
         },
         "associations_XpX7ak": {
@@ -136,11 +160,23 @@
             "logo": "shopify://shop_images/memberships-logo_BCHA.png",
             "logo_link": "https://bcha.com/"
           }
+        },
+        "associations_panGDq": {
+          "type": "associations",
+          "settings": {
+            "logo": "shopify://shop_images/memberships-logo_BCNPHA.png",
+            "logo_link": "https://bcnpha.ca/"
+          }
         }
       },
       "block_order": [
-        "associations_panGDq",
-        "associations_XpX7ak"
+        "associations_CQWeex",
+        "associations_c6KrzX",
+        "associations_aUJWne",
+        "associations_4LEYaw",
+        "associations_QtGNHk",
+        "associations_XpX7ak",
+        "associations_panGDq"
       ],
       "name": "Bichin Memberships",
       "settings": {
