@@ -35,8 +35,8 @@
       "settings": {
         "heading": "",
         "body": "",
-        "contact_btn_text": "Contact",
-        "contact_btn_link": ""
+        "contact_btn_text": "Contact Us",
+        "contact_btn_link": "shopify://pages/contact-us"
       }
     }
   },
