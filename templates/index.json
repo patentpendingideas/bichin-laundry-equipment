@@ -113,6 +113,7 @@
       "type": "main-page-sustainability",
       "name": "Sustainability",
       "settings": {
+        "image": "shopify://shop_images/Sustainability-Image-Banner.webp",
         "heading": "SUSTAINABILITY",
         "body": "REFORESTATION IN BC",
         "contact_btn_text": "Learn More",
