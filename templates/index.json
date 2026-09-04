@@ -154,7 +154,8 @@
         "associations_QtGNHk": {
           "type": "associations",
           "settings": {
-            "logo_link": ""
+            "logo": "shopify://shop_images/memberships-logo_FCABC.png",
+            "logo_link": "https://fcabc.ca/"
           }
         },
         "associations_XpX7ak": {
