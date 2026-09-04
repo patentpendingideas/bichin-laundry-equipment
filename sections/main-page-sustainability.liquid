@@ -39,13 +39,16 @@
   }
 {%- endschema -%}
 
-{% if section.settings.image != blank %}
-    <img src="{{ section.settings.image | image_url: width: 2800 }}" alt="{{ block.settings.image.alt | escape }}" class="absolute inset-0 h-full w-full object-cover" width="2800" height="1575"	loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
-
-  {{ section.settings.image | image_url: width: 2800 | image_tag: alt: section.settings.image.alt, loading: 'lazy' | class: 'absolute inset-0 h-full w-full object-cover'}}
-{% endif %}
 
   <div class="max-w-7xl mx-auto mt-25 mb-25 bg-grey-400">
+    <div class="mx-auto max-w-lg">
+      {% if section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 1200 | image_tag: alt: section.settings.image.alt, loading: 'lazy' | class: 'absolute inset-0 h-full w-full object-cover'}}
+      {% endif %}
+    </div>
+
+
+
     <h1 class="mb-12 max-w-max mx-auto color-black text-center text-lg md:text-xl lg:text-2xl uppercase">{{ page.title }}</h1>
     <p class='mt-6 mb-10 text-base text-gray-700 text-justify'>{{ page.content | remove: '<p>' | remove: '</p>' }}</p>
 
