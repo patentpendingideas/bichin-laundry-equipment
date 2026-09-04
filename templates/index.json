@@ -133,7 +133,8 @@
         "associations_c6KrzX": {
           "type": "associations",
           "settings": {
-            "logo_link": ""
+            "logo": "shopify://shop_images/memberships-logo_CLA.png",
+            "logo_link": "https://laundryassociation.org/"
           }
         },
         "associations_aUJWne": {
