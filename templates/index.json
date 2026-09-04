@@ -108,11 +108,22 @@
         "about-btn-text": "EXPLORE EQUIPMENT",
         "about-btn-url": "shopify://collections/hardmount-washers"
       }
+    },
+    "main_page_planning_Jmz9QU": {
+      "type": "main-page-planning",
+      "name": "Custom Section",
+      "settings": {
+        "heading": "SUSTAINABILITY",
+        "body": "REFORESTATION IN BC",
+        "contact_btn_text": "Learn More",
+        "contact_btn_link": "shopify://pages/sustainabilitiy"
+      }
     }
   },
   "order": [
     "hero_image_8xPcb3",
     "whatweoffer_section_hBnfLA",
-    "aboutus_czLXxf"
+    "aboutus_czLXxf",
+    "main_page_planning_Jmz9QU"
   ]
 }
