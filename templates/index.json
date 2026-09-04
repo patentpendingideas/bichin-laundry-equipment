@@ -147,7 +147,8 @@
         "associations_4LEYaw": {
           "type": "associations",
           "settings": {
-            "logo_link": ""
+            "logo": "shopify://shop_images/memberships-logo_BCLCA.png",
+            "logo_link": "https://fcabc.ca/"
           }
         },
         "associations_QtGNHk": {
