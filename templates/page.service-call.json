@@ -33,24 +33,24 @@
     "service_call": {
       "type": "main-page-servicecall",
       "blocks": {
-        "subscription_8wF6ki": {
-          "type": "subscription",
-          "settings": {
-            "heading": "Annual BLE full service membership",
-            "text": "<ul><li>$1,997 Per machine</li><li>$97 Service call fee per occurrence*</li><li>Labour included</li><li>Parts costs are extra (preferred pricing)</li><li>Chemical program (preferred pricing)</li><li>Laundry carts (preferred pricing)</li><li>$18.63 Truck supply charge</li></ul>"
-          }
-        },
         "subscription_LhDdaH": {
           "type": "subscription",
           "settings": {
             "heading": "Service Call",
-            "text": "<ul><li>$150 Service call fee (1st Hour Included)</li><li>$135 Labour charge per hour thereafter</li><li>Billed in 15-minute increments</li><li>Parts costs are extra</li><li>$18.63 Truck supply charge</li></ul>"
+            "text": "<ul><li><strong>✓ </strong>$150 Service call fee (1st Hour Included)</li><li><strong>✓ </strong>$135 Labour charge per hour thereafter</li><li><strong>✓ </strong>Billed in 15-minute increments</li><li><strong>✓ </strong>Parts costs are extra</li><li><strong>✓ </strong>$18.63 Truck supply charge</li></ul>"
+          }
+        },
+        "subscription_8wF6ki": {
+          "type": "subscription",
+          "settings": {
+            "heading": "Annual BLE full service membership",
+            "text": "<ul><li><strong>✓ </strong>$1,997 Per machine</li><li><strong>✓ </strong>$97 Service call fee per occurrence*</li><li><strong>✓</strong> Labour included</li><li><strong>✓ </strong>Parts costs are extra (preferred pricing)</li><li><strong>✓ </strong>Chemical program (preferred pricing)</li><li><strong>✓ </strong>Laundry carts (preferred pricing)</li><li><strong>✓ </strong>$18.63 Truck supply charge</li></ul>"
           }
         }
       },
       "block_order": [
-        "subscription_8wF6ki",
-        "subscription_LhDdaH"
+        "subscription_LhDdaH",
+        "subscription_8wF6ki"
       ],
       "settings": {}
     }
