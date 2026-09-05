@@ -17,8 +17,8 @@
           "settings": {
             "image": "shopify://shop_images/on_premise_dexter_washing_machines.webp",
             "eyebrow": "Commercial Laundry Equipment",
-            "title": "Starting A Laundromat",
-            "description": "Planning for the best step forward",
+            "title": "Book a service call",
+            "description": "Lets get you back up and running",
             "button_text": "",
             "button_link": ""
           }
@@ -32,11 +32,28 @@
     },
     "service_call": {
       "type": "main-page-servicecall",
+      "blocks": {
+        "feature_EGe6Pk": {
+          "type": "feature",
+          "settings": {
+            "title": "Service Call",
+            "text": "<ul><li>$150 Service call fee (1st Hour Included)</li><li>$135 Labour charge per hour thereafter</li><li>Billed in 15-minute increments</li><li>Parts costs are extra</li><li>$18.63 Truck supply charge</li></ul>"
+          }
+        },
+        "feature_xrDaDc": {
+          "type": "feature",
+          "settings": {
+            "title": "Annual BLE full service membership",
+            "text": "<ul><li>$1,997 Per machine</li><li>$97 Service call fee per occurrence*</li><li>Labour included</li><li>Parts costs are extra (preferred pricing)</li><li>Chemical program (preferred pricing)</li><li>Laundry carts (preferred pricing)</li><li>$18.63 Truck supply charge</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_EGe6Pk",
+        "feature_xrDaDc"
+      ],
       "settings": {
-        "heading": "Select your subscription",
-        "body": " ",
-        "contact_btn_text": "Contact Us",
-        "contact_btn_link": "shopify://pages/contact-us"
+        "heading": "Select your subscription"
       }
     }
   },
