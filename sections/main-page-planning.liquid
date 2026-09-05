@@ -38,7 +38,7 @@
     <h2 class="mb-12 max-w-max mx-auto color-black text-center text-lg md:text-xl lg:text-2xl uppercase">{{ section.settings.heading }}</h2>
     <p class='mt-6 mb-10 text-base text-gray-700 text-justify'>{{ section.settings.body | remove: '<p>' | remove: '</p>' }}</p>
 
-      {% if section.settings.body != blank or section.settings.contact_btn_text != blank %}
+      {% if section.settings.contact_btn_text != blank %}
         <a {% if section.settings.contact_btn_link %} href="{{ section.settings.contact_btn_link }}" {% else %} role="link" aria-disabled="true" {% endif %} class="mt-25 text-center rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">{{ section.settings.contact_btn_text }}</a>
       {% endif %}
   </div>
