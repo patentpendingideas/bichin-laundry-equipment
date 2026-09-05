@@ -33,6 +33,13 @@
     "service_call": {
       "type": "main-page-servicecall",
       "blocks": {
+        "subscription_8wF6ki": {
+          "type": "subscription",
+          "settings": {
+            "heading": "Annual BLE full service membership",
+            "text": "<ul><li>$1,997 Per machine</li><li>$97 Service call fee per occurrence*</li><li>Labour included</li><li>Parts costs are extra (preferred pricing)</li><li>Chemical program (preferred pricing)</li><li>Laundry carts (preferred pricing)</li><li>$18.63 Truck supply charge</li></ul>"
+          }
+        },
         "subscription_LhDdaH": {
           "type": "subscription",
           "settings": {
@@ -42,6 +49,7 @@
         }
       },
       "block_order": [
+        "subscription_8wF6ki",
         "subscription_LhDdaH"
       ],
       "settings": {}
