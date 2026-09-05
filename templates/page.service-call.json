@@ -33,10 +33,7 @@
     "service_call": {
       "type": "main-page-servicecall",
       "settings": {
-        "heading": "Select your subscription",
-        "body": " ",
-        "contact_btn_text": "Contact Us",
-        "contact_btn_link": "shopify://pages/contact-us"
+        "heading": "Select your subscription"
       }
     }
   },
