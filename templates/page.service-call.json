@@ -30,32 +30,21 @@
       "name": "Bichin Hero Image Slider",
       "settings": {}
     },
-
     "service_call": {
       "type": "main-page-servicecall",
       "blocks": {
-        "feature_EGe6Pk": {
-          "type": "feature",
+        "subscription_LhDdaH": {
+          "type": "subscription",
           "settings": {
             "heading": "Service Call",
             "text": "<ul><li>$150 Service call fee (1st Hour Included)</li><li>$135 Labour charge per hour thereafter</li><li>Billed in 15-minute increments</li><li>Parts costs are extra</li><li>$18.63 Truck supply charge</li></ul>"
           }
-        },
-        "feature_xrDaDc": {
-          "type": "feature",
-          "settings": {
-            "title": "Annual BLE full service membership",
-            "text": "<ul><li>$1,997 Per machine</li><li>$97 Service call fee per occurrence*</li><li>Labour included</li><li>Parts costs are extra (preferred pricing)</li><li>Chemical program (preferred pricing)</li><li>Laundry carts (preferred pricing)</li><li>$18.63 Truck supply charge</li></ul>"
-          }
         }
       },
       "block_order": [
-        "feature_EGe6Pk",
-        "feature_xrDaDc"
+        "subscription_LhDdaH"
       ],
-      "settings": {
-        "heading": "Select your subscription"
-      }
+      "settings": {}
     }
   },
   "order": [
