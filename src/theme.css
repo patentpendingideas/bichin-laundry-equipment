@@ -38,6 +38,10 @@
   --color-woodland: #595425;
 
   --font-open-sans: 'Open Sans', sans-serif;
+
+  --font-weight-bold: 800;
+  --font-weight-black: 900;
+  --font-weight-extra-bold: 1000;
 }
 
 @utility prose {

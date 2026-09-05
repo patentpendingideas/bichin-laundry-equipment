@@ -2,6 +2,12 @@
 {
   "name": "Service Calls",
   "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Select your subscription"
+    }
   ],
   "blocks": [
     {
@@ -26,7 +32,7 @@
 
  <div class="max-w-7xl mx-auto mt-25 mb-25">
    {% if section.settings.heading != blank %}
-     <h3 class="mb-12 max-w-max mx-auto color-black text-center text-lg md:text-xl lg:text-2xl uppercase">{{ section.settings.heading }}</h3>
+     <h3 class="mb-12 max-w-max mx-auto color-black text-center text-lg md:text-2xl lg:text-3xl uppercase font-black">{{ section.settings.heading }}</h3>
    {% endif %}
 
   <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-8">
@@ -34,7 +40,7 @@
     {% for block in section.blocks %}
           <div class="rounded-2xl bg-gray-500 shadow-lg p-5">
             {% if block.settings.heading != blank %}
-              <h4 class="text-2xl font-bold uppercase mb-6">{{ block.settings.heading }}</h4>
+              <h4 class="text-2xl font-extrabold uppercase mb-6">{{ block.settings.heading }}</h4>
             {% endif %}
             {% if block.settings.text != blank %}
               {{ block.settings.text }}
@@ -43,5 +49,3 @@
       {% endfor %}
   </div>
 </div>
-
-
