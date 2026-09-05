@@ -42,10 +42,13 @@
     {% for block in section.blocks %}
           <div class="rounded-2xl bg-gray-500">
 
-            {{ block.settings.heading }}heading
+            {{ block.settings.heading }}
 
-            {{ block.settings.text }}list items
-            <div>
+            {{ block.settings.text }}
+
+
+
+           <div>
               {% if block.settings.heading != blank %}
               {{ block.settings.heading }}
               {% endif %}
