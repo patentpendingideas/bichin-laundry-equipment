@@ -46,8 +46,8 @@
         "subscription_QdgBT3": {
           "type": "subscription",
           "settings": {
-            "heading": "",
-            "text": "<p>Describe the feature.</p>"
+            "heading": "Monthly",
+            "text": "<ul><li>97 per machine</li><li>Monthly payment</li><li>Monthly check-ups on washer and dryers</li><li>5% discount on parts</li></ul>"
           }
         },
         "subscription_8AEFEb": {
