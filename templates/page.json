@@ -32,16 +32,28 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
     },
     "starting_a_laundromat_6Ni6z9": {
       "type": "starting-a-laundromat",
       "name": "Start a laundromat",
       "settings": {}
+    },
+    "main_page_planning_gEnx4x": {
+      "type": "main-page-planning",
+      "name": "Planning Section",
+      "settings": {
+        "heading": "",
+        "body": "",
+        "contact_btn_text": "Contact Us",
+        "contact_btn_link": ""
+      }
     }
   },
   "order": [
     "hero_image_7y6tTi",
+    "main_page_planning_gEnx4x",
     "main",
     "starting_a_laundromat_6Ni6z9"
   ]
