@@ -53,10 +53,37 @@
         "subscription_8wF6ki"
       ],
       "settings": {}
+    },
+    "1788637834f10f2498": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_YDxdiz": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1142460",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_YDxdiz"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "hero_image_Nx8AWp",
-    "service_call"
+    "service_call",
+    "1788637834f10f2498"
   ]
 }
