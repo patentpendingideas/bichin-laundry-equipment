@@ -30,45 +30,14 @@
       "name": "Bichin Hero Image Slider",
       "settings": {}
     },
-    "main": {
-      "type": "main-page-planning",
-      "settings": {
-        "heading": "Constructing a Laundromat and Need Guidance from a Commercial Laundry Machines & Equipment Provider?",
-        "body": "If you are a contractor, architect, or project estimator, you know that time is money. You need a reliable source for materials and labor that can help you stay on schedule and budget. That’s where we come in. Bichin Laundry Equipment specializes in providing comprehensive quotes for any type of laundromat construction project. We have years of experience in the commercial laundromat industry, and we have the knowledge and resources to help you get the materials and labour you need when you need them.Our process is simple and efficient. We work closely with you to understand your project and its unique requirements and then provide you with a detailed quote that includes all the materials and labor you’ll need, as well as accurate cost estimates. With our assistance, you will be able to stay on top of your project and make sure that it’s completed on time and within budget. So why wait? Contact us today to get a quote for your next construction project.",
-        "contact_btn_text": "Contact Us",
-        "contact_btn_link": "shopify://pages/contact-us"
-      }
-    },
-    "1788640777ab6e035f": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_dyhjnW": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
-          "settings": {
-            "form_id": "1142471",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 24,
-            "padding_right": 0,
-            "padding_left": 0
-          }
-        }
-      },
-      "block_order": [
-        "forms_inline_dyhjnW"
-      ],
+    "starting_a_laundromat_n7MLeE": {
+      "type": "starting-a-laundromat",
+      "name": "Start a laundromat",
       "settings": {}
     }
   },
   "order": [
     "hero_image_Nx8AWp",
-    "main",
-    "1788640777ab6e035f"
+    "starting_a_laundromat_n7MLeE"
   ]
 }
