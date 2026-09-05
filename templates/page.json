@@ -33,10 +33,16 @@
     "main": {
       "type": "main-page",
       "settings": {}
+    },
+    "starting_a_laundromat_6Ni6z9": {
+      "type": "starting-a-laundromat",
+      "name": "Start a laundromat",
+      "settings": {}
     }
   },
   "order": [
     "hero_image_7y6tTi",
-    "main"
+    "main",
+    "starting_a_laundromat_6Ni6z9"
   ]
 }
