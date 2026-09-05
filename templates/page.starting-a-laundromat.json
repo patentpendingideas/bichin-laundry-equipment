@@ -36,19 +36,8 @@
       "settings": {
         "heading": "",
         "body": "Whether you are an existing Laundromat owner or a new owner starting up, Bichin Laundry Equipment will work with you through the entire process of setting up a successful laundromat from start to finish to ensure your Laundromat business works for you! We offer assistance in helping you find a location, assess your commercial space, create layouts, devise plans, and match you with the models and quantities of laundry you will need. We also work with contractors and deal with third-party financing options. In addition, we also offer lifelong ongoing support with your business and equipment. Interested to know the process of starting your own laundromat or renovating your current one?",
-        "contact_btn_text": "Contact Us",
+        "contact_btn_text": "",
         "contact_btn_link": ""
-      }
-    },
-    "rich_text_Tg8Rnd": {
-      "type": "rich-text",
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "section_width": "max-w-4xl",
-        "caption": "",
-        "text": "Whether you are an existing Laundromat owner or a new owner starting up, Bichin Laundry Equipment will work with you through the entire process of setting up a successful laundromat from start to finish to ensure your Laundromat business works for you! We offer assistance in helping you find a location, assess your commercial space, create layouts, devise plans, and match you with the models and quantities of laundry you will need. We also work with contractors and deal with third-party financing options. In addition, we also offer lifelong ongoing support with your business and equipment. Interested to know the process of starting your own laundromat or renovating your current one?",
-        "button_label": "Button label",
-        "button_link": ""
       }
     },
     "starting_a_laundromat_n7MLeE": {
@@ -60,7 +49,6 @@
   "order": [
     "hero_image_Nx8AWp",
     "main_page_planning_xxH7id",
-    "rich_text_Tg8Rnd",
     "starting_a_laundromat_n7MLeE"
   ]
 }
