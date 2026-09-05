@@ -43,8 +43,8 @@
         "feature_xrDaDc": {
           "type": "feature",
           "settings": {
-            "title": "Feature title",
-            "text": "<p>Describe the feature.</p>"
+            "title": "Annual BLE full service membership",
+            "text": "<ul><li>$1,997 Per machine</li><li>$97 Service call fee per occurrence*</li><li>Labour included</li><li>Parts costs are extra (preferred pricing)</li><li>Chemical program (preferred pricing)</li><li>Laundry carts (preferred pricing)</li><li>$18.63 Truck supply charge</li></ul>"
           }
         }
       },
