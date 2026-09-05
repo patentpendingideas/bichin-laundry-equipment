@@ -1,37 +1,57 @@
 {%- schema -%}
 {
   "name": "Service Calls",
-  "class": "section-main-servicecall",
   "tag": "section",
   "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading"
-      },
-      {
-        "type": "inline_richtext",
-        "id": "body",
-        "label": "Inline rich text"
-      },
-      {
-        "type": "text",
-        "id": "contact_btn_text",
-        "default": "Contact Us",
-        "label": "Button text"
-      },
-      {
-        "type": "url",
-        "id": "contact_btn_link",
-        "label": "Button link"
-      },
-    ],
-    "presets": [
-      {
-        "name": "Service Calls"
-      }
-    ]
-  }
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why shop with us"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Describe the feature.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service Calls",
+      "blocks": [
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        }
+      ]
+    }
+  ]
+}
 {%- endschema -%}
 
   <div class="max-w-7xl mx-auto mt-25 mb-25">
@@ -42,3 +62,24 @@
         <a {% if section.settings.contact_btn_link %} href="{{ section.settings.contact_btn_link }}" {% else %} role="link" aria-disabled="true" {% endif %} class="mt-25 text-center rounded-md bg-gold-600 bg-gradient-to-r from-gold-100 via-gold-600 to-gold-100 px-3 py-2 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-r hover:from-gold-400 hover:via-gold-200 hover:to-gold-400 transition delay-150">{{ section.settings.contact_btn_text }}</a>
       {% endif %}
   </div>
+
+  {% if section.settings.heading != blank %}
+    {{ section.settings.heading }}
+  {% endif %}
+
+  {% for block in section.blocks %}
+    {%- case block.type -%}
+      {%- when 'feature' -%}
+        <div {{ block.shopify_attributes }}>
+          {% if block.settings.icon != blank %}
+          {{ block.settings.icon | image_url: width: 1200 | image_tag: alt: block.settings.icon.alt, loading: 'lazy' }}
+          {% endif %}
+          {% if block.settings.title != blank %}
+          {{ block.settings.title }}
+          {% endif %}
+          {% if block.settings.text != blank %}
+          {{ block.settings.text }}
+          {% endif %}
+        </div>
+    {%- endcase -%}
+  {% endfor %}
