@@ -32,6 +32,26 @@
     },
     "service_call": {
       "type": "main-page-servicecall",
+      "blocks": {
+        "feature_EGe6Pk": {
+          "type": "feature",
+          "settings": {
+            "title": "Service Call",
+            "text": "<ul><li>$150 Service call fee (1st Hour Included)</li><li>$135 Labour charge per hour thereafter</li><li>Billed in 15-minute increments</li><li>Parts costs are extra</li><li>$18.63 Truck supply charge</li></ul>"
+          }
+        },
+        "feature_xrDaDc": {
+          "type": "feature",
+          "settings": {
+            "title": "Feature title",
+            "text": "<p>Describe the feature.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_EGe6Pk",
+        "feature_xrDaDc"
+      ],
       "settings": {
         "heading": "Select your subscription"
       }
