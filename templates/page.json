@@ -1,32 +1,42 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "faq_BzizYk": {
-      "type": "faq",
+    "hero_image_7y6tTi": {
+      "type": "hero-image",
       "blocks": {
-        "item_qmT3Hm": {
-          "type": "item",
+        "slide_AJPqXt": {
+          "type": "slide",
           "settings": {
-            "heading": "FAQ Item 1",
-            "body": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque totam cum cupiditate officia et quaerat blanditiis culpa? Hic, nesciunt id.<\/p>"
-          }
-        },
-        "item_EBEdYH": {
-          "type": "item",
-          "settings": {
-            "heading": "FAQ Item 2",
-            "body": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque totam cum cupiditate officia et quaerat blanditiis culpa? Hic, nesciunt id.<\/p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque totam cum cupiditate officia et quaerat blanditiis culpa? Hic, nesciunt id.<\/p>"
+            "image": "shopify://shop_images/planning-banner.webp",
+            "eyebrow": "Planning & Design",
+            "title": "Planning & Design",
+            "description": "The Laundry Room Design & Planning Guide",
+            "button_text": "",
+            "button_link": ""
           }
         }
       },
-      "block_order": ["item_qmT3Hm", "item_EBEdYH"],
-      "settings": {
-        "heading": "FAQ Demo Section"
-      }
+      "block_order": [
+        "slide_AJPqXt"
+      ],
+      "name": "Bichin Hero Image Slider",
+      "settings": {}
     },
     "main": {
       "type": "main-page",
       "settings": {}
     }
   },
-  "order": ["faq_BzizYk", "main"]
+  "order": [
+    "hero_image_7y6tTi",
+    "main"
+  ]
 }
