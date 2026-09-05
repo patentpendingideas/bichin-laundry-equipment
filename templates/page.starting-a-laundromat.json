@@ -40,7 +40,7 @@
         "contact_btn_link": ""
       }
     },
-    "starting_a_laundromat_n7MLeE": {
+    "starting_a_laundromat_eDNRfy": {
       "type": "starting-a-laundromat",
       "name": "Start a laundromat",
       "settings": {}
@@ -49,6 +49,6 @@
   "order": [
     "hero_image_Nx8AWp",
     "main_page_planning_xxH7id",
-    "starting_a_laundromat_n7MLeE"
+    "starting_a_laundromat_eDNRfy"
   ]
 }
