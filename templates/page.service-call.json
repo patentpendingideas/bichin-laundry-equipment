@@ -37,14 +37,14 @@
           "type": "subscription",
           "settings": {
             "heading": "Service Call",
-            "text": "<ul><li><strong>✓ </strong>$150 Service call fee (1st Hour Included)</li><li><strong>✓ </strong>$135 Labour charge per hour thereafter</li><li><strong>✓ </strong>Billed in 15-minute increments</li><li><strong>✓ </strong>Parts costs are extra</li><li><strong>✓ </strong>$18.63 Truck supply charge</li></ul>"
+            "text": "<ul><li>✔<strong> </strong>$150 Service call fee (1st Hour Included)</li><li>✔<strong> </strong>$135 Labour charge per hour thereafter</li><li>✔<strong> </strong>Billed in 15-minute increments</li><li>✔<strong> </strong>Parts costs are extra</li><li>✔<strong> </strong>$18.63 Truck supply charge</li></ul>"
           }
         },
         "subscription_8wF6ki": {
           "type": "subscription",
           "settings": {
             "heading": "Annual BLE full service membership",
-            "text": "<ul><li><strong>✓ </strong>$1,997 Per machine</li><li><strong>✓ </strong>$97 Service call fee per occurrence*</li><li><strong>✓</strong> Labour included</li><li><strong>✓ </strong>Parts costs are extra (preferred pricing)</li><li><strong>✓ </strong>Chemical program (preferred pricing)</li><li><strong>✓ </strong>Laundry carts (preferred pricing)</li><li><strong>✓ </strong>$18.63 Truck supply charge</li></ul>"
+            "text": "<ul><li>✔<strong> </strong>$1,997 Per machine</li><li>✔<strong> </strong>$97 Service call fee per occurrence*</li><li>✔ Labour included</li><li>✔<strong> </strong>Parts costs are extra (preferred pricing)</li><li>✔<strong> </strong>Chemical program (preferred pricing)</li><li>✔<strong> </strong>Laundry carts (preferred pricing)</li><li>✔<strong> </strong>$18.63 Truck supply charge</li></ul>"
           }
         }
       },
@@ -53,10 +53,37 @@
         "subscription_8wF6ki"
       ],
       "settings": {}
+    },
+    "1788637834f10f2498": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_YDxdiz": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "1142460",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_YDxdiz"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "hero_image_Nx8AWp",
-    "service_call"
+    "service_call",
+    "1788637834f10f2498"
   ]
 }
