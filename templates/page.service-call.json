@@ -37,7 +37,7 @@
           "type": "subscription",
           "settings": {
             "heading": "Service Call",
-            "text": "<ul><li>$150 Service call fee (1st Hour Included)</li><li>$135 Labour charge per hour thereafter</li><li>Billed in 15-minute increments</li><li>Parts costs are extra</li><li>$18.63 Truck supply charge</li></ul>"
+            "text": "<ul><li><strong>✓ </strong>$150 Service call fee (1st Hour Included)</li><li><strong>✓ </strong>$135 Labour charge per hour thereafter</li><li><strong>✓ </strong>Billed in 15-minute increments</li><li><strong>✓ </strong>Parts costs are extra</li><li><strong>✓ </strong>$18.63 Truck supply charge</li></ul>"
           }
         },
         "subscription_8wF6ki": {
