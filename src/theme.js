@@ -1,4 +1,5 @@
-import 'liquid-ajax-cart'
+import 'liquid-ajax-cart';
+window.liquidAjaxCart.conf('updateOnWindowFocus', false);
 
 import Alpine from 'alpinejs'
 import AlpineIntersect from '@alpinejs/intersect'
