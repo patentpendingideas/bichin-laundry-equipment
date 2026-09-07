@@ -42,6 +42,28 @@
 }
 {% endschema %}
 
+ {% if product %}
+<script>
+  (function () {
+    // 1. Get the selected or first available variant ID from Liquid
+    const defaultVariantId = "{{ product.selected_or_first_available_variant.id }}";
+
+    if (defaultVariantId) {
+      const url = new URL(window.location.href);
+
+      // 2. Only append if the 'variant' parameter isn't already present
+      if (!url.searchParams.has('variant')) {
+        url.searchParams.set('variant', defaultVariantId);
+
+        // 3. Update the browser's address bar without reloading the page
+        window.history.replaceState({ path: url.toString() }, '', url.toString());
+      }
+    }
+  })();
+</script>
+{% endif %}
+
+
 <div class='px-6 md:px-8 py-12'>
   <div
     class='shopify-section-main-product-inner container mx-auto'
@@ -112,8 +134,9 @@
         picker_type: section.settings.picker_type
       %}
 
+
       {%- assign current_variant = product.selected_or_first_available_variant -%}
-      {%- assign current_file_url = current_variant.metafields.global.specSheet.value.url -%}
+        {%- assign current_file_url = current_variant.metafields.global.specSheet.value.url -%}
         <div class="variant-file-container mb-5 mt-5">
           <a id="variant-file-link"
             href="{{ current_file_url | default: '#' }}"
