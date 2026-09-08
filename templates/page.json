@@ -40,17 +40,6 @@
         "contact_btn_link": ""
       }
     },
-    "main_page_planning_gEnx4x": {
-      "type": "main-page-planning",
-      "disabled": true,
-      "name": "Planning Section",
-      "settings": {
-        "heading": "",
-        "body": "Whether you are an existing Laundromat owner or a new owner starting up, Bichin Laundry Equipment will work with you through the entire process of setting up a successful laundromat from start to finish to ensure your Laundromat business works for you! We offer assistance in helping you find a location, assess your commercial space, create layouts, devise plans, and match you with the models and quantities of laundry you will need. We also work with contractors and deal with third-party financing options. In addition, we also offer lifelong ongoing support with your business and equipment. Interested to know the process of starting your own laundromat or renovating your current one?",
-        "contact_btn_text": "",
-        "contact_btn_link": ""
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -65,7 +54,6 @@
   "order": [
     "hero_image_7y6tTi",
     "main_page_leadsection_qr4F9t",
-    "main_page_planning_gEnx4x",
     "main",
     "retool_laundromat_T7TWqL"
   ]
