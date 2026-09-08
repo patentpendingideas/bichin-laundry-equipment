@@ -42,19 +42,29 @@
     },
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {}
     },
-    "starting_a_laundromat_6Ni6z9": {
-      "type": "starting-a-laundromat",
-      "name": "Start a laundromat",
+    "retool_laundromat_T7TWqL": {
+      "type": "retool-laundromat",
+      "name": "Retool Laundromat",
       "settings": {}
+    },
+    "main_page_leadsection_qr4F9t": {
+      "type": "main-page-leadsection",
+      "name": "Lead Section",
+      "settings": {
+        "heading": "",
+        "body": "",
+        "contact_btn_text": "Contact Us",
+        "contact_btn_link": ""
+      }
     }
   },
   "order": [
     "hero_image_7y6tTi",
     "main_page_planning_gEnx4x",
     "main",
-    "starting_a_laundromat_6Ni6z9"
+    "retool_laundromat_T7TWqL",
+    "main_page_leadsection_qr4F9t"
   ]
 }
