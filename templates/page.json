@@ -17,8 +17,8 @@
           "settings": {
             "image": "shopify://shop_images/planning-banner.webp",
             "eyebrow": "Planning & Design",
-            "title": "Starting A Laundromat",
-            "description": "The Laundry Room Design & Planning Guide",
+            "title": "Laundromat Retool",
+            "description": "keeping up with the latest technology and amenities",
             "button_text": "",
             "button_link": ""
           }
@@ -30,8 +30,19 @@
       "name": "Bichin Hero Image Slider",
       "settings": {}
     },
+    "main_page_leadsection_qr4F9t": {
+      "type": "main-page-leadsection",
+      "name": "Lead Section",
+      "settings": {
+        "heading": "",
+        "body": "",
+        "contact_btn_text": "Contact Us",
+        "contact_btn_link": ""
+      }
+    },
     "main_page_planning_gEnx4x": {
       "type": "main-page-planning",
+      "disabled": true,
       "name": "Planning Section",
       "settings": {
         "heading": "",
@@ -42,29 +53,20 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
     },
     "retool_laundromat_T7TWqL": {
       "type": "retool-laundromat",
       "name": "Retool Laundromat",
       "settings": {}
-    },
-    "main_page_leadsection_qr4F9t": {
-      "type": "main-page-leadsection",
-      "name": "Lead Section",
-      "settings": {
-        "heading": "",
-        "body": "",
-        "contact_btn_text": "Contact Us",
-        "contact_btn_link": ""
-      }
     }
   },
   "order": [
     "hero_image_7y6tTi",
+    "main_page_leadsection_qr4F9t",
     "main_page_planning_gEnx4x",
     "main",
-    "retool_laundromat_T7TWqL",
-    "main_page_leadsection_qr4F9t"
+    "retool_laundromat_T7TWqL"
   ]
 }
