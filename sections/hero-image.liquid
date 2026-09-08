@@ -16,14 +16,14 @@
 			},
 			startAutoplay() {
 				if (!this.autoplay) return
-				this.interval = setInterval(() => this.next(), {{ section.settings.autoplay_speed | default: 5000 }})
+				this.interval = setInterval(() => this.next(), {{ section.settings.autoplay_speed | default: 1000 }})
 			},
 			stopAutoplay() {
 				clearInterval(this.interval)
 			}
 		}"
 		x-init="startAutoplay()"
-		@mouseenter="stopAutoplay()"
+		@mouseenter="startAutoplay()"
 		@mouseleave="startAutoplay()"
 		class="relative max-w-full mx-auto overflow-hidden">
 		<!-- Slides track -->
