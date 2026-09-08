@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-green-50: oklch(98.2% 0.018 155.826);
     --color-green-600: oklch(62.7% 0.194 149.214);
@@ -80,6 +81,7 @@
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-xs: 4px;
+    --aspect-video: 16 / 9;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -1083,6 +1085,9 @@
   .max-h-75 {
     max-height: calc(var(--spacing) * 75);
   }
+  .max-h-1200 {
+    max-height: calc(var(--spacing) * 1200);
+  }
   .min-h-64 {
     min-height: calc(var(--spacing) * 64);
   }
@@ -1504,6 +1509,10 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-10 {
+    border-style: var(--tw-border-style);
+    border-width: 10px;
+  }
   .border-t {
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
@@ -1512,11 +1521,22 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-b-1 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
   .border-black {
     border-color: var(--color-black);
   }
   .border-gold-400 {
     border-color: var(--color-gold-400);
+  }
+  .border-gold-600 {
+    border-color: var(--color-gold-600);
   }
   .border-gray-100 {
     border-color: var(--color-gray-100);
@@ -1538,6 +1558,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-gray-900) 10%, transparent);
     }
+  }
+  .border-red-400 {
+    border-color: var(--color-red-400);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -2700,6 +2723,21 @@
       display: none;
     }
   }
+  .md\:aspect-\[1\/2\] {
+    @media (width >= 48rem) {
+      aspect-ratio: 1/2;
+    }
+  }
+  .md\:aspect-\[3\/2\] {
+    @media (width >= 48rem) {
+      aspect-ratio: 3/2;
+    }
+  }
+  .md\:aspect-\[16\/4\] {
+    @media (width >= 48rem) {
+      aspect-ratio: 16/4;
+    }
+  }
   .md\:aspect-\[16\/9\] {
     @media (width >= 48rem) {
       aspect-ratio: 16/9;
@@ -2708,6 +2746,16 @@
   .md\:aspect-\[21\/9\] {
     @media (width >= 48rem) {
       aspect-ratio: 21/9;
+    }
+  }
+  .md\:aspect-video {
+    @media (width >= 48rem) {
+      aspect-ratio: var(--aspect-video);
+    }
+  }
+  .md\:max-w-1\/2 {
+    @media (width >= 48rem) {
+      max-width: calc(1 / 2 * 100%);
     }
   }
   .md\:max-w-5xl {
@@ -2748,6 +2796,11 @@
   .md\:px-8 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:py-12 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 12);
     }
   }
   .md\:py-24 {
@@ -2847,6 +2900,16 @@
   .lg\:flex {
     @media (width >= 64rem) {
       display: flex;
+    }
+  }
+  .lg\:h-3\/4 {
+    @media (width >= 64rem) {
+      height: calc(3 / 4 * 100%);
+    }
+  }
+  .lg\:h-6\/8 {
+    @media (width >= 64rem) {
+      height: calc(6 / 8 * 100%);
     }
   }
   .lg\:h-12 {
