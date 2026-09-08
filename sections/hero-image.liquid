@@ -35,7 +35,7 @@
 				<div class="w-full flex-shrink-0" {{ block.shopify_attributes }}>
 					<div class="relative aspect-[4/3] md:aspect-[21/9]">
 						{% if block.settings.image %}
-							<img src="{{ block.settings.image | image_url: width: 2800 }}" alt="{{ block.settings.image.alt | escape }}" class="absolute inset-0 h-3/4 w-full object-cover" width="2800" height="1575"	loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+							<img src="{{ block.settings.image | image_url: width: 2800 }}" alt="{{ block.settings.image.alt | escape }}" class="absolute inset-0 h-full w-full object-cover" width="2800" height="1575"	loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
 						{% else %}
 							<div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
 								No image selected
@@ -44,7 +44,7 @@
 
 						{% if block.settings.title or block.settings.description %}
 							<div class="absolute inset-0 flex items-center">
-								<div class="md:pl-32 md:py-24 max-w-1/2 text-white bg-black/30 backdrop-blur-xs rounded-xl p-8">
+								<div class="md:pl-32 md:py-12 max-w-7/8 md:max-w-1/2 text-white bg-black/30 backdrop-blur-xs rounded-xl p-8">
 									{% if block.settings.title != blank %}
 										<h1 class="text-lg font-bold uppercase tracking-tight uppercase text-white md:text-5xl md:mt-12">{{ block.settings.title }}</h1>
 									{% endif %}
