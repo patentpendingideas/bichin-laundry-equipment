@@ -1,0 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_image_Nx8AWp": {
+      "type": "hero-image",
+      "blocks": {
+        "slide_yrmPGG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/on_premise_dexter_washing_machines.webp",
+            "eyebrow": "Commercial Laundry Equipment",
+            "title": "Starting A Laundromat",
+            "description": "",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_yrmPGG"
+      ],
+      "name": "Bichin Hero Image Slider",
+      "settings": {}
+    },
+    "main_page_planning_xxH7id": {
+      "type": "main-page-planning",
+      "name": "Planning Section",
+      "settings": {
+        "heading": "",
+        "body": "Whether you are an existing Laundromat owner or a new owner starting up, Bichin Laundry Equipment will work with you through the entire process of setting up a successful laundromat from start to finish to ensure your Laundromat business works for you! We offer assistance in helping you find a location, assess your commercial space, create layouts, devise plans, and match you with the models and quantities of laundry you will need. We also work with contractors and deal with third-party financing options. In addition, we also offer lifelong ongoing support with your business and equipment. Interested to know the process of starting your own laundromat or renovating your current one?",
+        "contact_btn_text": "",
+        "contact_btn_link": ""
+      }
+    },
+    "retool_laundromat_eDNRfy": {
+      "type": "retool-laundromat",
+      "name": "retool a laundromat",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero_image_Nx8AWp",
+    "main_page_planning_xxH7id",
+    "retool_laundromat_eDNRfy"
+  ]
+}
