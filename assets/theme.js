@@ -5762,6 +5762,7 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
   };
 
   // src/theme.js
+  window.liquidAjaxCart.conf("updateOnWindowFocus", false);
   var ns = "starter";
   window.starterNamespace = ns;
   window[ns] = window[ns] || {};
